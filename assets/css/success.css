@@ -1,0 +1,159 @@
+.success-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 120px 20px;
+
+    background: #f8fafc;
+
+}
+
+.success-card {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+}
+
+.success-icon {
+
+    width: 100px;
+    height: 100px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 50px;
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+
+}
+
+.success-card h1 {
+
+    margin-bottom: 15px;
+
+    color: #1e293b;
+
+}
+
+.success-card p {
+
+    color: #64748b;
+
+    margin-bottom: 35px;
+
+}
+
+.donation-details {
+
+    background: #f1f5f9;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 35px;
+
+}
+
+.detail {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+.detail:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.detail span {
+
+    color: #64748b;
+
+}
+
+.detail strong {
+
+    color: #0f172a;
+
+}
+
+.home-btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 10px;
+
+    transition: .3s;
+
+}
+
+.home-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+.success-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.success-icon.pending {
+    background: #fff8e1;
+    color: #d97706;
+}
+
+.success-icon.success {
+    background: #dcfce7;
+    color: #16a34a;
+}

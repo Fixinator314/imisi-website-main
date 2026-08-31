@@ -1,0 +1,135 @@
+.failed-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f5f7fb;
+}
+
+.failed-card {
+    width: 100%;
+    max-width: 650px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.failed-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: #ffebee;
+    color: #d32f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.failed-card h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #222;
+}
+
+.description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.failure-reasons {
+    text-align: left;
+    background: #fafafa;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 35px;
+}
+
+.failure-reasons h3 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.failure-reasons ul {
+    padding-left: 20px;
+}
+
+.failure-reasons li {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.retry-btn,
+.home-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.retry-btn {
+    background: #d32f2f;
+    color: #fff;
+}
+
+.retry-btn:hover {
+    background: #b71c1c;
+    transform: translateY(-2px);
+}
+
+.home-btn {
+    background: #f3f4f6;
+    color: #222;
+}
+
+.home-btn:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.support-text {
+    color: #777;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .failed-card {
+        padding: 30px 24px;
+    }
+
+    .failed-card h1 {
+        font-size: 1.7rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .retry-btn,
+    .home-btn {
+        width: 100%;
+    }
+
+}

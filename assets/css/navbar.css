@@ -1,0 +1,804 @@
+/* ==========================================================
+   IMISI FOUNDATION — NAVBAR
+   New navigation system
+   Compatible with existing .header GSAP animation
+   ========================================================== */
+
+/* ==========================================================
+   NAVBAR VARIABLES
+   Kept local so we don't depend on the new site's globals.css
+   ========================================================== */
+
+.nav-wrap {
+  --nav-bone: #f6f3ea;
+  --nav-paper: #fbf9f2;
+  --nav-teal: #0a6970;
+  --nav-teal-ink: #052e32;
+  --nav-green: #0c9268;
+  --nav-lime: #bed639;
+  --nav-charcoal: #20211d;
+  --nav-ash: #7b8178;
+
+  position: fixed;
+  inset: 0 0 auto 0;
+
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+
+  pointer-events: none;
+
+  /* IMPORTANT:
+     Your old GSAP animation targets .header.
+     Therefore opacity is intentionally NOT controlled here.
+  */
+}
+
+/* ==========================================================
+   MAIN NAV
+   ========================================================== */
+
+.nav {
+  pointer-events: auto;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-top: 22px;
+
+  width: min(1600px, calc(100% - 40px));
+
+  padding: 0.6rem 0.9rem 0.6rem 1.1rem;
+
+  border-radius: 999px;
+
+  border: 1px solid transparent;
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    width 0.6s ease,
+    margin-top 0.6s ease,
+    background 0.6s ease,
+    border-color 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+/* ==========================================================
+   SCROLLED STATE
+   ========================================================== */
+.nav-wrap .nav[data-state="before-hero"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.nav[data-state="scrolled"] {
+  margin-top: 14px;
+
+  width: min(1180px, calc(100% - 28px));
+
+  background: rgba(246, 243, 234, 0.88);
+
+  border-color: rgba(32, 33, 29, 0.08);
+
+  box-shadow: 0 18px 50px -30px rgba(5, 46, 50, 0.5);
+}
+
+.nav-wrap .nav[data-state="top"],
+.nav-wrap .nav[data-state="scrolled"] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  color: var(--nav-bone);
+
+  transition: color 0.4s ease;
+}
+
+.nav[data-state="scrolled"] .nav__logo {
+  color: var(--nav-teal-ink);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav__logo-image {
+  display: block;
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.nav__logo:hover .nav__logo-image {
+  opacity: 0.8;
+}
+
+.nav__word em {
+  font-style: normal;
+
+  opacity: 0.7;
+}
+
+/* ==========================================================
+   DESKTOP LINKS
+   ========================================================== */
+
+.nav__links {
+  display: flex;
+  align-items: center;
+
+  gap: 0.2rem;
+}
+
+.nav__links a {
+  position: relative;
+
+  padding: 0.5rem 1rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+
+  color: #1f1f1f;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.nav__links a:hover {
+  color: var(--nav-teal);
+}
+
+.nav[data-state="scrolled"] .nav__links a {
+  color: rgba(32, 33, 29, 0.75);
+}
+
+.nav[data-state="scrolled"] .nav__links a:hover {
+  color: var(--nav-teal-ink);
+}
+
+/* ==========================================================
+   CTA AREA
+   ========================================================== */
+
+.nav__cta {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.nav__support {
+  padding: 0.5rem 0.9rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+
+  color: #1f1f1f;
+
+  transition: color 0.3s ease;
+}
+
+.nav[data-state="scrolled"] .nav__support {
+  color: var(--nav-teal);
+}
+
+.nav__support:hover {
+  color: var(--nav-teal);
+}
+
+/* ==========================================================
+   PARTNER BUTTON
+   ========================================================== */
+
+.nav__partner {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.45rem;
+
+  padding: 0.6rem 1.2rem;
+
+  border-radius: 999px;
+
+  background: var(--nav-lime);
+
+  color: var(--nav-teal-ink);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.nav__partner:hover {
+  transform: translateY(-2px);
+
+  background: #d4e65c;
+}
+
+.nav__partner .ico {
+  width: 17px;
+  height: 17px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+/* ==========================================================
+   MOBILE BURGER
+   ========================================================== */
+
+.nav__burger {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 999px;
+
+  color: var(--nav-bone);
+
+  cursor: pointer;
+}
+
+.nav[data-state="scrolled"] .nav__burger {
+  color: var(--nav-teal-ink);
+}
+
+.nav__burger svg {
+  width: 22px;
+  height: 22px;
+
+  margin: auto;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 2;
+
+  stroke-linecap: round;
+}
+
+/* ==========================================================
+   MEGA MENU
+   ========================================================== */
+
+.mega {
+  position: absolute;
+
+  top: calc(100% + 14px);
+
+  left: 50%;
+
+  transform: translate(-50%, 10px);
+
+  width: 820px;
+
+  max-width: 92vw;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  border-radius: 1.5rem;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(32, 33, 29, 0.1);
+
+  background: rgba(251, 249, 242, 0.97);
+
+  backdrop-filter: blur(24px);
+
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow: 0 40px 120px -40px rgba(5, 46, 50, 0.6);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s ease;
+}
+
+.mega.open {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translate(-50%, 0);
+}
+
+/* Mega list */
+
+.mega__list {
+  padding: 1rem;
+}
+
+.mega__list-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 0.25rem;
+}
+
+.mega__item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.75rem;
+
+  padding: 0.6rem 0.75rem;
+
+  border-radius: 0.75rem;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mega__item:hover {
+  background: rgba(32, 33, 29, 0.05);
+
+  transform: translateX(3px);
+}
+
+.mega__item .n {
+  font-family: monospace;
+
+  font-size: 0.75rem;
+
+  color: var(--nav-ash);
+}
+
+.mega__item .t {
+  font-family: "Marcellus", serif;
+
+  font-size: 1.1rem;
+
+  color: var(--nav-teal-ink);
+}
+
+.mega__all {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding: 0.7rem 0.75rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-weight: 600;
+
+  color: var(--nav-teal);
+}
+
+.mega__all .ico {
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+/* Mega preview */
+
+.mega__preview {
+  margin: 0.5rem;
+
+  border-radius: 1rem;
+
+  padding: 1.5rem;
+
+  color: #fff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+.mega__preview .n {
+  font-family: monospace;
+
+  font-size: 3rem;
+
+  opacity: 0.4;
+}
+
+.mega__preview .t {
+  font-family: "Marcellus", serif;
+
+  font-size: 1.5rem;
+}
+
+.mega__preview p {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.85rem;
+
+  line-height: 1.6;
+
+  opacity: 0.85;
+
+  margin-top: 0.4rem;
+}
+
+/* ==========================================================
+   MOBILE FULLSCREEN MENU
+   ========================================================== */
+
+.mobile {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  background: var(--nav-teal-ink);
+
+  color: var(--nav-bone);
+
+  display: flex;
+
+  flex-direction: column;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.mobile.open {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+/* Mobile top */
+
+.mobile__top {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 1.5rem;
+}
+
+.mobile__brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  font-family: "Marcellus", serif;
+
+  font-size: 1.1rem;
+}
+
+.mobile__brand .nav__mark {
+  width: 30px;
+
+  height: 30px;
+}
+
+.mobile__close {
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: none;
+
+  background: none;
+
+  color: var(--nav-bone);
+
+  cursor: pointer;
+}
+
+.mobile__close svg {
+  width: 24px;
+  height: 24px;
+
+  margin: auto;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 2;
+
+  stroke-linecap: round;
+}
+
+/* Mobile navigation */
+
+.mobile__nav {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 0 1.5rem 2.5rem;
+}
+
+.mobile__nav a.big {
+  display: block;
+
+  padding: 0.75rem 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(2.25rem, 10vw, 3rem);
+
+  opacity: 0;
+
+  transform: translateY(30px);
+}
+
+.mobile.open .mobile__nav a.big {
+  animation: imisiMobileIn 0.6s ease forwards;
+}
+
+@keyframes imisiMobileIn {
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* Mobile pipeline */
+
+.mobile__stages {
+  margin-top: 2rem;
+}
+
+.mobile__stages .lbl {
+  font-family: monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color: var(--nav-lime);
+
+  margin-bottom: 0.75rem;
+}
+
+.mobile__stages .row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.4rem 1rem;
+}
+
+.mobile__stages a {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.9rem;
+
+  color: rgba(246, 243, 234, 0.7);
+}
+
+.mobile__stages a .n {
+  font-family: monospace;
+
+  color: rgba(190, 214, 57, 0.7);
+}
+
+/* ==========================================================
+   GRAIN
+   ========================================================== */
+
+.mobile .grain {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.08;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================
+   TABLET / MOBILE
+   ========================================================== */
+
+@media (max-width: 1024px) {
+  .nav {
+    width: calc(100% - 28px);
+
+    margin-top: 14px;
+  }
+
+  .nav[data-state="scrolled"] {
+    width: calc(100% - 20px);
+
+    margin-top: 10px;
+  }
+
+  .nav__logo-image {
+    display: block;
+    width: 40px;
+    height: auto;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__support {
+    display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .nav__partner {
+    display: none;
+  }
+}
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+  .nav {
+    width: calc(100% - 20px);
+
+    padding: 0.5rem 0.65rem 0.5rem 0.8rem;
+  }
+
+  .nav__word {
+    font-size: 1rem;
+  }
+
+  .nav__mark {
+    width: 29px;
+    height: 29px;
+  }
+
+  .mobile__top {
+    padding: 1rem;
+  }
+
+  .mobile__nav {
+    padding: 0 1rem 2rem;
+  }
+  .nav__logo-image {
+    width: 125px;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav__logo-image {
+    display: block;
+    width: 40px;
+    height: auto;
+  }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .mega,
+  .mobile,
+  .nav__partner,
+  .mega__item {
+    transition: none;
+  }
+
+  .mobile.open .mobile__nav a.big {
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+  }
+}

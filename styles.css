@@ -1,0 +1,384 @@
+/* ==========================================================
+   IMISI — EDITORIAL FOOTER
+   ========================================================== */
+
+.site-footer {
+  position: relative;
+  min-height: 100vh;
+
+  background: #063f42;
+  color: #f6f3ea;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.site-footer__inner {
+  position: relative;
+
+  width: min(1600px, calc(100% - 8rem));
+
+  min-height: 500px;
+
+  margin: 0 auto;
+
+  padding: 7rem 0 0;
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.site-footer__hero {
+  width: 50%;
+
+  position: relative;
+
+  z-index: 2;
+}
+.site-footer__eyebrow {
+  display: block;
+
+  margin-bottom: 2rem;
+
+  font-family: var(--mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: #bed639;
+}
+
+.site-footer__title {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(3.2rem, 8vw, 6rem);
+
+  max-width: 100%;
+
+  overflow-wrap: break-word;
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.055em;
+
+  color: #f6f3ea;
+}
+
+.site-footer__title span {
+  display: block;
+
+  color: #f6f3ea;
+}
+
+.site-footer__title span {
+  display: block;
+
+  color: var(--bone);
+}
+
+.site-footer__intro {
+  display: none;
+}
+
+/* ==========================================================
+   ACTIONS
+   ========================================================== */
+
+.site-footer__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.7rem;
+
+  margin-top: 2.5rem;
+}
+
+.site-footer__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  min-height: 50px;
+
+  padding: 0.8rem 1.5rem;
+
+  border-radius: 999px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.75rem;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.site-footer__button span {
+  font-size: 1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.site-footer__button:hover span {
+  transform: translate(3px, -3px);
+}
+
+.site-footer__button--lime {
+  background: var(--lime);
+
+  color: var(--teal-ink);
+
+  border: 1px solid var(--lime);
+}
+
+.site-footer__button--ghost {
+  background: transparent;
+
+  border: 1px solid rgba(246, 243, 234, 0.25);
+
+  color: var(--bone);
+}
+
+.site-footer__button:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.site-footer__grid {
+  position: absolute;
+
+  top: 7.2rem;
+
+  right: 0;
+
+  width: 42%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 3rem;
+
+  padding: 0;
+
+  border: 0;
+}
+
+/* Hide brand block in this version */
+
+.site-footer__brand {
+  display: none;
+}
+
+.site-footer__column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 0.8rem;
+}
+
+.site-footer__label {
+  margin-bottom: 1rem;
+
+  font-family: var(--mono);
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: var(--lime);
+}
+
+.site-footer__column a {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.78rem;
+
+  color: rgba(246, 243, 234, 0.7);
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.site-footer__column a:hover {
+  color: var(--bone);
+
+  transform: translateX(3px);
+}
+
+/* ==========================================================
+   LEGAL BAR
+   ========================================================== */
+
+.site-footer__legal {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  width: 100%;
+
+  min-height: 66px;
+
+  padding: 0 4rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  border-top: 1px solid rgba(246, 243, 234, 0.12);
+
+  font-family: var(--mono);
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(246, 243, 234, 0.42);
+}
+
+.site-footer__legal-right {
+  margin-left: auto;
+}
+
+/* ==========================================================
+   GIANT WORDMARK
+   ========================================================== */
+
+.site-footer__wordmark {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: -2vw;
+
+  width: 100%;
+
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(12rem, 23vw, 28rem);
+
+  font-weight: 400;
+
+  line-height: 0.65;
+
+  letter-spacing: -0.075em;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  color: rgba(246, 243, 234, 0.055);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .site-footer__inner {
+    width: min(90%, 700px);
+
+    padding-top: 6rem;
+
+    min-height: auto;
+  }
+
+  .site-footer__hero {
+    width: 100%;
+  }
+
+  .site-footer__title {
+    font-size: clamp(4rem, 15vw, 7rem);
+  }
+
+  .site-footer__grid {
+    position: relative;
+
+    top: auto;
+
+    right: auto;
+
+    width: 100%;
+
+    margin-top: 5rem;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 3rem 2rem;
+  }
+
+  .site-footer__legal {
+    position: relative;
+
+    min-height: auto;
+
+    margin-top: 5rem;
+
+    padding: 1.5rem 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.6rem;
+  }
+
+  .site-footer__legal-right {
+    margin-left: 0;
+  }
+
+  .site-footer__wordmark {
+    position: relative;
+
+    bottom: auto;
+
+    margin-top: 5rem;
+
+    font-size: 28vw;
+  }
+}

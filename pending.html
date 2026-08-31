@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verifying Donation</title>
+
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/pending.css">
+
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/pending.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Foundation
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li><a href="#">Programs</a></li>
+
+                <li class="dropdown">
+
+                    <button class="dropdown-btn">
+
+                        Partner With Us
+
+                        <span class="arrow">
+                            &#9662;
+                        </span>
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="payment.html">
+                                Donate
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Become a Volunteer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Corporate Partnership
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <button class="hamburger">
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main class="pending-page">
+
+        <div class="pending-card">
+
+            <div class="pending-icon">
+                ⏳
+            </div>
+
+            <h1>
+                Verifying Your Donation
+            </h1>
+
+            <p class="description">
+                We've received your payment request and are waiting for confirmation from our payment provider.
+            </p>
+
+            <div class="reference-box">
+
+                <span>
+                    Payment Reference
+                </span>
+
+                <strong id="reference">
+                    Loading...
+                </strong>
+
+            </div>
+
+            <div class="status-box">
+
+                <strong id="status">
+                    Verifying payment...
+                </strong>
+
+            </div>
+
+            <p class="info">
+
+                Please don't close this page.
+
+                <br><br>
+
+                Verification usually takes only a few seconds.
+
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

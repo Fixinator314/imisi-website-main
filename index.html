@@ -1,0 +1,1393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Imisi House Foundation</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/intro.css" />
+    <link rel="stylesheet" href="./assets/css/home-hero.css" />
+    <link rel="stylesheet" href="./assets/css/foundation.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Custom desktop cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Route/section sweep used on nav clicks -->
+    <div class="sweep" id="sweep" aria-hidden="true">
+      <span class="sweep__title"></span>
+    </div>
+    <!-- =======================================
+INTRO
+======================================== -->
+
+    <section class="draw-section" id="drawSection">
+      <div class="draw-stage">
+        <!-- viewBox tightened to the visible logo; the source file's two
+           off-canvas <g clip-path> groups were export junk and removed. -->
+        <svg
+          id="logoSvg"
+          viewBox="60 160 290 240"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke="#c7d413"
+            fill="#c7d413"
+            d="M312.42,265a50.48,50.48,0,0,1-15.68-2.89c.09,1.77.13,3.5.13,5.21,0,.92,0,1.83,0,2.73s-.06,1.79-.11,2.67-.11,1.83-.18,2.73-.15,1.63-.24,2.42-.15,1.35-.23,2c-.11.88-.24,1.73-.37,2.58,0,.25-.08.49-.11.73-.12.65-.23,1.28-.35,1.92s-.23,1.25-.36,1.87c-.06.29-.12.59-.18.86-.13.59-.26,1.17-.4,1.74-.55,2.37-1.18,4.63-1.86,6.74-.14.47-.29.91-.44,1.37-.07.22-.14.44-.22.65-.14.41-.28.8-.42,1.19-.42,1.21-.87,2.36-1.31,3.46l-.73,1.75c-6.14,14.3-15.59,25.31-21.75,28.79a17,17,0,0,1-8.16,2.24h-.3a19.18,19.18,0,0,1-6.07-1c-9.14-3.06-17.68-12.79-24-27.39-.64-1.47-1.29-2.88-1.93-4.27-.33-.68-.65-1.37-1-2q-1.47-3-3-5.76l-1-1.8c-.33-.59-.67-1.17-1-1.75-.66-1.15-1.34-2.27-2-3.35-.33-.54-.67-1.07-1-1.6s-.79-1.21-1.19-1.8c-.28-.42-.58-.85-.87-1.26l-.21-.32c-.28-.39-.55-.76-.82-1.15-.57-.77-1.12-1.52-1.68-2.26l-.4-.54h0a125.48,125.48,0,0,0-16.18-17.18c-2.59-2.33-5.19-4.53-7.77-6.73-1.81-1.54-3.66-3.12-5.5-4.73l-2.27-2-.82-.74c-2.54-2.31-3.67-4.29-3.39-5.88.76-4.24,8.14-10,19.87-15.67h0a44.41,44.41,0,0,1,17-7.49h0c14.86-7,23.92-14.39,27-22.13a49.16,49.16,0,0,0-6.71-.42c-3.35,0-6.6.27-10,.57-1.25.11-2.5.21-3.78.3h0a100.87,100.87,0,0,1-20.15,10.61c-23.94,9.74-36.58,20-38.62,31.51-1.29,7.21,1.49,14,8.24,20.16,3,2.78,6.08,5.37,9,7.87l3.94,3.36h0l.86.74c2.37,2.07,4.72,4.18,7,6.44.4.39.81.79,1.19,1.19s.85.86,1.28,1.29c1.47,1.53,2.93,3.13,4.38,4.83.47.55.93,1.11,1.39,1.68.85,1,1.68,2.1,2.5,3.23.35.45.69.92,1,1.4.21.28.41.58.62.87.49.7,1,1.42,1.47,2.15,1.89,2.86,3.76,6,5.59,9.45,1.53,2.91,3,6.06,4.55,9.48,10.45,24,23.94,32.79,33.41,36,1.19.39,2.4.72,3.6,1l.09,0,.83.17c.44.09.89.17,1.33.23s.66.1,1,.14.91.11,1.38.15h0c.45,0,.92.07,1.38.09s.92,0,1.39,0a32.9,32.9,0,0,0,16.17-4.27,38.31,38.31,0,0,0,4.74-3.22l.88-.71c1-.85,2.06-1.78,3.11-2.79.34-.32.67-.66,1-1,.57-.58,1.14-1.16,1.7-1.78.24-.25.48-.52.72-.79.54-.6,1.09-1.24,1.64-1.89.34-.4.67-.81,1-1.23.68-.85,1.36-1.72,2-2.63s1.3-1.8,1.95-2.74c.32-.47.65-1,1-1.45s.58-.88.87-1.34c1.31-2.06,2.59-4.25,3.81-6.56.3-.55.6-1.12.89-1.7.52-1,1.05-2.11,1.56-3.19q1.74-3.75,3.27-7.81c.06-.17.13-.35.18-.52.22-.58.44-1.17.65-1.78s.4-1.18.6-1.78.34-1,.5-1.57.33-1.06.49-1.6a1.87,1.87,0,0,0,.07-.22c.13-.43.25-.86.36-1.3a.19.19,0,0,0,0-.1c.14-.47.27-1,.4-1.45s.32-1.23.47-1.84.34-1.42.51-2.14c.22-1,.42-2,.62-3,.16-.8.32-1.6.46-2.42A112.47,112.47,0,0,0,312.42,265Z"
+          />
+          <path
+            stroke="#c7d413"
+            fill="#c7d413"
+            d="M222.79,181.42c3.61-.31,7.33-.63,11.35-.63,1.35,0,2.78,0,4.3.12a.47.47,0,0,1-.05-.1c.3,0,.65-.05,1.06-.05a12.73,12.73,0,0,1,4,.67h0c.33.11.67.23,1,.37.68.28,1.46.58,2.32.91,10.88,4.19,36.36,14,47.17,60.12.11.47.21.93.31,1.39l1.08.49c.36.17.72.34,1.07.49a58.25,58.25,0,0,0,8.17,2.93c.23.07.47.12.7.18.94.24,1.88.45,2.8.6l1,.14q1,.15,2,.21c-.49-3.27-1.13-6.61-1.92-10-5.39-23-14.88-41.12-28.19-53.8-11.18-10.64-22.5-15-28.58-17.33l-2-.8a29.83,29.83,0,0,0-11-2.17c-6,0-11,2.05-14.06,5.77a13.22,13.22,0,0,0-2.86,10.51Z"
+          />
+          <path
+            stroke="#008c60"
+            fill="#008c60"
+            d="M338.69,252.33c-2.57-3.28-6.51-5-11.71-5a45,45,0,0,0-10.23,1.48,17.44,17.44,0,0,1-4.14.46c-.5,0-1,0-1.5-.06-8.34-.51-18.22-5.32-26.72-10.35-2.88-1.72-5.6-3.45-8.06-5a106.91,106.91,0,0,0-38.73-15.1,73.32,73.32,0,0,0-11.85-1A55.7,55.7,0,0,0,213.87,219a44.41,44.41,0,0,0-17,7.49,41,41,0,0,0-5.15,4.45c-5.95,6.05-9.17,11.94-10.53,17.85,2.58,2.31,5.21,4.56,7.77,6.74s5.18,4.4,7.77,6.73c-1.8-8.37-.39-13.75,6.13-20.38,5.54-5.62,13.29-8.48,23.07-8.48,15.66,0,32.34,7.3,41.86,13.55a159.35,159.35,0,0,0,21.52,12.19c2.45,1.1,4.94,2.1,7.45,2.94A50.54,50.54,0,0,0,312.42,265h.21a33.91,33.91,0,0,0,7.78-.89,41.11,41.11,0,0,1,4.83-.93,48.61,48.61,0,0,1-3.45,7.93,61.08,61.08,0,0,1-11,15.53,110.64,110.64,0,0,1-5.33,19.67q-.84,6.14-2.15,12a166,166,0,0,1,14.93-16.89c6.25-6.35,11.66-11.85,17.47-23.09C340.26,269.37,344.2,259.36,338.69,252.33Z"
+          />
+          <path
+            stroke="#008c60"
+            fill="#008c60"
+            d="M272.37,361a23.67,23.67,0,0,1-12-3.58C245,382.17,235.7,386.2,231.29,386.2a8.6,8.6,0,0,1-3.65-.89c-5.86-2.53-8.69-11.64-13.85-60.52a153.68,153.68,0,0,0-3.67-20.71c-1.83-3.46-3.7-6.59-5.59-9.45-2.37.2-5,.63-8,1.13-1.55.25-3.17.51-4.86.76a142,142,0,0,1,6.56,29.91c3.06,29,5.21,43.28,7.88,52.84,3.14,11.13,7.58,17,15.33,20.39a25,25,0,0,0,9.89,2.11c9.16,0,18.19-5.13,27.61-15.69,6.86-7.71,13.06-17.41,17.81-25.56a18.8,18.8,0,0,1-4.26.48Z"
+          />
+          <path
+            stroke="#008c60"
+            fill="#008c60"
+            d="M182.77,270.8c1,3.49,2.26,7,3.58,10.67,2.35-.28,4.58-.64,6.79-1C189.74,277,186.28,273.84,182.77,270.8Z"
+          />
+          <path
+            stroke="#076870"
+            fill="#076870"
+            d="M296.74,262.06h0l-1.15-.41c-2.12-.75-4.22-1.6-6.3-2.53.24,1.47.46,3,.67,4.49a154.68,154.68,0,0,1,1.14,27.31c-.18,4.08-.54,8.1-1,12,.44-1.1.89-2.25,1.31-3.46.14-.39.28-.78.42-1.19.08-.21.15-.43.22-.65.15-.46.3-.9.44-1.37.68-2.11,1.31-4.37,1.86-6.74.14-.57.27-1.15.4-1.74.06-.27.12-.57.18-.86.13-.62.25-1.24.36-1.87s.23-1.27.35-1.92c0-.24.07-.48.11-.73.13-.85.26-1.7.37-2.58.08-.66.16-1.33.23-2s.17-1.6.24-2.42.14-1.81.18-2.73.09-1.77.11-2.67,0-1.81,0-2.73C296.87,265.56,296.83,263.83,296.74,262.06Z"
+          />
+          <path
+            stroke="#076870"
+            fill="#076870"
+            d="M294,242.83c-10.81-46.13-36.29-55.93-47.17-60.12-.86-.33-1.64-.63-2.32-.91-.35-.14-.69-.26-1-.37h0l-.48-.07h0c-1.58-.22-3.09-.36-4.51-.45s-2.95-.12-4.3-.12c-4,0-7.74.32-11.35.63l-.3,0c-3.25.28-6.31.54-9.39.54a42.39,42.39,0,0,1-7.46-.62c-7.93-1.45-8.81-2.66-10.4-4.88a26.68,26.68,0,0,0-5.91-6.27c-3-2.26-7.35-3.46-12.53-3.46a41.54,41.54,0,0,0-6.57.56c-6.56,1.07-29.3,6.49-46.66,31.61-12.07,17.43-14.82,41.67-7,61.72,7,18.07,21.69,30.48,41.27,34.92a85,85,0,0,0,19,2.18,98.68,98.68,0,0,0,14.88-1.22l1.61-.24,1.9-.3,1.35-.22c2.19-.37,4.21-.7,6.06-.93.66-.08,1.3-.15,1.93-.2-.49-.73-1-1.45-1.47-2.15-.21-.29-.41-.59-.62-.87-.34-.48-.68-.95-1-1.4-.82-1.13-1.66-2.2-2.5-3.23l-1.39-1.68c-1.45-1.7-2.91-3.3-4.38-4.83l-1.57.26c-1.23.19-2.48.38-3.74.55l-1.48.19a74.93,74.93,0,0,1-9.55.63,69.43,69.43,0,0,1-15.52-1.78c-18.4-4.17-26.55-16.09-30.16-25.35-5.88-15.12-3.76-34.07,5.29-47.17,11-15.92,26-23.39,36.33-25.07a26.63,26.63,0,0,1,4.06-.35,9.6,9.6,0,0,1,3.27.42,12.17,12.17,0,0,1,2.48,2.8c3.49,4.86,7.2,8.76,20.31,11.13a56.59,56.59,0,0,0,10.23.87c1,0,2,0,3-.06,1.46,0,2.87-.14,4.28-.25h0c1.28-.09,2.53-.19,3.78-.3,3.44-.3,6.69-.57,10-.57,1.23,0,2.49,0,3.83.13.92.06,1.88.15,2.88.29,5.39.76,11.8,2.72,19.69,7.6,10.2,6.31,18.44,18.39,23.82,34.47,2.3,1.37,4.71,2.71,7.15,4,.91.48,1.83.92,2.75,1.36C294.19,243.76,294.09,243.3,294,242.83Z"
+          />
+          <path
+            stroke="#076870"
+            fill="#076870"
+            d="M258.58,334.71c-4.43-5.51-9.89-13.84-16.33-26.44-7.6-14.89-14.77-23.21-23.23-27a26.9,26.9,0,0,0-6.13-1.89h0l.41.54c.56.74,1.11,1.49,1.68,2.26.27.39.54.76.82,1.15l.21.32c.29.41.59.84.87,1.26.4.59.8,1.18,1.19,1.8s.69,1.06,1,1.6c.69,1.08,1.37,2.2,2,3.35.34.58.68,1.16,1,1.75l1,1.8q1.5,2.75,3,5.76c.32.67.64,1.36,1,2,.64,1.39,1.29,2.8,1.93,4.27,6.06,13.92,14.1,23.41,22.76,26.91.42.18.86.34,1.28.48a19.18,19.18,0,0,0,6.07,1h.3C259.14,335.4,258.87,335.05,258.58,334.71Z"
+          />
+          <path
+            stroke="#076870"
+            fill="#076870"
+            d="M302.15,314.07c-.51,1.08-1,2.15-1.56,3.19-.29.58-.59,1.15-.89,1.7-1.22,2.31-2.5,4.5-3.81,6.56-.29.46-.58.9-.87,1.34s-.65,1-1,1.45c-.65.94-1.3,1.86-1.95,2.74s-1.36,1.78-2,2.63c-.34.42-.67.83-1,1.23-.55.65-1.1,1.29-1.64,1.89-.24.27-.48.54-.72.79-.56.62-1.13,1.2-1.7,1.78-.34.33-.67.67-1,1-1.05,1-2.09,1.94-3.11,2.79l-.88.71a38.31,38.31,0,0,1-4.74,3.22,32.9,32.9,0,0,1-16.17,4.27c-.47,0-.92,0-1.39,0s-.93-.05-1.38-.09h0c-.47,0-.92-.09-1.38-.15s-.65-.08-1-.14-.89-.14-1.33-.23l-.83-.17-.09,0a43.34,43.34,0,0,0,8.67,6.9l.75.44.75.39a7.6,7.6,0,0,0,.76.37c.25.12.49.25.74.36.5.22,1,.42,1.51.6s1.14.41,1.72.57c.42.12.86.23,1.28.33s.86.18,1.28.25.86.12,1.3.17l.65.05c.42,0,.84.05,1.28.05h.13c.41,0,.83,0,1.24,0l.82-.07.28,0a15.27,15.27,0,0,0,1.87-.33h.05c6.59-1.48,12.3-6.52,16.67-14.76a110.44,110.44,0,0,0,9.84-27.54,1.42,1.42,0,0,0,.05-.22c.14-.64.28-1.27.4-1.92.1-.4.18-.82.25-1.23s.19-.88.26-1.33.23-1.19.33-1.8c.16-.89.31-1.8.46-2.72s.27-1.82.4-2.74Q303.89,310.33,302.15,314.07Z"
+          />
+        </svg>
+
+        <p class="draw-label">Explore Site</p>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+    <section class="intro">
+      <div class="intro-sticky">
+        <div class="intro-content">
+          <h1>
+            IMISI HOUSE
+            <br />
+            FOUNDATION
+          </h1>
+
+          <p>Empowering Communities Through Hope</p>
+        </div>
+
+        <div class="scroll-down">
+          <span> Keep Going </span>
+
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================
+HEADER
+======================================== -->
+
+    <!-- ==========================================================
+     NAVBAR
+     ========================================================== -->
+
+    <header class="header nav-wrap">
+      <nav class="nav" id="nav" data-state="top">
+        <!-- LOGO -->
+        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <div class="nav__links" id="navLinks">
+          <a href="#about" data-sweep="About"> About </a>
+
+          <a href="#pipeline" data-mega="1" data-sweep="Heritage Pipeline">
+            Heritage Pipeline
+          </a>
+
+          <a href="#programmes" data-sweep="Programmes"> Programmes </a>
+
+          <a href="#stories" data-sweep="Stories"> Stories </a>
+
+          <a href="#impact" data-sweep="Impact"> Impact </a>
+
+          <a href="#get-involved" data-sweep="Get Involved"> Get Involved </a>
+        </div>
+
+        <!-- CTA -->
+        <div class="nav__cta">
+          <a class="nav__support" href="#support"> Support </a>
+
+          <a class="btn btn--solid nav__partner" href="#get-involved">
+            Partner With Us
+
+            <svg class="ico" viewBox="0 0 24 24">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </a>
+
+          <!-- MOBILE BURGER -->
+          <button class="nav__burger" id="burger" aria-label="Open menu">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         MEGA MENU
+         ====================================================== -->
+
+        <div class="mega" id="mega" aria-hidden="true">
+          <div class="mega__list" id="megaList"></div>
+
+          <div class="mega__preview" id="megaPreview"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==========================================================
+     MOBILE FULLSCREEN MENU
+     ========================================================== -->
+
+    <div class="mobile" id="mobile" aria-hidden="true">
+      <div class="grain"></div>
+
+      <div class="mobile__top">
+        <span class="mobile__brand">
+          <svg
+            class="nav__mark"
+            viewBox="60 160 290 240"
+            aria-hidden="true"
+          ></svg>
+
+          Ìmísí Foundation
+        </span>
+
+        <button class="mobile__close" id="mobileClose" aria-label="Close menu">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile__nav" id="mobileNav"></nav>
+    </div>
+
+    <!-- =======================================
+HERO
+======================================== -->
+
+    <section class="hero">
+      <div class="hero-image">
+        <img src="./assets/images/black1.JPG" alt="Imisi Foundation" />
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span> Building Stronger Communities </span>
+
+        <h2>
+          Every Child Deserves
+          <br />
+          A Better Tomorrow
+        </h2>
+
+        <p>
+          Creating opportunities through education, sustainable development,
+          community support and empowerment.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn"> Get Involved </a>
+
+          <a href="#" class="btn-outline"> Learn More </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     HERITAGE PIPELINE
+     ========================================================== -->
+
+    <section class="pipe" id="pipeline">
+      <div class="pipe__pin" id="pipePin">
+        <div class="grain"></div>
+
+        <div class="pipe__label eyebrow">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          The Heritage Pipeline
+        </div>
+
+        <div class="pipe__track" id="pipeTrack">
+          <!-- INTRO PANEL -->
+
+          <article class="panel panel--intro">
+            <div class="panel__box">
+              <h2>
+                Seven stages.<br />
+                One continuous journey.
+              </h2>
+
+              <p>
+                Heritage moves from knowledge holders to the next generation
+                through a real programme model. Scroll to travel it.
+              </p>
+
+              <div class="panel__hint">
+                Keep scrolling
+
+                <svg class="ico" viewBox="0 0 24 24">
+                  <path d="M5 12h14M13 6l6-6" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- ======================================================
+           STAGE PANELS ARE INSERTED HERE BY JAVASCRIPT
+           ====================================================== -->
+
+          <!-- OUTRO PANEL -->
+
+          <article class="panel panel--outro">
+            <div class="panel__box">
+              <h2>And then it begins again.</h2>
+
+              <p>
+                Return feeds Discover. Knowledge that leaves a community comes
+                back to it — and carries on.
+              </p>
+
+              <a class="btn btn--lime" href="#pipeline">
+                Explore the complete Heritage Pipeline
+
+                <svg class="ico" viewBox="0 0 24 24">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- PROGRESS -->
+
+        <div class="pipe__progress">
+          <div class="pipe__progress-meta">
+            <span id="pipeCurrent"> 01 · Discover </span>
+
+            <span> Return </span>
+          </div>
+
+          <div class="pipe__bar">
+            <div class="pipe__fill" id="pipeFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================================
+       MOBILE FALLBACK
+       ========================================================== -->
+
+      <div class="pipe-mobile" id="pipeMobile"></div>
+    </section>
+
+    <!-- ==========================================================
+     SECTION 02 — WHY THIS MATTERS
+     ========================================================== -->
+
+    <section class="why" id="why">
+      <div class="why__inner">
+        <!-- Section heading -->
+
+        <div class="why__heading">
+          <div class="eyebrow">
+            <span class="num">02</span>
+            <span class="rule"></span>
+            Why This Matters
+          </div>
+
+          <h2 class="why__title">
+            Heritage is not a relic.
+            <span>It is infrastructure.</span>
+          </h2>
+        </div>
+
+        <!-- Main statement -->
+
+        <div class="why__statement">
+          <p class="why__lead">
+            Across Africa, extraordinary knowledge exists inside communities,
+            institutions and living traditions. Yet too often, the pathways
+            connecting that knowledge to the next generation are fragmented.
+          </p>
+
+          <p class="why__copy">
+            Ìmísí Foundation exists to build those pathways — connecting
+            knowledge holders, learners, institutions and opportunity through a
+            continuous journey of discovery, learning, practice and return.
+          </p>
+        </div>
+
+        <!-- ======================================================
+         IMPACT STATISTICS
+         ====================================================== -->
+
+        <div class="why__stats">
+          <div class="why__stat">
+            <div class="why__number">
+              <span data-count="70">0</span><sup>%</sup>
+            </div>
+
+            <p>
+              of cultural heritage is transmitted through informal knowledge
+              systems.
+            </p>
+          </div>
+
+          <div class="why__stat">
+            <div class="why__number">
+              <span data-count="1">0</span>
+            </div>
+
+            <p>
+              continuous pathway connecting discovery, knowledge, practice and
+              opportunity.
+            </p>
+          </div>
+
+          <div class="why__stat">
+            <div class="why__number">∞</div>
+
+            <p>
+              generations carrying knowledge forward, adapting it and returning
+              it home.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     SECTION 03 — TWO KNOWLEDGE SYSTEMS
+     ========================================================== -->
+
+    <section class="knowledge" id="knowledge">
+      <div class="knowledge__inner">
+        <div class="knowledge__heading">
+          <div class="eyebrow">
+            <span class="num">03</span>
+            <span class="rule"></span>
+            Two Knowledge Systems
+          </div>
+
+          <h2 class="knowledge__title">
+            Living knowledge.
+            <span>Formal knowledge.</span>
+          </h2>
+
+          <p class="knowledge__intro">Two systems. One pathway.</p>
+        </div>
+
+        <div class="knowledge__systems">
+          <!-- LIVING KNOWLEDGE -->
+
+          <article class="knowledge__system knowledge__system--living">
+            <div class="knowledge__number">01</div>
+
+            <div class="knowledge__content">
+              <span class="knowledge__label"> Living Knowledge </span>
+
+              <h3>Knowledge carried by people.</h3>
+
+              <p>
+                Knowledge that lives inside communities, families, practitioners
+                and knowledge holders. It is carried through experience,
+                practice, memory and participation.
+              </p>
+
+              <div class="knowledge__list">
+                <span>Oral tradition</span>
+                <span>Craft & making</span>
+                <span>Community practice</span>
+                <span>Intergenerational knowledge</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- FORMAL KNOWLEDGE -->
+
+          <article class="knowledge__system knowledge__system--formal">
+            <div class="knowledge__number">02</div>
+
+            <div class="knowledge__content">
+              <span class="knowledge__label"> Formal Knowledge </span>
+
+              <h3>Knowledge held by institutions.</h3>
+
+              <p>
+                Knowledge preserved, researched and developed through museums,
+                universities, archives, laboratories and cultural institutions.
+              </p>
+
+              <div class="knowledge__list">
+                <span>Research</span>
+                <span>Archives</span>
+                <span>Museums</span>
+                <span>Academic study</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="knowledge__bridge">
+          <span class="knowledge__bridge-line"></span>
+
+          <p>
+            Ìmísí connects both systems — allowing knowledge to move between
+            people, institutions and generations.
+          </p>
+
+          <span class="knowledge__bridge-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     SECTION 04 — ECOSYSTEM
+     ========================================================== -->
+
+    <section class="ecosystem" id="ecosystem">
+      <div class="ecosystem__inner">
+        <div class="ecosystem__heading">
+          <div class="eyebrow">
+            <span class="num">04</span>
+            <span class="rule"></span>
+            The Ecosystem
+          </div>
+
+          <h2 class="ecosystem__title">
+            Knowledge doesn't
+            <span>move alone.</span>
+          </h2>
+
+          <p class="ecosystem__intro">
+            It moves through people, places and institutions — each playing a
+            different role in keeping heritage alive.
+          </p>
+        </div>
+
+        <!-- ======================================================
+         ECOSYSTEM GRID
+         ====================================================== -->
+
+        <div class="ecosystem__grid">
+          <!-- KNOWLEDGE HOLDERS -->
+
+          <article class="ecosystem__card ecosystem__card--large">
+            <span class="ecosystem__number"> 01 </span>
+
+            <div class="ecosystem__card-content">
+              <span class="ecosystem__label"> Knowledge Holders </span>
+
+              <h3>The people who carry the knowledge.</h3>
+
+              <p>
+                Practitioners, artisans, elders, researchers and cultural
+                custodians who hold knowledge and pass it forward.
+              </p>
+            </div>
+          </article>
+
+          <!-- LEARNERS -->
+
+          <article class="ecosystem__card">
+            <span class="ecosystem__number"> 02 </span>
+
+            <div class="ecosystem__card-content">
+              <span class="ecosystem__label"> Learners </span>
+
+              <h3>The next generation.</h3>
+
+              <p>
+                Young people discovering, learning, practising and transforming
+                knowledge into new possibilities.
+              </p>
+            </div>
+          </article>
+
+          <!-- INSTITUTIONS -->
+
+          <article class="ecosystem__card">
+            <span class="ecosystem__number"> 03 </span>
+
+            <div class="ecosystem__card-content">
+              <span class="ecosystem__label"> Institutions </span>
+
+              <h3>Places where knowledge lives.</h3>
+
+              <p>
+                Museums, universities, archives, cultural organisations and
+                other institutions that preserve and develop knowledge.
+              </p>
+            </div>
+          </article>
+
+          <!-- COMMUNITIES -->
+
+          <article class="ecosystem__card">
+            <span class="ecosystem__number"> 04 </span>
+
+            <div class="ecosystem__card-content">
+              <span class="ecosystem__label"> Communities </span>
+
+              <h3>Where knowledge returns.</h3>
+
+              <p>
+                Communities provide the context, identity and living environment
+                that give knowledge meaning.
+              </p>
+            </div>
+          </article>
+
+          <!-- OPPORTUNITY -->
+
+          <article class="ecosystem__card ecosystem__card--accent">
+            <span class="ecosystem__number"> 05 </span>
+
+            <div class="ecosystem__card-content">
+              <span class="ecosystem__label"> Opportunity </span>
+
+              <h3>Where knowledge becomes possibility.</h3>
+
+              <p>
+                Industry, employment, enterprise and further study create
+                pathways for knowledge to become sustainable opportunity.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- ====== CLOSING STATEMENT ============ -->
+
+        <div class="ecosystem__statement">
+          <span class="ecosystem__statement-line"></span>
+
+          <p>
+            When these relationships work together, heritage becomes a living
+            system.
+          </p>
+
+          <span class="ecosystem__statement-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     SECTION 05 — CURRENT WORK
+     ========================================================== -->
+
+    <section class="work" id="work">
+      <div class="work__inner">
+        <div class="work__heading">
+          <div class="eyebrow">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            Current Work
+          </div>
+
+          <h2 class="work__title">
+            Heritage in
+            <span>practice.</span>
+          </h2>
+
+          <p class="work__intro">
+            We work across communities, institutions and creative spaces to turn
+            knowledge into experiences, skills and opportunity.
+          </p>
+        </div>
+
+        <!-- ======================================================
+         FEATURED PROJECT
+         ====================================================== -->
+
+        <article class="work__featured">
+          <div class="work__image work__image--featured">
+            <div class="work__image-placeholder">
+              <img src="./assets/images/black1.JPG" alt="img1" />
+            </div>
+          </div>
+
+          <div class="work__featured-content">
+            <div class="work__meta">
+              <span> 01 </span>
+
+              <span> Featured </span>
+            </div>
+
+            <h3>Building pathways through heritage.</h3>
+
+            <p>
+              Creating spaces where young people can encounter cultural
+              knowledge, meet its practitioners and begin building their own
+              relationship with heritage.
+            </p>
+
+            <a href="#" class="work__link">
+              Explore the work
+
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M9 7h8v8" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- ======================================================
+         PROJECT GRID
+         ====================================================== -->
+
+        <div class="work__grid">
+          <!-- PROJECT 02 -->
+
+          <article class="work__card">
+            <div class="work__image">
+              <div class="work__image-placeholder">
+                <img src="./assets/images/SKH06078.JPG" alt="img1" />
+              </div>
+            </div>
+
+            <div class="work__card-content">
+              <div class="work__meta">
+                <span>02</span>
+
+                <span>Programme</span>
+              </div>
+
+              <h3>Learning through experience.</h3>
+
+              <p>
+                Connecting learners with places, practitioners and real-world
+                experiences.
+              </p>
+
+              <a href="#" class="work__link">
+                Discover
+
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 03 -->
+
+          <article class="work__card">
+            <div class="work__image">
+              <div class="work__image-placeholder">
+                <img src="./assets/images/black1.JPG" alt="img1" />
+              </div>
+            </div>
+
+            <div class="work__card-content">
+              <div class="work__meta">
+                <span>03</span>
+
+                <span>Research</span>
+              </div>
+
+              <h3>Preserving living knowledge.</h3>
+
+              <p>
+                Supporting the documentation, preservation and transmission of
+                knowledge.
+              </p>
+
+              <a href="#" class="work__link">
+                Discover
+
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 04 -->
+
+          <article class="work__card">
+            <div class="work__image">
+              <div class="work__image-placeholder">
+                <img src="./assets/images/black1.JPG" alt="img1" />
+              </div>
+            </div>
+
+            <div class="work__card-content">
+              <div class="work__meta">
+                <span>04</span>
+
+                <span>Partnership</span>
+              </div>
+
+              <h3>Knowledge into opportunity.</h3>
+
+              <p>
+                Creating pathways from heritage knowledge into further study,
+                work and enterprise.
+              </p>
+
+              <a href="#" class="work__link">
+                Discover
+
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     SECTION 06 — TRUE LIFE ALCHEMY
+     ========================================================== -->
+
+    <section class="alchemy" id="alchemy">
+      <div class="alchemy__inner">
+        <!-- HEADER -->
+
+        <div class="alchemy__heading">
+          <div class="eyebrow">
+            <span class="num">06</span>
+
+            <span class="rule"></span>
+
+            True Life Alchemy
+          </div>
+        </div>
+
+        <!-- MAIN STATEMENT -->
+
+        <div class="alchemy__statement">
+          <h2 class="alchemy__title">
+            Knowledge becomes
+            <span>something lived.</span>
+          </h2>
+
+          <p class="alchemy__intro">
+            When knowledge moves from memory into practice, it begins to
+            transform the person carrying it — and the world around them.
+          </p>
+        </div>
+
+        <!-- VISUAL -->
+
+        <div class="alchemy__visual">
+          <div class="alchemy__image">
+            <video
+              class="alchemy__video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-hidden="true"
+            >
+              <source
+                src="./assets/images/true-life-alchemy.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          <div class="alchemy__caption">
+            <span class="alchemy__caption-number"> 06 </span>
+
+            <p>
+              Heritage is not simply something we preserve. It is something we
+              practise, adapt and carry forward.
+            </p>
+          </div>
+        </div>
+
+        <!-- BOTTOM STATEMENT -->
+
+        <div class="alchemy__bottom">
+          <span class="alchemy__bottom-line"></span>
+
+          <p>
+            The goal is not to return to the past. It is to create a future with
+            deeper roots.
+          </p>
+
+          <span class="alchemy__bottom-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     SECTION 07 — GET INVOLVED
+     ========================================================== -->
+
+    <section class="involved" id="get-involved">
+      <!-- =========== INTRO =========== -->
+
+      <div class="involved__intro">
+        <div class="involved__eyebrow">
+          <span class="involved__number">07</span>
+          <span class="involved__line"></span>
+          <span>Get Involved</span>
+        </div>
+
+        <h2 class="involved__title">
+          There is a place
+          <span>for you here.</span>
+        </h2>
+
+        <p class="involved__description">
+          Heritage becomes stronger when more people participate in carrying it
+          forward.
+        </p>
+      </div>
+
+      <!-- ============= 3D CINEMATIC BASKET EXPERIENCE ============ -->
+
+      <div class="basket-experience" id="basketExperience">
+        <canvas id="basketCanvas" aria-label="3D woven basket"></canvas>
+
+        <!-- Small editorial text -->
+        <!-- TOP LABEL -->
+
+        <div class="basket-editorial basket-editorial--top">
+          <span class="basket-editorial__index"> 01 / HERITAGE </span>
+
+          <span class="basket-editorial__rule"></span>
+
+          <span class="basket-editorial__hint">
+            Carrying knowledge forward
+          </span>
+        </div>
+        <!-- MID STATEMENT -->
+
+        <div class="basket-statement basket-statement--one">
+          <span class="basket-statement__small"> What we carry </span>
+
+          <h3>
+            Knowledge
+            <span>moves.</span>
+          </h3>
+        </div>
+
+        <!-- SECOND STATEMENT -->
+
+        <div class="basket-statement basket-statement--two">
+          <span class="basket-statement__small"> What we inherit </span>
+
+          <h3>
+            We make
+            <span>our own.</span>
+          </h3>
+        </div>
+
+        <!-- FINAL STATEMENT -->
+
+        <div class="basket-statement basket-statement--final">
+          <span class="basket-statement__small"> The invitation </span>
+
+          <h3>
+            Carry it
+            <span>forward.</span>
+          </h3>
+        </div>
+
+        <!-- BOTTOM LABEL -->
+
+  <div class="basket-editorial basket-editorial--bottom">
+
+    <span>
+      Ìmísí Foundation
+    </span>
+
+    <span>
+      07 — 09
+    </span>
+
+  </div>
+
+</div>
+
+        <div class="basket-caption basket-caption--top">
+          <span>Heritage</span>
+
+          <span>01 / 03</span>
+        </div>
+
+        <div class="basket-caption basket-caption--bottom">
+          <span> Knowledge is something we carry forward. </span>
+        </div>
+      </div>
+
+      <!-- ============ PARTICIPATION OPTIONS =================== -->
+
+      <div class="involved__options">
+        <!-- PARTNER -->
+
+        <a href="#" class="involved__option">
+          <div class="involved__option-top">
+            <span class="involved__option-number"> 01 </span>
+
+            <svg class="involved__arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </div>
+
+          <div class="involved__option-content">
+            <span class="involved__label"> Partner </span>
+
+            <h3>Build with us.</h3>
+
+            <p>
+              Collaborate with Ìmísí to create programmes, research, experiences
+              and pathways that connect knowledge with opportunity.
+            </p>
+          </div>
+        </a>
+
+        <!-- LEARN -->
+
+        <a href="#" class="involved__option">
+          <div class="involved__option-top">
+            <span class="involved__option-number"> 02 </span>
+
+            <svg class="involved__arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </div>
+
+          <div class="involved__option-content">
+            <span class="involved__label"> Learn </span>
+
+            <h3>Begin your journey.</h3>
+
+            <p>
+              Discover programmes, experiences and opportunities to encounter
+              knowledge, practise it and make it your own.
+            </p>
+          </div>
+        </a>
+
+        <!-- SUPPORT -->
+
+        <a href="#support" class="involved__option involved__option--accent">
+          <div class="involved__option-top">
+            <span class="involved__option-number"> 03 </span>
+
+            <svg class="involved__arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </div>
+
+          <div class="involved__option-content">
+            <span class="involved__label"> Support </span>
+
+            <h3>Help knowledge move.</h3>
+
+            <p>
+              Support the people, programmes and communities working to keep
+              knowledge alive for generations to come.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- =============== CLOSING STATEMENT ================= -->
+
+      <div class="involved__closing">
+        <span></span>
+
+        <p>The future of heritage is something we build together.</p>
+
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     SECTION 08 — NEXT CHAPTER
+     ========================================================== -->
+
+<section class="chapter" id="chapter">
+
+  <div class="chapter__inner">
+
+    <div class="chapter__eyebrow">
+      <span>08</span>
+      <span class="chapter__line"></span>
+      <span>Our Work</span>
+    </div>
+
+    <div class="chapter__content">
+
+      <p class="chapter__kicker">
+        From heritage to possibility
+      </p>
+
+      <h2 class="chapter__title">
+  <span class="chapter__line-text">What we carry</span>
+  <span class="chapter__line-text">shapes what comes</span>
+  <span class="chapter__line-text chapter__line-text--accent">next.</span>
+</h2>
+
+      <p class="chapter__description">
+        We create pathways that connect heritage,
+        creativity and opportunity — giving people
+        the space to build something of their own.
+      </p>
+
+      <a href="#programmes" class="chapter__link">
+        Explore our programmes
+        <span>↗</span>
+      </a>
+
+    </div>
+
+    <div class="chapter__footer">
+      <span>Ìmísí Foundation</span>
+      <span>08 — 09</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================================
+     SECTION 09 — WHAT MOVES FORWARD
+     ========================================================== -->
+
+<section class="forward" id="movement">
+
+  <div class="forward__inner">
+
+    <div class="forward__top">
+
+      <div class="forward__eyebrow">
+        <span>09</span>
+        <span class="forward__line"></span>
+        <span>The Movement</span>
+      </div>
+
+      <p class="forward__intro">
+        What happens when knowledge is given somewhere to go.
+      </p>
+
+    </div>
+
+
+    <div class="forward__content">
+
+      <div class="forward__words">
+
+        <span>Heritage.</span>
+        <span>Knowledge.</span>
+        <span>People.</span>
+
+      </div>
+
+
+      <div class="forward__statement">
+
+        <p>
+          We connect people to knowledge,
+          knowledge to experience,
+          and experience to opportunity.
+        </p>
+
+        <h2>
+          What we carry
+          <span>moves forward.</span>
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="forward__footer">
+
+      <span>Ìmísí Foundation</span>
+
+      <span>09 — 10</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- =========== MISSION ======== -->
+
+    <section class="mission"></section>
+
+    <!-- ========= PROGRAMMES =========== -->
+
+    <section class="programmes"></section>
+
+    <!-- ========= IMPACT  ======== -->
+
+    <section class="impact"></section>
+
+    <!-- ======= FOOTER =========== -->
+
+    <!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+
+<footer class="site-footer">
+
+  <div class="site-footer__inner">
+
+    <!-- MAIN CTA -->
+
+    <div class="site-footer__hero">
+
+      <span class="site-footer__eyebrow">
+        Ìmísí Foundation
+      </span>
+
+      <h2 class="site-footer__title">
+        Keep knowledge
+        <span>moving.</span>
+      </h2>
+
+      <p class="site-footer__intro">
+        Heritage continues when knowledge is shared,
+        practised and carried forward.
+      </p>
+
+      <div class="site-footer__actions">
+
+        <a
+          href="#get-involved"
+          class="site-footer__button site-footer__button--lime"
+        >
+          Partner With Us
+
+          <span>↗</span>
+        </a>
+
+        <a
+          href="#support"
+          class="site-footer__button site-footer__button--ghost"
+        >
+          Support the Foundation
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+
+        <div class="site-footer__logo">
+          ÌMÍSÍ
+        </div>
+
+        <p>
+          A living institution for heritage,
+          knowledge and possibility.
+        </p>
+
+      </div>
+
+
+      <div class="site-footer__column">
+
+        <span class="site-footer__label">
+          Explore
+        </span>
+
+        <a href="#pipeline">
+          Heritage Pipeline
+        </a>
+
+        <a href="#why">
+          Why This Matters
+        </a>
+
+        <a href="#knowledge">
+          Knowledge
+        </a>
+
+        <a href="#ecosystem">
+          Ecosystem
+        </a>
+
+      </div>
+
+
+      <div class="site-footer__column">
+
+        <span class="site-footer__label">
+          Connect
+        </span>
+
+        <a href="#get-involved">
+          Partner With Us
+        </a>
+
+        <a href="#support">
+          Support
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <div class="site-footer__column">
+
+        <span class="site-footer__label">
+          Follow
+        </span>
+
+        <a href="#">
+          Instagram
+        </a>
+
+        <a href="#">
+          LinkedIn
+        </a>
+
+        <a href="#">
+          Facebook
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- LEGAL -->
+
+    <div class="site-footer__legal">
+
+      <span>
+        © <span id="year"></span>
+        Ìmísí Foundation.
+      </span>
+
+      <span>
+        All rights reserved.
+      </span>
+
+      <span class="site-footer__legal-right">
+        Discover · Connect · Learn · Experience · Create · Transition · Return
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- WORDMARK -->
+
+  <div class="site-footer__wordmark">
+    ÌMÍSÍ
+  </div>
+
+</footer>
+
+    <button
+      class="scroll-to-top-btn"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
+
+    <!-- =======================================
+GSAP
+======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/home-hero.js"></script>
+    <script src="./assets/js/intro.js"></script>
+    <script src="./assets/js/foundation.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
+    <!-- THREE.JS IMPORT MAP -->
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
+    <script type="module" src="./assets/js/basket.js"></script>
+  </body>
+</html>

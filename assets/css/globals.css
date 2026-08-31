@@ -1,0 +1,143 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Marcellus", serif;
+  background: #fafdee;
+  color: #1f1f1f;
+  overflow-x: hidden;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Layout */
+
+.container {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+/* Brand Colours */
+
+:root {
+  --primary: #076870;
+  --secondary: #c7d413;
+  --cream: #fafdee;
+  --text: #404040;
+  --white: #ffffff;
+
+  --transition: 0.4s ease;
+}
+
+/* =========================== CURSOR ==================================== */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  display: grid;
+  place-items: center;
+  transition:
+    width 0.25s,
+    height 0.25s,
+    background 0.25s;
+}
+.cursor__label {
+  font-family: var(--mono);
+  font-size: 0;
+  letter-spacing: 0.1em;
+  color: #000;
+  text-transform: uppercase;
+}
+.cursor.is-active {
+  width: 42px;
+  height: 42px;
+}
+.cursor.has-label {
+  width: 72px;
+  height: 72px;
+  background: #fff;
+}
+.cursor.has-label .cursor__label {
+  font-size: 11px;
+}
+body.cursor-on,
+body.cursor-on * {
+  cursor: none !important;
+}
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}
+
+/* ====================== SCROLL PROGRESS / SWEEP ======================== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  height: 3px;
+  width: 100%;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: linear-gradient(
+    90deg,
+    var(--teal),
+    var(--green) 55%,
+    var(--lime)
+  );
+}
+.sweep {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  transform: translateY(100%);
+  background: var(--teal);
+  color: var(--bone);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.sweep__title {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}

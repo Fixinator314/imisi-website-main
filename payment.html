@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donate</title>
+
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/payment.css">
+
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/payment.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Foundation
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li><a href="#">Programs</a></li>
+
+                <li class="dropdown">
+
+                    <button class="dropdown-btn">
+                        Partner With Us
+                        <span class="arrow">&#9662;</span>
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a href="payment.html">Donate</a></li>
+
+                        <li><a href="#">Become a Volunteer</a></li>
+
+                        <li><a href="#">Corporate Partnership</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+            <button class="hamburger">
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main class="payment-page">
+
+        <div class="payment-card">
+
+            <h1>Make a Donation</h1>
+
+            <p>
+                Your generosity helps us continue transforming lives.
+            </p>
+
+            <form id="donation-form">
+
+                <label>Donation Amount</label>
+
+                <div class="amount-buttons">
+
+                    <button type="button" class="amount-btn" data-amount="100">
+                        R100
+                    </button>
+
+                    <button type="button" class="amount-btn" data-amount="250">
+                        R250
+                    </button>
+
+                    <button type="button" class="amount-btn" data-amount="500">
+                        R500
+                    </button>
+
+                    <button type="button" class="amount-btn" data-amount="1000">
+                        R1000
+                    </button>
+
+                </div>
+
+                <input type="number" id="amount" placeholder="Or enter custom amount" min="1" required>
+
+                <input type="text" id="name" placeholder="Full Name" required>
+
+                <input type="email" id="email" placeholder="Email Address" required>
+
+                <button class="donate-btn">
+                    Donate Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

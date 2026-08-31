@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donation Successful</title>
+
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/success.css">
+
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/success.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Foundation
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li><a href="#">Programs</a></li>
+
+                <li class="dropdown">
+
+                    <button class="dropdown-btn">
+                        Partner With Us
+                        <span class="arrow">&#9662;</span>
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="payment.html">Donate</a></li>
+                        <li><a href="#">Become a Volunteer</a></li>
+                        <li><a href="#">Corporate Partnership</a></li>
+                    </ul>
+
+                </li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+            <button class="hamburger">
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main class="success-page">
+
+        <div class="success-card">
+
+            <div class="success-icon pending" id="successIcon">
+                ⏳
+            </div>
+
+            <h1 id="heading">
+                Verifying Your Donation...
+            </h1>
+
+            <p class="description" id="description">
+                Please wait while we confirm your payment with our payment provider.
+                This usually takes only a few seconds.
+            </p>
+
+            <div class="donation-details">
+
+                <div class="detail">
+                    <span>Reference</span>
+                    <strong id="reference">
+                        Loading...
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Donor</span>
+                    <strong id="name">
+                        Loading...
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Email</span>
+                    <strong id="email">
+                        Loading...
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Amount</span>
+                    <strong id="amount">
+                        Loading...
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Payment Status</span>
+                    <strong id="status">
+                        Verifying your payment...
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Paid At</span>
+                    <strong id="paidAt">
+                        Waiting for confirmation...
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="success-message">
+
+                <p id="receiptMessage">
+                    📧 Your donation receipt will be emailed automatically once your payment has been confirmed.
+                </p>
+
+            </div>
+
+            <div class="actions">
+
+                <a href="index.html" class="home-btn">
+                    Return Home
+                </a>
+
+                <a href="payment.html" class="donate-again-btn">
+                    Donate Again
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

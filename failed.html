@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Unsuccessful</title>
+
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/failed.css">
+
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/failed.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Foundation
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">Programs</a>
+                </li>
+
+                <li class="dropdown">
+
+                    <button class="dropdown-btn">
+                        Partner With Us
+                        <span class="arrow">&#9662;</span>
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="payment.html">Donate</a></li>
+                        <li><a href="#">Become a Volunteer</a></li>
+                        <li><a href="#">Corporate Partnership</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+            </ul>
+
+            <button class="hamburger">
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main class="failed-page">
+
+        <div class="failed-card">
+
+            <div class="failed-icon">
+                ✕
+            </div>
+
+            <h1>
+                Payment Unsuccessful
+            </h1>
+
+            <p class="description">
+                Unfortunately, we couldn't complete your donation.
+                Don't worry—no donation has been recorded yet. You can try again whenever you're ready.
+            </p>
+
+            <div class="failure-details">
+
+                <div class="detail">
+
+                    <span>Payment Reference</span>
+
+                    <strong id="reference">
+                        Loading...
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="failure-reasons">
+
+                <h3>
+                    Possible Reasons
+                </h3>
+
+                <ul>
+
+                    <li>You cancelled the payment.</li>
+
+                    <li>Your bank declined the transaction.</li>
+
+                    <li>There was a temporary network issue.</li>
+
+                    <li>Your card has insufficient funds.</li>
+
+                    <li>Your payment session expired.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="actions">
+
+                <a href="payment.html" class="retry-btn">
+                    Try Again
+                </a>
+
+                <a href="index.html" class="home-btn">
+                    Return Home
+                </a>
+
+            </div>
+
+            <p class="support-text">
+                If money was deducted from your account but you have not received confirmation,
+                please contact us and provide the payment reference above so we can assist you.
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
