@@ -148,7 +148,8 @@ HEADER
         <div class="nav__links" id="navLinks">
           <a href="#about" data-sweep="About"> About </a>
 
-          <a href="#pipeline" data-mega="1" data-sweep="Heritage Pipeline">
+          <!-- data-mega="1" -->
+          <a href="#pipeline"  data-sweep="Heritage Pipeline">
             Heritage Pipeline
           </a>
 
@@ -838,18 +839,50 @@ HERO
             <video
               class="alchemy__video"
               autoplay
-              muted
+              
               loop
               playsinline
               preload="auto"
               aria-hidden="true"
             >
               <source
-                src="./assets/images/true-life-alchemy.mp4"
+                src="https://res.cloudinary.com/jf4bgnfx/video/upload/v1788170121/Telephone_Wired_Baskets_Episode_-_Compressed.mp4"
                 type="video/mp4"
               />
             </video>
           </div>
+
+          <!-- VIDEO CONTROLS -->
+    <div class="alchemy__controls">
+
+      <button
+        class="alchemy__play"
+        type="button"
+        aria-label="Play video"
+      >
+        <span class="alchemy__play-icon">▶</span>
+        <span class="alchemy__pause-icon">Ⅱ</span>
+      </button>
+
+      <div class="alchemy__timeline">
+        <input
+          class="alchemy__progress"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          step="0.1"
+          aria-label="Video progress"
+        />
+      </div>
+
+      <span class="alchemy__time">
+        <span class="alchemy__current">00:00</span>
+        /
+        <span class="alchemy__duration">00:00</span>
+      </span>
+
+    </div>
 
           <div class="alchemy__caption">
             <span class="alchemy__caption-number"> 06 </span>
@@ -1372,7 +1405,10 @@ GSAP
 
     <!-- JS -->
 
+    
     <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/alchemy-video.js"></script>
+    <script src="./assets/js/cursor.js"></script>
     <script src="./assets/js/home-hero.js"></script>
     <script src="./assets/js/intro.js"></script>
     <script src="./assets/js/foundation.js"></script>
