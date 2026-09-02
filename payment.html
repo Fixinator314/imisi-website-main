@@ -1,121 +1,457 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Ìmísí Foundation</title>
 
-    <title>Donate</title>
+    <!-- ==========================================================
+         STYLES
+         ========================================================== -->
 
-    <link rel="stylesheet" href="./assets/css/globals.css">
-    <link rel="stylesheet" href="./assets/css/navbar.css">
-    <link rel="stylesheet" href="./assets/css/payment.css">
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/payment.css" />
 
-    <script src="./assets/js/navbar.js" defer></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- ==========================================================
+         SCRIPTS
+         ========================================================== -->
+
     <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/navbar.js" defer></script>
     <script src="./assets/js/payment.js" defer></script>
+  </head>
 
-</head>
+  <body>
+    <!-- ==========================================================
+         NAVBAR
+         ========================================================== -->
 
-<body>
+    <header class="header nav-wrap">
+      <nav class="nav" id="nav" data-state="top">
+        <!-- LOGO -->
 
-    <header class="header">
+        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+        </a>
 
-        <nav class="navbar">
+        <!-- ======================================================
+             DESKTOP NAVIGATION
+             ====================================================== -->
 
-            <a href="index.html" class="logo">
-                Foundation
-            </a>
+        <div class="nav__links" id="navLinks">
+          <a href="./index.html#about" data-sweep="About"> About </a>
 
-            <ul class="nav-links">
+          <a href="./index.html#pipeline" data-sweep="Heritage Pipeline">
+            Heritage Pipeline
+          </a>
 
-                <li><a href="index.html">Home</a></li>
+          <a href="./index.html#programmes" data-sweep="Programmes">
+            Programmes
+          </a>
 
-                <li><a href="#">About</a></li>
+          <a href="./index.html#stories" data-sweep="Stories"> Stories </a>
 
-                <li><a href="#">Programs</a></li>
+          <a href="./index.html#impact" data-sweep="Impact"> Impact </a>
 
-                <li class="dropdown">
-
-                    <button class="dropdown-btn">
-                        Partner With Us
-                        <span class="arrow">&#9662;</span>
-                    </button>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a href="payment.html">Donate</a></li>
-
-                        <li><a href="#">Become a Volunteer</a></li>
-
-                        <li><a href="#">Corporate Partnership</a></li>
-
-                    </ul>
-
-                </li>
-
-                <li><a href="#">Contact</a></li>
-
-            </ul>
-
-            <button class="hamburger">
-                ☰
-            </button>
-
-        </nav>
-
-    </header>
-
-    <main class="payment-page">
-
-        <div class="payment-card">
-
-            <h1>Make a Donation</h1>
-
-            <p>
-                Your generosity helps us continue transforming lives.
-            </p>
-
-            <form id="donation-form">
-
-                <label>Donation Amount</label>
-
-                <div class="amount-buttons">
-
-                    <button type="button" class="amount-btn" data-amount="100">
-                        R100
-                    </button>
-
-                    <button type="button" class="amount-btn" data-amount="250">
-                        R250
-                    </button>
-
-                    <button type="button" class="amount-btn" data-amount="500">
-                        R500
-                    </button>
-
-                    <button type="button" class="amount-btn" data-amount="1000">
-                        R1000
-                    </button>
-
-                </div>
-
-                <input type="number" id="amount" placeholder="Or enter custom amount" min="1" required>
-
-                <input type="text" id="name" placeholder="Full Name" required>
-
-                <input type="email" id="email" placeholder="Email Address" required>
-
-                <button class="donate-btn">
-                    Donate Now
-                </button>
-
-            </form>
-
+          <a href="./index.html#get-involved" data-sweep="Get Involved">
+            Get Involved
+          </a>
         </div>
 
+        <!-- ======================================================
+             CTA AREA
+             ====================================================== -->
+
+        <div class="nav__cta">
+          <a class="nav__support" href="./index.html#support"> Support </a>
+
+          <!-- ====================================================
+               PARTNER WITH US DROPDOWN
+               ==================================================== -->
+
+          <div class="nav__partner-wrap">
+            <button
+              class="btn btn--solid nav__partner nav__partner-btn"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Partner With Us
+
+              <svg
+                class="ico nav__partner-arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <div class="nav__partner-menu" aria-hidden="true">
+              <a href="./payment.html"> Donate </a>
+
+              <a href="./index.html#get-involved"> Volunteer </a>
+
+              <a href="./index.html#get-involved"> Corporate Partnership </a>
+            </div>
+          </div>
+
+          <!-- ====================================================
+               MOBILE BURGER
+               ==================================================== -->
+
+          <button class="nav__burger" id="burger" aria-label="Open menu">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+             HERITAGE PIPELINE MEGA MENU
+             ====================================================== -->
+
+        <div class="mega" id="mega" aria-hidden="true">
+          <div class="mega__list" id="megaList"></div>
+
+          <div class="mega__preview" id="megaPreview"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==========================================================
+         MOBILE FULLSCREEN MENU
+         ========================================================== -->
+
+    <div class="mobile" id="mobile" aria-hidden="true">
+      <div class="grain"></div>
+
+      <div class="mobile__top">
+        <span class="mobile__brand">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+
+          <span>Ìmísí Foundation</span>
+        </span>
+
+        <button class="mobile__close" id="mobileClose" aria-label="Close menu">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile__nav" id="mobileNav"></nav>
+    </div>
+
+    <!-- ==========================================================
+         PAYMENT PAGE
+         ========================================================== -->
+
+    <main class="payment-page">
+      <section class="payment-card">
+        <h1>Support Our Mission</h1>
+
+        <p class="subtitle">
+          Every contribution helps preserve heritage, empower learners and
+          strengthen communities.
+        </p>
+
+        <form id="donation-form" novalidate>
+          <!-- ====================================================
+               DONATION FREQUENCY
+               ==================================================== -->
+
+          <!-- <div class="form-group">
+            <label> Donation Frequency </label>
+
+            <div class="frequency-options">
+              <label class="frequency-option">
+                <input type="radio" name="frequency" value="once" checked />
+
+                <span> Once-Off </span>
+              </label>
+
+              <label class="frequency-option">
+                <input type="radio" name="frequency" value="daily" />
+
+                <span> Daily </span>
+              </label>
+
+              <label class="frequency-option">
+                <input type="radio" name="frequency" value="weekly" />
+
+                <span> Weekly </span>
+              </label>
+
+              <label class="frequency-option">
+                <input type="radio" name="frequency" value="monthly" />
+
+                <span> Monthly </span>
+              </label>
+
+              <label class="frequency-option">
+                <input type="radio" name="frequency" value="quarterly" />
+
+                <span> Every 3 Months </span>
+              </label>
+
+              <label class="frequency-option">
+                <input type="radio" name="frequency" value="biannually" />
+
+                <span> Every 6 Months </span>
+              </label>
+
+              <label class="frequency-option">
+                <input type="radio" name="frequency" value="annually" />
+
+                <span> Yearly </span>
+              </label>
+            </div>
+          </div> -->
+
+          <!-- ====================================================
+               WHAT ARE YOU SUPPORTING?
+               ==================================================== -->
+
+          <div class="form-group">
+            <label> What would you like your donation to support? </label>
+
+            <div class="support-options">
+              <label class="support-card">
+                <input type="radio" name="supportArea" value="cohort" checked />
+
+                <div>
+                  <strong> Fund a Heritage Pipeline Cohort </strong>
+
+                  <p>
+                    Support an entire cohort of learners from recruitment
+                    through completion.
+                  </p>
+                </div>
+              </label>
+
+              <label class="support-card">
+                <input type="radio" name="supportArea" value="learner" />
+
+                <div>
+                  <strong> Sponsor a Learner </strong>
+
+                  <p>
+                    Help cover learning opportunities, mentorship and programme
+                    participation.
+                  </p>
+                </div>
+              </label>
+
+              <label class="support-card">
+                <input type="radio" name="supportArea" value="artisan" />
+
+                <div>
+                  <strong> Support Artisan Skills Transfer </strong>
+
+                  <p>
+                    Preserve traditional knowledge by supporting master artisans
+                    and experts.
+                  </p>
+                </div>
+              </label>
+
+              <label class="support-card">
+                <input type="radio" name="supportArea" value="archive" />
+
+                <div>
+                  <strong> Heritage Documentation & Archive </strong>
+
+                  <p>
+                    Help preserve oral histories, cultural records and digital
+                    archives.
+                  </p>
+                </div>
+              </label>
+
+              <label class="support-card">
+                <input type="radio" name="supportArea" value="museum" />
+
+                <div>
+                  <strong> Museum & Field Learning </strong>
+
+                  <p>
+                    Support educational visits, heritage experiences and
+                    cultural excursions.
+                  </p>
+                </div>
+              </label>
+
+              <label class="support-card">
+                <input type="radio" name="supportArea" value="materials" />
+
+                <div>
+                  <strong> Tools & Learning Materials </strong>
+
+                  <p>
+                    Provide equipment, materials and learning resources for
+                    participants.
+                  </p>
+                </div>
+              </label>
+
+              <label class="support-card">
+                <input type="radio" name="supportArea" value="operations" />
+
+                <div>
+                  <strong> Foundation Operations </strong>
+
+                  <p>Support the Foundation where the need is greatest.</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- ====================================================
+               SUGGESTED AMOUNT
+               ==================================================== -->
+          <!-- 
+          <div class="form-group">
+            <label> Donation Amount (ZAR) </label>
+
+            <div class="amount-buttons">
+              <button type="button" class="amount-btn" data-amount="100">
+                R100
+              </button>
+
+              <button type="button" class="amount-btn" data-amount="250">
+                R250
+              </button>
+
+              <button type="button" class="amount-btn" data-amount="500">
+                R500
+              </button>
+
+              <button type="button" class="amount-btn" data-amount="1000">
+                R1 000
+              </button>
+            </div>
+          </div> -->
+
+          <div class="form-group">
+            <label for="amount">Enter Your Own Amount </label>
+
+            <input
+              id="amount"
+              type="number"
+              min="1"
+              step="1"
+              placeholder="Enter donation amount"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name"> Full Name </label>
+
+            <input
+              id="name"
+              type="text"
+              maxlength="100"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email"> Email Address </label>
+
+            <input
+              id="email"
+              type="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+
+          <button type="submit" class="donate-btn">Donate Securely</button>
+        </form>
+
+        <div class="payment-info">
+          <h3>Why Your Support Matters</h3>
+
+          <p>
+            Every donation helps the Ìmísí Foundation preserve cultural
+            heritage, develop artisan skills, empower learners and create
+            opportunities for future generations.
+          </p>
+
+          <div class="payment-benefits">
+            <div class="benefit">
+              <span><i class="fa-solid fa-lock"></i></span>
+
+              <div>
+                <strong> Secure Payments </strong>
+
+                <p>
+                  All donations are securely processed through
+                  <strong>Paystack</strong>.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <span><i class="fa-solid fa-envelope"></i></span>
+
+              <div>
+                <strong> Email Receipt </strong>
+
+                <p>
+                  You'll receive an official donation receipt once your payment
+                  has been confirmed.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <span><i class="fa-solid fa-heart"></i></span>
+
+              <div>
+                <strong> Meaningful Impact </strong>
+
+                <p>
+                  Your contribution directly supports the programme or
+                  initiative you've selected.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <span><i class="fa-solid fa-gift"></i></span>
+
+              <div>
+                <strong> Recurring Giving </strong>
+
+                <p>
+                  Recurring donations can be cancelled at any time through your
+                  payment provider.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>

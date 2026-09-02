@@ -166,13 +166,29 @@ HEADER
         <div class="nav__cta">
           <a class="nav__support" href="#support"> Support </a>
 
-          <a class="btn btn--solid nav__partner" href="#get-involved">
-            Partner With Us
+          <li class="nav__dropdown">
+  <button class="btn btn--solid nav__partner nav__dropdown-btn" type="button">
+    Partner With Us
 
-            <svg class="ico" viewBox="0 0 24 24">
-              <path d="M7 17 17 7M9 7h8v8" />
-            </svg>
-          </a>
+    <svg class="ico nav__dropdown-arrow" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  </button>
+
+  <ul class="nav__dropdown-menu">
+    <li>
+      <a href="payment.html">Donate</a>
+    </li>
+
+    <li>
+      <a href="#get-involved">Volunteer</a>
+    </li>
+
+    <li>
+      <a href="#get-involved">Corporate Partnership</a>
+    </li>
+  </ul>
+</li>
 
           <!-- MOBILE BURGER -->
           <button class="nav__burger" id="burger" aria-label="Open menu">

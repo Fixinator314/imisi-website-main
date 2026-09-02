@@ -1,47 +1,196 @@
-const form = document.getElementById("donation-form");
+/* =========================================================
+   IMISI FOUNDATION — PAYMENT
+   Donation Form
+========================================================= */
 
-const amountButtons = document.querySelectorAll(".amount-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("donation-form");
 
-const amountInput = document.getElementById("amount");
+  const amountButtons = document.querySelectorAll(".amount-btn");
 
-amountButtons.forEach(button => {
+  const amountInput = document.getElementById("amount");
 
+  const frequencyInputs = document.querySelectorAll('input[name="frequency"]');
+
+  const supportInputs = document.querySelectorAll('input[name="supportArea"]');
+
+  /* =========================================================
+     SAFETY CHECK
+  ========================================================= */
+
+  if (!form || !amountInput) {
+    return;
+  }
+
+  /* =========================================================
+     SUGGESTED AMOUNT BUTTONS
+  ========================================================= */
+
+  amountButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      /* Remove active state from all buttons */
 
-        amountButtons.forEach(btn => btn.classList.remove("active"));
+      amountButtons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
 
-        button.classList.add("active");
+      /* Activate selected button */
 
-        amountInput.value = button.dataset.amount;
+      button.classList.add("active");
 
+      /* Put selected amount into input */
+
+      amountInput.value = button.dataset.amount;
     });
+  });
 
-});
+  /* =========================================================
+     CUSTOM AMOUNT INPUT
+     
+     If the user manually changes the amount,
+     remove the selected preset button.
+  ========================================================= */
 
-form.addEventListener("submit", async (e) => {
+  amountInput.addEventListener("input", () => {
+    const currentAmount = amountInput.value;
 
-    e.preventDefault();
+    amountButtons.forEach((button) => {
+      if (button.dataset.amount === currentAmount) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    });
+  });
 
-    const donation = {
+  /* =========================================================
+     FORM SUBMISSION
+  ========================================================= */
 
-        name: document.getElementById("name").value.trim(),
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-        email: document.getElementById("email").value.trim(),
+    /* ---------------------------------------------------------
+       GET DONOR INFORMATION
+    --------------------------------------------------------- */
 
-        amount: Number(amountInput.value),
+    const name = document.getElementById("name").value.trim();
 
-    };
+    const email = document.getElementById("email").value.trim();
 
-    try {
+    const amount = Number(amountInput.value);
 
-        const response = await initializeDonation(donation);
+    /* ---------------------------------------------------------
+       GET DONATION FREQUENCY
+    --------------------------------------------------------- */
 
-        window.location.href = response.authorization_url;
+    const selectedFrequency = document.querySelector(
+      'input[name="frequency"]:checked',
+    );
 
-    } catch (error) {
+    const frequency = selectedFrequency ? selectedFrequency.value : "once";
 
-        alert(error.message);
+    /* ---------------------------------------------------------
+       GET SUPPORT AREA
+    --------------------------------------------------------- */
 
+    const selectedSupport = document.querySelector(
+      'input[name="supportArea"]:checked',
+    );
+
+    const supportArea = selectedSupport ? selectedSupport.value : "operations";
+
+    /* =========================================================
+       BASIC VALIDATION
+    ========================================================= */
+
+    if (!name) {
+      alert("Please enter your full name.");
+      return;
     }
 
+    if (!email) {
+      alert("Please enter your email address.");
+      return;
+    }
+
+    if (!amount || amount < 1) {
+      alert("Please enter a valid donation amount.");
+      amountInput.focus();
+      return;
+    }
+
+    /* =========================================================
+       DONATION OBJECT
+    ========================================================= */
+
+    const donation = {
+      name,
+
+      email,
+
+      amount,
+
+      frequency,
+
+      supportArea,
+    };
+
+    /* =========================================================
+       DISABLE BUTTON WHILE PROCESSING
+    ========================================================= */
+
+    const submitButton = form.querySelector(".donate-btn");
+
+    const originalButtonText = submitButton
+      ? submitButton.textContent
+      : "Donate Securely";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+
+      submitButton.textContent = "Processing...";
+    }
+
+    /* =========================================================
+       INITIALIZE PAYMENT
+    ========================================================= */
+
+    try {
+      const response = await initializeDonation(donation);
+
+      /* -------------------------------------------------------
+         Make sure Paystack returned a payment URL
+      ------------------------------------------------------- */
+
+      if (!response || !response.authorization_url) {
+        throw new Error("Unable to initialize the payment. Please try again.");
+      }
+
+      /* -------------------------------------------------------
+         Redirect to Paystack
+      ------------------------------------------------------- */
+
+      window.location.href = response.authorization_url;
+    } catch (error) {
+      /* =========================================================
+       ERROR HANDLING
+    ========================================================= */
+
+      console.error("Donation error:", error);
+
+      alert(
+        error?.message ||
+          "Something went wrong while processing your donation. Please try again.",
+      );
+
+      /* Restore button */
+
+      if (submitButton) {
+        submitButton.disabled = false;
+
+        submitButton.textContent = originalButtonText;
+      }
+    }
+  });
 });

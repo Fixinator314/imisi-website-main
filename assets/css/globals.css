@@ -81,7 +81,7 @@ ul {
     background 0.25s;
 }
 .cursor__label {
-  font-family: var(--mono);
+  font-family: "Marcellus", serif;
   font-size: 0;
   letter-spacing: 0.1em;
   color: #000;
@@ -138,6 +138,6 @@ body.cursor-on * {
   pointer-events: none;
 }
 .sweep__title {
-  font-family: var(--serif);
+  font-family: "Marcellus", serif;
   font-size: clamp(2.5rem, 6vw, 5rem);
 }

@@ -184,3 +184,22 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNav();
   });
 });
+
+/* =========================================================
+   PARTNER WITH US DROPDOWN
+========================================================= */
+
+const partnerDropdown = document.querySelector(".nav__dropdown");
+const partnerButton = document.querySelector(".nav__dropdown-btn");
+
+if (partnerDropdown && partnerButton) {
+  partnerButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    partnerDropdown.classList.toggle("is-open");
+  });
+
+  document.addEventListener("click", () => {
+    partnerDropdown.classList.remove("is-open");
+  });
+}
