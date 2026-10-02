@@ -1,0 +1,370 @@
+/* ==========================================================
+   IMISI HOUSE — FROM HERITAGE TO POSSIBILITY
+   Brand-aligned styling
+   ========================================================== */
+
+.heritage-possibility {
+  --imisi-teal: #087078;
+  --imisi-lime: #c6df00;
+  --imisi-coral: #e98582;
+  --imisi-bone: #f4f5e9;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 100vh;
+
+  background: var(--imisi-bone);
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.heritage-possibility__inner {
+  width: min(1400px, 100%);
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: clamp(120px, 13vw, 180px) clamp(24px, 7vw, 110px) 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ==========================================================
+   EYEBROW
+   ========================================================== */
+
+.heritage-possibility__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 55px;
+
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+
+  opacity: 0.8;
+}
+
+.heritage-possibility__line {
+  width: 42px;
+  height: 1px;
+
+  background: var(--imisi-lime);
+}
+
+/* ==========================================================
+   MAIN STATEMENT
+   ========================================================== */
+
+.heritage-possibility__statement {
+  max-width: 1100px;
+
+  margin-bottom: 100px;
+}
+
+.heritage-possibility__title {
+  margin: 0;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(60px, 8.5vw, 138px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+
+  color: var(--imisi-charcoal);
+}
+
+.heritage-possibility__title span {
+  display: block;
+
+  color: var(--imisi-teal);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   FLOW
+   ========================================================== */
+
+.heritage-possibility__flow {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    minmax(40px, 100px)
+    1fr
+    minmax(40px, 100px)
+    1fr
+    minmax(40px, 100px)
+    1fr;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+/* ==========================================================
+   NODE
+   ========================================================== */
+
+.possibility-node {
+  position: relative;
+
+  padding: 32px 30px 35px;
+
+  min-height: 190px;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.25);
+
+  transition:
+    transform 0.5s ease,
+    background 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+/* number */
+
+.possibility-node__number {
+  display: block;
+
+  margin-bottom: 45px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: var(--imisi-teal);
+}
+
+/* title */
+
+.possibility-node h3 {
+  margin: 0 0 12px;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(25px, 2.2vw, 38px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--imisi-charcoal);
+}
+
+/* description */
+
+.possibility-node p {
+  max-width: 190px;
+
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+
+  color: rgba(63, 63, 63, 0.68);
+}
+
+/* ==========================================================
+   ACTIVE NODE
+   ========================================================== */
+
+.possibility-node.is-active {
+  background: var(--imisi-teal);
+
+  border-top-color: var(--imisi-teal);
+
+  transform: translateY(-12px);
+
+  color: var(--imisi-bone);
+}
+
+.possibility-node.is-active .possibility-node__number {
+  color: var(--imisi-lime);
+}
+
+.possibility-node.is-active h3 {
+  color: var(--imisi-bone);
+}
+
+.possibility-node.is-active p {
+  color: rgba(244, 245, 233, 0.72);
+}
+
+/* ==========================================================
+   CONNECTORS
+   ========================================================== */
+
+.possibility-node__connector {
+  width: 100%;
+  height: 1px;
+
+  background: var(--imisi-lime);
+
+  transform-origin: left center;
+
+  opacity: 0.8;
+}
+
+/* ==========================================================
+   SMALL CORAL ACCENT
+   ========================================================== */
+
+.heritage-possibility__flow::after {
+  content: "";
+
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-coral);
+
+  right: 10%;
+  margin-top: -270px;
+
+  opacity: 0.9;
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.heritage-possibility__closing {
+  max-width: 680px;
+
+  margin-top: 100px;
+  margin-left: auto;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.2);
+}
+
+.heritage-possibility__closing p {
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(15px, 1.4vw, 19px);
+
+  line-height: 1.7;
+
+  color: var(--imisi-charcoal);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1000px) {
+  .heritage-possibility__flow {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+  }
+
+  .possibility-node__connector {
+    display: none;
+  }
+
+  .heritage-possibility__flow::after {
+    right: 8%;
+    margin-top: -120px;
+  }
+}
+
+@media (max-width: 650px) {
+  .heritage-possibility__inner {
+    min-height: auto;
+
+    padding: 120px 24px 80px;
+  }
+
+  .heritage-possibility__eyebrow {
+    margin-bottom: 40px;
+  }
+
+  .heritage-possibility__statement {
+    margin-bottom: 65px;
+  }
+
+  .heritage-possibility__title {
+    font-size: clamp(52px, 15vw, 85px);
+
+    line-height: 0.92;
+  }
+
+  .heritage-possibility__flow {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .possibility-node {
+    width: 100%;
+
+    min-height: 170px;
+
+    padding: 28px 24px;
+  }
+
+  .possibility-node__number {
+    margin-bottom: 35px;
+  }
+
+  .possibility-node.is-active {
+    transform: translateX(8px);
+  }
+
+  .heritage-possibility__closing {
+    margin-top: 70px;
+  }
+
+  .heritage-possibility__flow::after {
+    right: 15%;
+
+    margin-top: -300px;
+  }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .possibility-node {
+    transition: none;
+  }
+}

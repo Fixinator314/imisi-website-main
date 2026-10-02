@@ -1,0 +1,413 @@
+/* ==========================================================
+   IMISI FOUNDATION — STORIES IN MOTION
+   05 / Stories in Motion
+   ========================================================== */
+
+.stories-motion {
+  position: relative;
+  height: 320vh;
+
+  background: #f4f1e8;
+  color: #3f3f3f;
+}
+
+/* ==========================================================
+   STICKY FRAME
+   ========================================================== */
+
+.stories-motion__sticky {
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+  min-height: 700px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 5vh 5vw;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.stories-motion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.stories-motion__eyebrow {
+  color: #0a6970;
+}
+
+.stories-motion__index {
+  opacity: 0.45;
+}
+
+/* ==========================================================
+   INTRO
+   ========================================================== */
+
+.stories-motion__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-top: 7vh;
+  margin-bottom: 5vh;
+}
+
+.stories-motion__title {
+  margin: 0;
+
+  max-width: 800px;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.stories-motion__title em {
+  color: #0c9268;
+  font-style: italic;
+}
+
+.stories-motion__lead {
+  width: min(320px, 25vw);
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   VIEWPORT
+   ========================================================== */
+
+.stories-motion__viewport {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  overflow: visible;
+}
+
+/* ==========================================================
+   TRACK
+   ========================================================== */
+
+.stories-motion__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(3rem, 7vw, 8rem);
+
+  width: max-content;
+
+  will-change: transform;
+}
+
+/* ==========================================================
+   STORY
+   ========================================================== */
+
+.motion-story {
+  position: relative;
+
+  width: min(38vw, 600px);
+
+  flex: 0 0 auto;
+}
+
+.motion-story--large {
+  width: min(45vw, 700px);
+}
+
+.motion-story--offset {
+  margin-top: 9vh;
+}
+
+/* ==========================================================
+   IMAGE
+   ========================================================== */
+
+.motion-story__image {
+  position: relative;
+
+  width: 100%;
+  height: clamp(300px, 43vh, 520px);
+
+  overflow: hidden;
+
+  background: #d9d5ca;
+}
+
+.motion-story--large .motion-story__image {
+  height: clamp(340px, 47vh, 560px);
+}
+
+.motion-story__image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.15));
+
+  pointer-events: none;
+}
+
+.motion-story__image img {
+  width: 100%;
+  height: 115%;
+
+  object-fit: cover;
+
+  transform: scale(1.05);
+
+  will-change: transform;
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.motion-story__content {
+  position: relative;
+
+  padding: 1.5rem 0 0;
+}
+
+.motion-story__number {
+  display: inline-block;
+
+  margin-right: 1rem;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+
+  color: #0a6970;
+}
+
+.motion-story__category {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  opacity: 0.45;
+}
+
+.motion-story h3 {
+  margin: 1rem 0 0;
+
+  max-width: 550px;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.motion-story h3 em {
+  color: #0c9268;
+  font-style: italic;
+}
+
+.motion-story p {
+  max-width: 420px;
+
+  margin: 1.25rem 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.7;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   END STATEMENT
+   ========================================================== */
+
+.stories-motion__statement {
+  width: min(420px, 30vw);
+
+  flex: 0 0 auto;
+
+  margin-left: 4vw;
+}
+
+.stories-motion__statement span {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+
+  color: #0a6970;
+}
+
+.stories-motion__statement p {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  line-height: 1;
+}
+
+.stories-motion__statement strong {
+  display: block;
+
+  margin-top: 2rem;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+
+  color: #bed639;
+}
+
+/* ==========================================================
+   PROGRESS
+   ========================================================== */
+
+.stories-motion__progress {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  margin-top: 3vh;
+}
+
+.stories-motion__progress-line {
+  position: relative;
+
+  width: min(300px, 30vw);
+  height: 1px;
+
+  background: rgba(63, 63, 63, 0.2);
+}
+
+.stories-motion__progress-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+
+  width: 0%;
+
+  background: #0a6970;
+
+  transform-origin: left;
+}
+
+.stories-motion__progress-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+
+  opacity: 0.45;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .stories-motion {
+    height: auto;
+  }
+
+  .stories-motion__sticky {
+    position: relative;
+
+    height: auto;
+    min-height: 100vh;
+
+    padding: 6rem 7vw;
+  }
+
+  .stories-motion__index {
+    display: none;
+  }
+
+  .stories-motion__intro {
+    display: block;
+
+    margin-top: 5rem;
+  }
+
+  .stories-motion__title {
+    font-size: clamp(3.5rem, 15vw, 5.5rem);
+  }
+
+  .stories-motion__lead {
+    width: 100%;
+
+    margin-top: 2rem;
+  }
+
+  .stories-motion__viewport {
+    position: relative;
+
+    flex: 1;
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .stories-motion__track {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(3rem, 7vw, 8rem);
+
+    width: max-content;
+    min-width: max-content;
+
+    will-change: transform;
+  }
+
+  .motion-story,
+  .motion-story--large {
+    width: 100%;
+  }
+
+  .motion-story--offset {
+    margin-top: 0;
+  }
+
+  .motion-story__image,
+  .motion-story--large .motion-story__image {
+    height: 65vh;
+  }
+
+  .stories-motion__statement {
+    width: 100%;
+    margin: 0;
+  }
+
+  .stories-motion__progress {
+    display: none;
+  }
+}

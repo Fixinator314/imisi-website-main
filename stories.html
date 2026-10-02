@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Stories</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-hero.css" />
+    <link rel="stylesheet" href="./assets/css/stories-intro.css" />
+    <link rel="stylesheet" href="./assets/css/featured-story.css" />
+    <link rel="stylesheet" href="./assets/css/story-archive.css" />
+    <link rel="stylesheet" href="./assets/css/story-voices.css" />
+    <link rel="stylesheet" href="./assets/css/stories-motion.css" />
+    <link rel="stylesheet" href="./assets/css/stories-continue.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/intro.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="heritage-pipeline-page">
+    <!-- Custom desktop cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Route/section sweep used on nav clicks -->
+    <div class="sweep" id="sweep" aria-hidden="true">
+      <span class="sweep__title"></span>
+    </div>
+    <!-- ==========================================================
+     NAVBAR
+     ========================================================== -->
+
+    <header class="header nav-wrap">
+      <!-- ========================================================
+       DESKTOP NAVIGATION
+       ======================================================== -->
+
+      <nav class="nav" id="nav" data-state="top">
+        <!-- LOGO -->
+        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+        </a>
+
+        <!-- ======================================================
+         DESKTOP NAVIGATION LINKS
+         ====================================================== -->
+
+        <div class="nav__links" id="navLinks">
+          <a href="./heritage-pipeline.html" data-sweep="Heritage Pipeline">
+            Heritage Pipeline
+          </a>
+
+          <a href="./programmes.html" data-sweep="Programmes"> Programmes </a>
+
+          <a href="./stories.html" data-sweep="Stories"> Stories </a>
+
+          <a href="./impact.html" data-sweep="Impact"> Impact </a>
+
+          <a href="./get-involved.html" data-sweep="Get Involved">
+            Get Involved
+          </a>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP CTA
+         ====================================================== -->
+
+        <div class="nav__cta">
+          <a class="nav__support" href="#support"> Support </a>
+
+          <!-- DESKTOP PARTNER DROPDOWN -->
+
+          <div class="nav__dropdown">
+            <button
+              class="btn btn--solid nav__partner nav__dropdown-btn"
+              type="button"
+            >
+              Partner With Us
+
+              <svg
+                class="ico nav__dropdown-arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <ul class="nav__dropdown-menu">
+              <li>
+                <a href="payment.html"> Donate </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Volunteer </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Corporate Partnership </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ====================================================
+           MOBILE BURGER
+           ==================================================== -->
+
+          <button
+            class="nav__burger"
+            id="burger"
+            aria-label="Open menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP HERITAGE PIPELINE MEGA MENU
+         ====================================================== -->
+
+        <div class="mega" id="mega" aria-hidden="true">
+          <div class="mega__list" id="megaList"></div>
+
+          <div class="mega__preview" id="megaPreview"></div>
+        </div>
+      </nav>
+
+      <!-- ========================================================
+       MOBILE FULLSCREEN MENU
+       
+       IMPORTANT:
+       This is OUTSIDE the main .nav.
+       ======================================================== -->
+
+      <div class="mobile" id="mobile" aria-hidden="true">
+        <div class="grain"></div>
+
+        <!-- ======================================================
+         MOBILE TOP BAR
+         ====================================================== -->
+
+        <div class="mobile__top">
+          <a href="./index.html" class="mobile__brand">
+            <img
+              src="./assets/images/imnisi_foundation_logo2.png"
+              alt="Ìmísí Foundation"
+              class="mobile__brand-logo"
+            />
+          </a>
+
+          <!-- CLOSE BUTTON -->
+
+          <button
+            class="mobile__close"
+            id="mobileClose"
+            aria-label="Close menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         MOBILE NAVIGATION
+         ====================================================== -->
+
+        <nav class="mobile__nav" id="mobileNav">
+          <!-- ABOUT -->
+
+          <a href="./heritage-pipeline.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 01 </span>
+
+            Heritage Pipeline
+          </a>
+
+          <!-- HERITAGE PIPELINE -->
+
+          <a href="./programmes.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 02 </span>
+
+            Programmes
+          </a>
+
+          <!-- PROGRAMMES -->
+
+          <a href="./stories.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 03 </span>
+
+            Stories
+          </a>
+
+          <!-- STORIES -->
+
+          <a href="./impact.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 04 </span>
+
+            Impact
+          </a>
+
+          <!-- GET INVOLVED -->
+
+          <a href="./get-involved.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 05 </span>
+
+            Get Involved
+          </a>
+
+          <!-- ====================================================
+           MOBILE ACTIONS
+           ==================================================== -->
+
+          <div class="mobile__actions">
+            <!-- SUPPORT -->
+
+            <a
+              href="./payment.html"
+              class="mobile__action mobile__action--support"
+              data-mobile-link
+            >
+              Support
+            </a>
+
+            <!-- PARTNER WITH US -->
+
+            <button
+              class="mobile__action mobile__action--partner"
+              id="mobilePartnerToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobilePartnerMenu"
+            >
+              Partner With Us
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <!-- MOBILE PARTNER DROPDOWN -->
+
+            <div class="mobile__partner-menu" id="mobilePartnerMenu">
+              <a href="./payment.html" data-mobile-link> Donate </a>
+
+              <a href="./get-involved.html" data-mobile-link> Volunteer </a>
+
+              <a href="./get-involved.html" data-mobile-link>
+                Corporate Partnership
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================================
+     HERITAGE PIPELINE — HERO
+     ========================================================== -->
+
+    <main class="heritage-page">
+      <section class="heritage-hero" id="heritage-hero">
+        <!-- HERO BACKGROUND -->
+        <div class="heritage-hero__media" aria-hidden="true">
+          <img
+            src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+            alt=""
+            class="heritage-hero__image"
+          />
+
+          <div class="heritage-hero__overlay"></div>
+        </div>
+
+        <!-- HERO CONTENT -->
+        <div class="heritage-hero__inner">
+          <!-- EYEBROW -->
+          <div class="heritage-hero__eyebrow">
+            <span class="heritage-hero__eyebrow-line"></span>
+
+            <span> Heritage Pipeline </span>
+          </div>
+
+          <!-- TITLE -->
+          <h1 class="heritage-hero__title">
+            <span class="heritage-hero__title-line"> STORIES </span>
+
+            <!-- <span class="heritage-hero__title-line"> is not </span>
+
+            <span class="heritage-hero__title-line"> behind us. </span> -->
+          </h1>
+
+          <!-- INTRO -->
+          <div class="heritage-hero__bottom">
+            <p class="heritage-hero__intro">
+              It is knowledge carried forward — from one generation to the next,
+              through people, practice and possibility.
+            </p>
+
+            <div class="heritage-hero__meta">
+              <span>ÌMÍSÍ HOUSE</span>
+              <span>HERITAGE / KNOWLEDGE / POSSIBILITY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCROLL INDICATOR -->
+        <div class="heritage-hero__scroll">
+          <span class="heritage-hero__scroll-label">
+            Explore the pipeline
+          </span>
+
+          <span class="heritage-hero__scroll-line">
+            <span class="heritage-hero__scroll-dot"></span>
+          </span>
+        </div>
+      </section>
+
+      <section class="heritage-pipeline" id="pipeline">
+        <!-- We'll build this next -->
+      </section>
+    </main>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — STORIES INTRO
+     ========================================================== -->
+
+    <section class="stories-intro" id="stories-intro">
+      <div class="stories-intro__inner">
+        <header class="stories-intro__header">
+          <span class="stories-intro__eyebrow"> 01 / Stories </span>
+
+          <span class="stories-intro__index"> PEOPLE · PLACE · MEMORY </span>
+        </header>
+
+        <div class="stories-intro__main">
+          <h1 class="stories-intro__title">
+            Knowledge has
+            <span>a story.</span>
+          </h1>
+
+          <div class="stories-intro__copy">
+            <p class="stories-intro__lead">
+              Heritage lives through the people who carry it, the places that
+              hold it and the stories that give it meaning.
+            </p>
+
+            <p>
+              Explore the experiences, perspectives and moments that continue to
+              shape how knowledge moves forward.
+            </p>
+          </div>
+        </div>
+
+        <div class="stories-intro__bottom">
+          <div class="stories-intro__line"></div>
+
+          <div class="stories-intro__scroll">
+            <span>Scroll to explore</span>
+
+            <span>↓</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — FEATURED STORY
+     ========================================================== -->
+
+    <section class="featured-story" id="featured-story">
+      <div class="featured-story__inner">
+        <div class="featured-story__meta">
+          <span>02 / Featured Story</span>
+
+          <span>People · Place · Practice</span>
+        </div>
+
+        <article class="featured-story__visual">
+          <div class="featured-story__image-wrap">
+            <img
+              class="featured-story__image"
+              src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178524/black1.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="featured-story__content">
+            <span class="featured-story__number"> 01 </span>
+
+            <span class="featured-story__label"> Featured Story </span>
+
+            <h2 class="featured-story__title">
+              The knowledge
+              <em>we carry.</em>
+            </h2>
+
+            <p class="featured-story__excerpt">
+              Stories reveal how knowledge travels between people, generations
+              and places — becoming part of the lives of those who encounter it.
+            </p>
+
+            <a href="#" class="featured-story__link">
+              <span>Read the story</span>
+              <strong>↗</strong>
+            </a>
+          </div>
+        </article>
+
+        <div class="featured-story__caption">
+          <span>01</span>
+
+          <p>
+            A story is never only about the past. It is also about what happens
+            next.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — STORY ARCHIVE
+     ========================================================== -->
+
+    <section class="story-archive" id="story-archive">
+      <div class="story-archive__inner">
+        <header class="story-archive__header">
+          <div>
+            <span class="story-archive__eyebrow"> 03 / The Archive </span>
+
+            <h2 class="story-archive__title">
+              Stories that
+              <span>keep moving.</span>
+            </h2>
+          </div>
+
+          <p class="story-archive__intro">
+            Explore stories of people, places, practices and experiences that
+            continue to shape the living heritage of our communities.
+          </p>
+        </header>
+
+        <!-- FILTER -->
+
+        <div class="story-archive__filters">
+          <button class="story-filter is-active" data-filter="all">
+            All Stories
+          </button>
+
+          <button class="story-filter" data-filter="people">People</button>
+
+          <button class="story-filter" data-filter="place">Place</button>
+
+          <button class="story-filter" data-filter="practice">Practice</button>
+
+          <button class="story-filter" data-filter="experience">
+            Experience
+          </button>
+        </div>
+
+        <!-- ARCHIVE GRID -->
+
+        <div class="story-archive__grid">
+          <!-- STORY 01 -->
+
+          <article class="story-card story-card--large" data-category="people">
+            <a href="#" class="story-card__link">
+              <div class="story-card__image-wrap">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178524/black1.jpg"
+                  alt=""
+                  class="story-card__image"
+                />
+              </div>
+
+              <div class="story-card__meta">
+                <span>01 / People</span>
+
+                <span>Story</span>
+              </div>
+
+              <h3 class="story-card__title">
+                The people who
+                <em>carry knowledge.</em>
+              </h3>
+
+              <p class="story-card__excerpt">
+                A story about knowledge passed between people, generations and
+                communities.
+              </p>
+
+              <span class="story-card__arrow"> ↗ </span>
+            </a>
+          </article>
+
+          <!-- STORY 02 -->
+
+          <article class="story-card" data-category="place">
+            <a href="#" class="story-card__link">
+              <div class="story-card__image-wrap">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178683/SKH06078.jpg"
+                  alt=""
+                  class="story-card__image"
+                />
+              </div>
+
+              <div class="story-card__meta">
+                <span>02 / Place</span>
+
+                <span>Story</span>
+              </div>
+
+              <h3 class="story-card__title">
+                Places that
+                <em>remember.</em>
+              </h3>
+
+              <p class="story-card__excerpt">
+                Exploring the relationship between memory, landscape and
+                identity.
+              </p>
+
+              <span class="story-card__arrow"> ↗ </span>
+            </a>
+          </article>
+
+          <!-- STORY 03 -->
+
+          <article class="story-card" data-category="practice">
+            <a href="#" class="story-card__link">
+              <div class="story-card__image-wrap">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178683/SKH06078.jpg"
+                  alt=""
+                  class="story-card__image"
+                />
+              </div>
+
+              <div class="story-card__meta">
+                <span>03 / Practice</span>
+
+                <span>Story</span>
+              </div>
+
+              <h3 class="story-card__title">
+                Learning through
+                <em>practice.</em>
+              </h3>
+
+              <p class="story-card__excerpt">
+                When knowledge moves from something we know into something we
+                do.
+              </p>
+
+              <span class="story-card__arrow"> ↗ </span>
+            </a>
+          </article>
+
+          <!-- STORY 04 -->
+
+          <article
+            class="story-card story-card--wide"
+            data-category="experience"
+          >
+            <a href="#" class="story-card__link">
+              <div class="story-card__image-wrap">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178683/SKH06078.jpg"
+                  alt=""
+                  class="story-card__image"
+                />
+              </div>
+
+              <div class="story-card__meta">
+                <span>04 / Experience</span>
+
+                <span>Story</span>
+              </div>
+
+              <h3 class="story-card__title">
+                When heritage becomes
+                <em>experience.</em>
+              </h3>
+
+              <p class="story-card__excerpt">
+                The moments where knowledge becomes tangible, personal and
+                lived.
+              </p>
+
+              <span class="story-card__arrow"> ↗ </span>
+            </a>
+          </article>
+
+          <!-- STORY 05 -->
+
+          <article class="story-card" data-category="people">
+            <a href="#" class="story-card__link">
+              <div class="story-card__image-wrap">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178524/black1.jpg"
+                  alt=""
+                  class="story-card__image"
+                />
+              </div>
+
+              <div class="story-card__meta">
+                <span>05 / People</span>
+
+                <span>Perspective</span>
+              </div>
+
+              <h3 class="story-card__title">
+                Voices from
+                <em>the journey.</em>
+              </h3>
+
+              <p class="story-card__excerpt">
+                Perspectives from people carrying heritage into new spaces.
+              </p>
+
+              <span class="story-card__arrow"> ↗ </span>
+            </a>
+          </article>
+
+          <!-- STORY 06 -->
+
+          <article class="story-card" data-category="place">
+            <a href="#" class="story-card__link">
+              <div class="story-card__image-wrap">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+                  alt=""
+                  class="story-card__image"
+                />
+              </div>
+
+              <div class="story-card__meta">
+                <span>06 / Place</span>
+
+                <span>Journal</span>
+              </div>
+
+              <h3 class="story-card__title">
+                Returning to
+                <em>where it began.</em>
+              </h3>
+
+              <p class="story-card__excerpt">
+                A journey back to the places where knowledge first took root.
+              </p>
+
+              <span class="story-card__arrow"> ↗ </span>
+            </a>
+          </article>
+        </div>
+
+        <!-- ARCHIVE FOOTER -->
+
+        <div class="story-archive__footer">
+          <span> The archive continues. </span>
+
+          <span> 06 Stories </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     04 — VOICES / PERSPECTIVES
+     ========================================================== -->
+    <section class="story-voices" id="story-voices">
+      <div class="story-voices__top">
+        <span class="story-voices__eyebrow">04 / Voices & Perspectives</span>
+
+        <span class="story-voices__index"> LISTEN · REFLECT · CARRY </span>
+      </div>
+
+      <div class="story-voices__intro">
+        <p class="story-voices__kicker">Every story carries a perspective.</p>
+
+        <h2 class="story-voices__title">
+          Heritage is heard
+          <em>through people.</em>
+        </h2>
+      </div>
+
+      <div class="story-voices__track">
+        <!-- VOICE 01 -->
+        <article class="story-voice">
+          <div class="story-voice__number">01</div>
+
+          <div class="story-voice__quote">
+            <span class="story-voice__mark">“</span>
+
+            <blockquote>
+              [Quote from a participant, practitioner or community voice.]
+            </blockquote>
+          </div>
+
+          <div class="story-voice__person">
+            <div class="story-voice__line"></div>
+
+            <div>
+              <strong>Participant / Practitioner</strong>
+              <span>People · Heritage · Practice</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- VOICE 02 -->
+        <article class="story-voice">
+          <div class="story-voice__number">02</div>
+
+          <div class="story-voice__quote">
+            <span class="story-voice__mark">“</span>
+
+            <blockquote>
+              [Quote about learning, experience or discovering something new.]
+            </blockquote>
+          </div>
+
+          <div class="story-voice__person">
+            <div class="story-voice__line"></div>
+
+            <div>
+              <strong>Participant / Practitioner</strong>
+              <span>Learning · Experience · Connection</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- VOICE 03 -->
+        <article class="story-voice">
+          <div class="story-voice__number">03</div>
+
+          <div class="story-voice__quote">
+            <span class="story-voice__mark">“</span>
+
+            <blockquote>
+              [Quote about carrying knowledge forward and returning it to
+              others.]
+            </blockquote>
+          </div>
+
+          <div class="story-voice__person">
+            <div class="story-voice__line"></div>
+
+            <div>
+              <strong>Community Voice</strong>
+              <span>Return · Contribution · Future</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="story-voices__closing">
+        <span></span>
+        <p>
+          A living heritage is not only something we inherit. It is something we
+          continue to tell.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     05 — STORIES IN MOTION
+     ========================================================== -->
+
+    <section class="stories-motion" id="stories-motion">
+      <div class="stories-motion__sticky">
+        <!-- HEADER -->
+
+        <header class="stories-motion__header">
+          <div class="stories-motion__eyebrow">
+            <span>05 / Stories in Motion</span>
+          </div>
+
+          <div class="stories-motion__index">MEMORY · PLACE · MOVEMENT</div>
+        </header>
+
+        <!-- INTRO -->
+
+        <div class="stories-motion__intro">
+          <h2 class="stories-motion__title">
+            Stories do not
+            <em>stand still.</em>
+          </h2>
+
+          <p class="stories-motion__lead">
+            They move between people, places and generations — changing as they
+            travel.
+          </p>
+        </div>
+
+        <!-- HORIZONTAL TRACK -->
+
+        <div class="stories-motion__viewport">
+          <div class="stories-motion__track">
+            <!-- STORY 01 -->
+
+            <article class="motion-story motion-story--large">
+              <div class="motion-story__image">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178683/SKH06078.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="motion-story__content">
+                <span class="motion-story__number"> 01 </span>
+
+                <span class="motion-story__category"> PLACE </span>
+
+                <h3>
+                  Where memory
+                  <em>takes root.</em>
+                </h3>
+
+                <p>
+                  Places hold more than history. They hold the traces of the
+                  people, practices and experiences that shaped them.
+                </p>
+              </div>
+            </article>
+
+            <!-- STORY 02 -->
+
+            <article class="motion-story">
+              <div class="motion-story__image">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178524/black1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="motion-story__content">
+                <span class="motion-story__number"> 02 </span>
+
+                <span class="motion-story__category"> PEOPLE </span>
+
+                <h3>
+                  Knowledge moves
+                  <em>through us.</em>
+                </h3>
+
+                <p>
+                  What we inherit becomes part of how we understand, practise
+                  and contribute.
+                </p>
+              </div>
+            </article>
+
+            <!-- STORY 03 -->
+
+            <article class="motion-story motion-story--offset">
+              <div class="motion-story__image">
+                <img
+                  src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="motion-story__content">
+                <span class="motion-story__number"> 03 </span>
+
+                <span class="motion-story__category"> JOURNEY </span>
+
+                <h3>
+                  Returning can
+                  <em>change what comes next.</em>
+                </h3>
+
+                <p>
+                  The journey does not end when we return. It becomes part of
+                  what we carry forward.
+                </p>
+              </div>
+            </article>
+
+            <!-- END STATEMENT -->
+
+            <div class="stories-motion__statement">
+              <span>CONTINUE</span>
+
+              <p>Every story leaves something behind.</p>
+
+              <strong>↗</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROGRESS -->
+
+        <div class="stories-motion__progress">
+          <span class="stories-motion__progress-line">
+            <span class="stories-motion__progress-fill"></span>
+          </span>
+
+          <span class="stories-motion__progress-label"> 01 — 03 </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     06 — CONTINUE THE JOURNEY
+     ========================================================== -->
+
+    <section class="stories-continue" id="stories-continue">
+      <div class="stories-continue__inner">
+        <header class="stories-continue__header">
+          <span class="stories-continue__eyebrow">
+            06 / Continue the Journey
+          </span>
+
+          <span class="stories-continue__index">
+            DISCOVER · CONNECT · RETURN
+          </span>
+        </header>
+
+        <div class="stories-continue__main">
+          <div class="stories-continue__title-wrap">
+            <span class="stories-continue__number"> 06 </span>
+
+            <h2 class="stories-continue__title">
+              The story
+              <em>continues.</em>
+            </h2>
+          </div>
+
+          <div class="stories-continue__copy">
+            <p class="stories-continue__lead">
+              Every story becomes part of another story.
+            </p>
+
+            <p>
+              What we discover, learn and experience can become something we
+              carry into the future — through the people we meet, the places we
+              return to and the knowledge we choose to share.
+            </p>
+          </div>
+        </div>
+
+        <!-- JOURNEY PATH -->
+
+        <div class="stories-continue__path">
+          <div class="continue-node is-active">
+            <span>01</span>
+            <strong>Discover</strong>
+          </div>
+
+          <div class="continue-line"></div>
+
+          <div class="continue-node">
+            <span>02</span>
+            <strong>Connect</strong>
+          </div>
+
+          <div class="continue-line"></div>
+
+          <div class="continue-node">
+            <span>03</span>
+            <strong>Learn</strong>
+          </div>
+
+          <div class="continue-line"></div>
+
+          <div class="continue-node">
+            <span>04</span>
+            <strong>Experience</strong>
+          </div>
+
+          <div class="continue-line"></div>
+
+          <div class="continue-node">
+            <span>05</span>
+            <strong>Create</strong>
+          </div>
+
+          <div class="continue-line"></div>
+
+          <div class="continue-node">
+            <span>06</span>
+            <strong>Return</strong>
+          </div>
+        </div>
+
+        <!-- CTA -->
+
+        <div class="stories-continue__cta">
+          <p>Explore where the journey can take you next.</p>
+
+          <a href="./programmes.html" class="stories-continue__button">
+            <span>Explore Programmes</span>
+            <strong>↗</strong>
+          </a>
+        </div>
+
+        <!-- CYCLE -->
+
+        <div class="stories-continue__cycle">
+          <span class="stories-continue__cycle-mark"> ↻ </span>
+
+          <p>
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FOOTER =========== -->
+
+    <!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- MAIN CTA -->
+
+        <div class="site-footer__hero">
+          <span class="site-footer__eyebrow"> Ìmísí Foundation </span>
+
+          <h2 class="site-footer__title">
+            Keep knowledge
+            <span>moving.</span>
+          </h2>
+
+          <p class="site-footer__intro">
+            Heritage continues when knowledge is shared, practised and carried
+            forward.
+          </p>
+
+          <div class="site-footer__actions">
+            <a
+              href="#get-involved"
+              class="site-footer__button site-footer__button--lime"
+            >
+              Partner With Us
+
+              <span>↗</span>
+            </a>
+
+            <a
+              href="#support"
+              class="site-footer__button site-footer__button--ghost"
+            >
+              Support the Foundation
+            </a>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <div class="site-footer__logo">ÌMÍSÍ</div>
+
+            <p>A living institution for heritage, knowledge and possibility.</p>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Explore </span>
+
+            <a href="./heritage-pipeline.html"> Heritage Pipeline </a>
+
+            <a href="./heritage-pipeline.html"> Why This Matters </a>
+
+            <a href="#knowledge"> Knowledge </a>
+
+            <a href="#ecosystem"> Ecosystem </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Connect </span>
+
+            <a href="#get-involved"> Partner With Us </a>
+
+            <a href="#support"> Support </a>
+
+            <a href="#contact"> Contact </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Follow </span>
+
+            <a href="#"> Instagram </a>
+
+            <a href="#"> LinkedIn </a>
+
+            <a href="#"> Facebook </a>
+          </div>
+        </div>
+
+        <!-- LEGAL -->
+
+        <div class="site-footer__legal">
+          <span>
+            © <span id="year"></span>
+            Ìmísí Foundation.
+          </span>
+
+          <span> All rights reserved. </span>
+
+          <span class="site-footer__legal-right">
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </span>
+        </div>
+      </div>
+
+      <!-- WORDMARK -->
+
+      <div class="site-footer__wordmark">ÌMÍSÍ</div>
+    </footer>
+
+    <button
+      class="scroll-to-top-btn"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
+
+    <!-- =======================================
+GSAP
+======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/cursor.js"></script>
+
+    <script src="./assets/js/stories-intro.js"></script>
+    <script src="./assets/js/featured-story.js"></script>
+    <script src="./assets/js/story-archive.js"></script>
+    <script src="./assets/js/story-voices.js"></script>
+    <script src="./assets/js/stories-motion.js"></script>
+    <script src="./assets/js/stories-continue.js"></script>
+
+    <!-- THREE.JS IMPORT MAP -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./assets/js/basket.js"></script>
+  </body>
+</html>

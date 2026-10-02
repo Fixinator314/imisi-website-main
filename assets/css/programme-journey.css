@@ -1,0 +1,403 @@
+/* ==========================================================
+   IMISI FOUNDATION — PROGRAMME JOURNEY
+   ========================================================== */
+
+.programme-journey {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 700vh;
+
+  background: var(--imisi-teal);
+
+  color: var(--imisi-bone);
+
+  overflow: visible;
+}
+
+/* ==========================================================
+   STICKY FRAME
+   ========================================================== */
+
+.programme-journey__sticky {
+  position: sticky;
+
+  top: 0;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  padding: clamp(2rem, 4vw, 4rem) clamp(5%, 7vw, 9%);
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.programme-journey__header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+.programme-journey__eyebrow {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-lime);
+}
+
+.programme-journey__counter {
+  display: flex;
+
+  gap: 0.3rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.55;
+}
+
+.programme-journey__current {
+  color: var(--imisi-lime);
+
+  opacity: 1;
+}
+
+/* ==========================================================
+   LAYOUT
+   ========================================================== */
+
+.programme-journey__layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 0.25fr)
+    minmax(0, 1fr);
+
+  gap: clamp(3rem, 7vw, 9rem);
+
+  height: calc(100% - 8rem);
+}
+
+/* ==========================================================
+   RAIL
+   ========================================================== */
+
+.programme-journey__rail {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.programme-journey__rail-line {
+  position: absolute;
+
+  left: 3px;
+
+  top: 5%;
+
+  width: 1px;
+
+  height: 90%;
+
+  background: rgba(244, 241, 232, 0.18);
+}
+
+.programme-journey__rail-progress {
+  display: block;
+
+  width: 100%;
+
+  height: 0;
+
+  background: var(--imisi-lime);
+
+  transform-origin: top;
+}
+
+/* ==========================================================
+   NAV
+   ========================================================== */
+
+.programme-journey__nav {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.3rem;
+
+  padding-left: 1.5rem;
+}
+
+.programme-journey__nav-item {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.9rem;
+
+  padding: 0;
+
+  border: 0;
+
+  background: none;
+
+  color: rgba(244, 241, 232, 0.4);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.programme-journey__nav-item span {
+  width: 25px;
+
+  font-size: 0.58rem;
+
+  opacity: 0.6;
+}
+
+.programme-journey__nav-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -1.82rem;
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgba(244, 241, 232, 0.25);
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.programme-journey__nav-item.is-active {
+  color: var(--imisi-bone);
+
+  transform: translateX(5px);
+}
+
+.programme-journey__nav-item.is-active::before {
+  background: var(--imisi-lime);
+
+  transform: scale(1.35);
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.programme-journey__content {
+  position: relative;
+
+  height: 100%;
+
+  padding-bottom: 4rem;
+}
+
+.programme-journey__stage {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  max-width: 1000px;
+
+  opacity: 0;
+
+  visibility: hidden;
+}
+
+.programme-journey__stage.is-active {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.programme-journey__stage-number {
+  margin-bottom: 1rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.15em;
+
+  color: var(--imisi-lime);
+}
+
+.programme-journey__stage-label {
+  margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+
+  text-transform: uppercase;
+
+  opacity: 0.55;
+}
+
+.programme-journey__stage h2 {
+  max-width: 1000px;
+
+  margin: 0 0 clamp(2rem, 4vh, 3rem);
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(4rem, 8vw, 8.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+}
+
+.programme-journey__stage h2 em {
+  display: block;
+
+  color: var(--imisi-lime);
+
+  font-style: italic;
+}
+
+.programme-journey__stage p {
+  max-width: 530px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color: rgba(244, 241, 232, 0.68);
+}
+
+/* ==========================================================
+   CYCLE
+   ========================================================== */
+
+.programme-journey__cycle {
+  position: absolute;
+
+  left: clamp(5%, 7vw, 9%);
+
+  right: clamp(5%, 7vw, 9%);
+
+  bottom: 2rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.63rem;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  opacity: 0.45;
+}
+
+.programme-journey__cycle strong {
+  font-family: "Marcellus", serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  color: var(--imisi-lime);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .programme-journey {
+    min-height: 700vh;
+  }
+
+  .programme-journey__sticky {
+    padding: 2rem 6% 3rem;
+  }
+
+  .programme-journey__layout {
+    grid-template-columns: 1fr;
+
+    height: calc(100% - 7rem);
+  }
+
+  .programme-journey__rail {
+    display: none;
+  }
+
+  .programme-journey__stage h2 {
+    font-size: clamp(3.4rem, 15vw, 6rem);
+  }
+
+  .programme-journey__stage p {
+    font-size: 0.9rem;
+  }
+}

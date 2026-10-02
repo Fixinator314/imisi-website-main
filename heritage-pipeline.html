@@ -1,0 +1,1474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Heritage Pipeline</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-hero.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-line.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-matter.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-motion.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-archive.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-living-system.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-return.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-continue.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-scroll-accents.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-possibility.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-work.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/intro.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="heritage-pipeline-page">
+    <!-- Custom desktop cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Route/section sweep used on nav clicks -->
+    <div class="sweep" id="sweep" aria-hidden="true">
+      <span class="sweep__title"></span>
+    </div>
+    <!-- ==========================================================
+     NAVBAR
+     ========================================================== -->
+
+    <header class="header nav-wrap">
+      <!-- ========================================================
+       DESKTOP NAVIGATION
+       ======================================================== -->
+
+      <nav class="nav" id="nav" data-state="top">
+        <!-- LOGO -->
+        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+        </a>
+
+        <!-- ======================================================
+         DESKTOP NAVIGATION LINKS
+         ====================================================== -->
+
+        <div class="nav__links" id="navLinks">
+          <a href="./heritage-pipeline.html" data-sweep="Heritage Pipeline">
+            Heritage Pipeline
+          </a>
+
+          <a href="./programmes.html" data-sweep="Programmes"> Programmes </a>
+
+          <a href="./stories.html" data-sweep="Stories"> Stories </a>
+
+          <a href="./impact.html" data-sweep="Impact"> Impact </a>
+
+          <a href="./get-involved.html" data-sweep="Get Involved"> Get Involved </a>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP CTA
+         ====================================================== -->
+
+        <div class="nav__cta">
+          <a class="nav__support" href="#support"> Support </a>
+
+          <!-- DESKTOP PARTNER DROPDOWN -->
+
+          <div class="nav__dropdown">
+            <button
+              class="btn btn--solid nav__partner nav__dropdown-btn"
+              type="button"
+            >
+              Partner With Us
+
+              <svg
+                class="ico nav__dropdown-arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <ul class="nav__dropdown-menu">
+              <li>
+                <a href="payment.html"> Donate </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Volunteer </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Corporate Partnership </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ====================================================
+           MOBILE BURGER
+           ==================================================== -->
+
+          <button
+            class="nav__burger"
+            id="burger"
+            aria-label="Open menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP HERITAGE PIPELINE MEGA MENU
+         ====================================================== -->
+
+        <div class="mega" id="mega" aria-hidden="true">
+          <div class="mega__list" id="megaList"></div>
+
+          <div class="mega__preview" id="megaPreview"></div>
+        </div>
+      </nav>
+
+      <!-- ========================================================
+       MOBILE FULLSCREEN MENU
+       
+       IMPORTANT:
+       This is OUTSIDE the main .nav.
+       ======================================================== -->
+
+      <div class="mobile" id="mobile" aria-hidden="true">
+        <div class="grain"></div>
+
+        <!-- ======================================================
+         MOBILE TOP BAR
+         ====================================================== -->
+
+        <div class="mobile__top">
+          <a href="./index.html" class="mobile__brand">
+            <img
+              src="./assets/images/imnisi_foundation_logo2.png"
+              alt="Ìmísí Foundation"
+              class="mobile__brand-logo"
+            />
+          </a>
+
+          <!-- CLOSE BUTTON -->
+
+          <button
+            class="mobile__close"
+            id="mobileClose"
+            aria-label="Close menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         MOBILE NAVIGATION
+         ====================================================== -->
+
+        <nav class="mobile__nav" id="mobileNav">
+          <!-- ABOUT -->
+
+          <a href="./heritage-pipeline.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 01 </span>
+
+            Heritage Pipeline
+          </a>
+
+          <!-- HERITAGE PIPELINE -->
+
+          <a href="./programmes.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 02 </span>
+
+            Programmes
+          </a>
+
+          <!-- PROGRAMMES -->
+
+          <a href="./stories.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 03 </span>
+
+            Stories
+          </a>
+
+          <!-- STORIES -->
+
+          <a href="./impact.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 04 </span>
+
+            Impact
+          </a>
+
+          <!-- GET INVOLVED -->
+
+          <a href="./get-involved.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 05 </span>
+
+            Get Involved
+          </a>
+
+          <!-- ====================================================
+           MOBILE ACTIONS
+           ==================================================== -->
+
+          <div class="mobile__actions">
+            <!-- SUPPORT -->
+
+            <a
+              href="./payment.html"
+              class="mobile__action mobile__action--support"
+              data-mobile-link
+            >
+              Support
+            </a>
+
+            <!-- PARTNER WITH US -->
+
+            <button
+              class="mobile__action mobile__action--partner"
+              id="mobilePartnerToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobilePartnerMenu"
+            >
+              Partner With Us
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <!-- MOBILE PARTNER DROPDOWN -->
+
+            <div class="mobile__partner-menu" id="mobilePartnerMenu">
+              <a href="./payment.html" data-mobile-link> Donate </a>
+
+              <a href="./get-involved.html" data-mobile-link> Volunteer </a>
+
+              <a href="./get-involved.html" data-mobile-link>
+                Corporate Partnership
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="heritage-page">
+      <!-- ========================================================
+       01 — HERO
+       ======================================================== -->
+
+      <section class="heritage-hero" id="heritage-hero">
+        <div class="heritage-hero__media" aria-hidden="true">
+          <img
+            src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+            alt=""
+            class="heritage-hero__image"
+          />
+
+          <div class="heritage-hero__overlay"></div>
+        </div>
+
+        <div class="heritage-hero__inner">
+          <div class="heritage-hero__eyebrow">
+            <span class="heritage-hero__eyebrow-line"></span>
+
+            <span> Heritage Pipeline </span>
+          </div>
+
+          <h1 class="heritage-hero__title">
+            <span class="heritage-hero__title-line"> Heritage </span>
+
+            <span class="heritage-hero__title-line"> moves. </span>
+          </h1>
+
+          <div class="heritage-hero__bottom">
+            <p class="heritage-hero__intro">
+              Connecting South Africa's living and scientific heritage to the
+              next generation.
+            </p>
+
+            <div class="heritage-hero__meta">
+              <span>ÌMÍSÍ HOUSE</span>
+              <span>DISCOVER / CONNECT / LEARN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="heritage-hero__scroll">
+          <span class="heritage-hero__scroll-label"> Enter the pipeline </span>
+
+          <span class="heritage-hero__scroll-line">
+            <span class="heritage-hero__scroll-dot"></span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ========================================================
+     02 — THE GAP
+     ======================================================== -->
+
+      <section class="pipeline-line" id="pipeline-gap">
+        <div class="pipeline-line__inner">
+          <!-- ------------------------------------------------------
+         INTRO
+         ------------------------------------------------------ -->
+
+          <div class="pipeline-line__header">
+            <div class="pipeline-line__eyebrow">
+              <span class="pipeline-line__eyebrow-number"> 01 </span>
+
+              <span class="pipeline-line__line"></span>
+
+              <span> The Gap </span>
+            </div>
+
+            <h2 class="pipeline-line__title">
+              <span> Knowledge exists. </span>
+
+              <span class="pipeline-line__title-accent">
+                Pathways don't always.
+              </span>
+            </h2>
+          </div>
+
+          <!-- ------------------------------------------------------
+         KNOWLEDGE SYSTEMS
+         ------------------------------------------------------ -->
+
+          <div class="pipeline-line__systems">
+            <!-- FORMAL -->
+            <article
+              class="knowledge-system knowledge-system--formal"
+              data-system="formal"
+            >
+              <div class="knowledge-system__top">
+                <span class="knowledge-system__number"> 01 </span>
+
+                <span class="knowledge-system__label"> Formal knowledge </span>
+              </div>
+
+              <h3 class="knowledge-system__title">Institutions</h3>
+
+              <div class="knowledge-system__items">
+                <span>Museums</span>
+                <span>Universities</span>
+                <span>Researchers</span>
+              </div>
+            </article>
+
+            <!-- CENTRE -->
+            <div class="pipeline-line__bridge">
+              <div class="pipeline-line__bridge-label">
+                <span> THE GAP </span>
+              </div>
+
+              <div class="pipeline-line__bridge-line">
+                <span class="pipeline-line__node"></span>
+
+                <span class="pipeline-line__progress"></span>
+
+                <span class="pipeline-line__node"></span>
+              </div>
+
+              <p class="pipeline-line__bridge-copy">
+                Young people can struggle to see where these knowledge systems
+                connect to their own futures.
+              </p>
+            </div>
+
+            <!-- LIVING -->
+            <article
+              class="knowledge-system knowledge-system--living"
+              data-system="living"
+            >
+              <div class="knowledge-system__top">
+                <span class="knowledge-system__number"> 02 </span>
+
+                <span class="knowledge-system__label"> Living knowledge </span>
+              </div>
+
+              <h3 class="knowledge-system__title">Communities</h3>
+
+              <div class="knowledge-system__items">
+                <span>Artisans</span>
+                <span>Makers</span>
+                <span>Communities</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- ------------------------------------------------------
+         CLOSING
+         ------------------------------------------------------ -->
+
+          <div class="pipeline-line__closing">
+            <p>
+              The Heritage Pipeline creates pathways between these worlds — and
+              places the next generation inside that exchange.
+            </p>
+
+            <span class="pipeline-line__closing-arrow"> ↓ </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+     03 — THE KNOWLEDGE BRIDGE
+     ======================================================== -->
+
+      <section class="knowledge-motion" id="knowledge-bridge">
+        <div class="knowledge-motion__inner">
+          <!-- ------------------------------------------------------
+         HEADER
+         ------------------------------------------------------ -->
+
+          <header class="knowledge-motion__header">
+            <div class="knowledge-motion__eyebrow">
+              <span class="knowledge-motion__number">02</span>
+              <span class="knowledge-motion__line"></span>
+              <span>Knowledge Bridge</span>
+            </div>
+
+            <h2 class="knowledge-motion__title">
+              One material.
+              <span>Many ways of knowing.</span>
+            </h2>
+
+            <p class="knowledge-motion__intro">
+              The same material can reveal different worlds — depending on who
+              is looking, handling, studying or making with it.
+            </p>
+          </header>
+
+          <!-- ------------------------------------------------------
+         MATERIAL JOURNEY
+         ------------------------------------------------------ -->
+
+          <div class="knowledge-motion__bridge">
+            <!-- LEFT DISCIPLINES -->
+
+            <div class="knowledge-motion__disciplines">
+              <article class="bridge-discipline" data-position="1">
+                <span class="bridge-discipline__number"> 01 </span>
+
+                <span class="bridge-discipline__name"> Hunter </span>
+              </article>
+
+              <article class="bridge-discipline" data-position="2">
+                <span class="bridge-discipline__number"> 02 </span>
+
+                <span class="bridge-discipline__name"> Zooarchaeologist </span>
+              </article>
+
+              <article class="bridge-discipline" data-position="3">
+                <span class="bridge-discipline__number"> 03 </span>
+
+                <span class="bridge-discipline__name"> Taxidermist </span>
+              </article>
+
+              <article class="bridge-discipline" data-position="4">
+                <span class="bridge-discipline__number"> 04 </span>
+
+                <span class="bridge-discipline__name"> Paleontologist </span>
+              </article>
+            </div>
+
+            <!-- ----------------------------------------------------
+           CENTRE MATERIAL
+           ---------------------------------------------------- -->
+
+            <div class="knowledge-motion__material">
+              <div class="material-orbit">
+                <span class="material-orbit__ring"></span>
+
+                <span
+                  class="material-orbit__ring material-orbit__ring--two"
+                ></span>
+
+                <span
+                  class="material-orbit__dot material-orbit__dot--one"
+                ></span>
+
+                <span
+                  class="material-orbit__dot material-orbit__dot--two"
+                ></span>
+              </div>
+
+              <div class="material-core">
+                <span class="material-core__number"> MATERIAL </span>
+
+                <span class="material-core__name"> Bone </span>
+
+                <span class="material-core__hint"> See differently. </span>
+              </div>
+            </div>
+
+            <!-- RIGHT DISCIPLINES -->
+
+            <div
+              class="knowledge-motion__disciplines knowledge-motion__disciplines--right"
+            >
+              <article class="bridge-discipline" data-position="5">
+                <span class="bridge-discipline__number"> 05 </span>
+
+                <span class="bridge-discipline__name"> Museum Curator </span>
+              </article>
+
+              <article class="bridge-discipline" data-position="6">
+                <span class="bridge-discipline__number"> 06 </span>
+
+                <span class="bridge-discipline__name"> Conservator </span>
+              </article>
+
+              <article class="bridge-discipline" data-position="7">
+                <span class="bridge-discipline__number"> 07 </span>
+
+                <span class="bridge-discipline__name"> Bone Carver </span>
+              </article>
+
+              <article class="bridge-discipline" data-position="8">
+                <span class="bridge-discipline__number"> 08 </span>
+
+                <span class="bridge-discipline__name"> Maker </span>
+              </article>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------
+         CLOSING
+         ------------------------------------------------------ -->
+
+          <div class="knowledge-motion__closing">
+            <span class="knowledge-motion__closing-line"></span>
+
+            <p>
+              Knowledge becomes more powerful when different ways of knowing
+              meet.
+            </p>
+
+            <span class="knowledge-motion__closing-arrow"> ↓ </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- /* ========================================================== 04 — THE
+      HERITAGE PIPELINE
+      ========================================================== */ -->
+
+      <section class="pipeline-journey" id="pipeline">
+        <div class="pipeline-journey__sticky">
+          <!-- ------------------------------------------------------
+         HEADER / PROGRESS
+         ------------------------------------------------------ -->
+
+          <div class="pipeline-journey__top">
+            <div class="pipeline-journey__eyebrow">
+              <span>03</span>
+              <span class="pipeline-journey__line"></span>
+              <span>The Heritage Pipeline</span>
+            </div>
+
+            <div class="pipeline-journey__counter">
+              <span class="pipeline-journey__current">01</span>
+              <span>/</span>
+              <span>07</span>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------
+         MAIN JOURNEY
+         ------------------------------------------------------ -->
+
+          <div class="pipeline-journey__layout">
+            <!-- ----------------------------------------------------
+           LEFT — STAGE NAVIGATION
+           ---------------------------------------------------- -->
+
+            <aside class="pipeline-journey__rail">
+              <div class="pipeline-journey__rail-line">
+                <span class="pipeline-journey__rail-progress"></span>
+              </div>
+
+              <div class="pipeline-stage-nav">
+                <button
+                  class="pipeline-stage-nav__item is-active"
+                  data-stage="01"
+                  type="button"
+                >
+                  <span>01</span>
+                  <strong>Discover</strong>
+                </button>
+
+                <button
+                  class="pipeline-stage-nav__item"
+                  data-stage="02"
+                  type="button"
+                >
+                  <span>02</span>
+                  <strong>Connect</strong>
+                </button>
+
+                <button
+                  class="pipeline-stage-nav__item"
+                  data-stage="03"
+                  type="button"
+                >
+                  <span>03</span>
+                  <strong>Learn</strong>
+                </button>
+
+                <button
+                  class="pipeline-stage-nav__item"
+                  data-stage="04"
+                  type="button"
+                >
+                  <span>04</span>
+                  <strong>Experience</strong>
+                </button>
+
+                <button
+                  class="pipeline-stage-nav__item"
+                  data-stage="05"
+                  type="button"
+                >
+                  <span>05</span>
+                  <strong>Create</strong>
+                </button>
+
+                <button
+                  class="pipeline-stage-nav__item"
+                  data-stage="06"
+                  type="button"
+                >
+                  <span>06</span>
+                  <strong>Transition</strong>
+                </button>
+
+                <button
+                  class="pipeline-stage-nav__item"
+                  data-stage="07"
+                  type="button"
+                >
+                  <span>07</span>
+                  <strong>Return</strong>
+                </button>
+              </div>
+            </aside>
+
+            <!-- ----------------------------------------------------
+           RIGHT — STAGE CONTENT
+           ---------------------------------------------------- -->
+
+            <div class="pipeline-journey__content">
+              <!-- ==================================================
+             01 — DISCOVER
+             ================================================== -->
+
+              <article class="pipeline-stage is-active" data-stage="01">
+                <div class="pipeline-stage__number">01</div>
+
+                <div class="pipeline-stage__content">
+                  <p class="pipeline-stage__label">Discover</p>
+
+                  <h2 class="pipeline-stage__title">
+                    What
+                    <span>exists?</span>
+                  </h2>
+
+                  <p class="pipeline-stage__lead">Exposure comes first.</p>
+
+                  <p class="pipeline-stage__text">
+                    Young people encounter museums, collections, heritage sites,
+                    artisans, laboratories and the professionals who work within
+                    them.
+                  </p>
+
+                  <div class="pipeline-stage__activities">
+                    <span>Museum Discovery Days</span>
+                    <span>School Outreach</span>
+                    <span>Behind-the-Scenes Tours</span>
+                    <span>Meet-the-Artisan</span>
+                    <span>Documentary Screenings</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==================================================
+             02 — CONNECT
+             ================================================== -->
+
+              <article class="pipeline-stage" data-stage="02">
+                <div class="pipeline-stage__number">02</div>
+
+                <div class="pipeline-stage__content">
+                  <p class="pipeline-stage__label">Connect</p>
+
+                  <h2 class="pipeline-stage__title">
+                    How do
+                    <span>these worlds intersect?</span>
+                  </h2>
+
+                  <p class="pipeline-stage__lead">
+                    Different ways of knowing meet around the same material.
+                  </p>
+
+                  <p class="pipeline-stage__text">
+                    Artisans, scientists, museum professionals, researchers and
+                    communities reveal different perspectives on materials,
+                    knowledge and heritage.
+                  </p>
+
+                  <div class="pipeline-stage__activities">
+                    <span>Materials</span>
+                    <span>Disciplines</span>
+                    <span>Experts</span>
+                    <span>Living Knowledge</span>
+                    <span>Scientific Knowledge</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==================================================
+             03 — LEARN
+             ================================================== -->
+
+              <article class="pipeline-stage" data-stage="03">
+                <div class="pipeline-stage__number">03</div>
+
+                <div class="pipeline-stage__content">
+                  <p class="pipeline-stage__label">Learn</p>
+
+                  <h2 class="pipeline-stage__title">
+                    Can
+                    <span>I do this?</span>
+                  </h2>
+
+                  <p class="pipeline-stage__lead">
+                    Curiosity becomes structured education.
+                  </p>
+
+                  <p class="pipeline-stage__text">
+                    Learners move into structured programmes that introduce
+                    museums, archaeology, paleontology, geology, anthropology,
+                    material culture, craft, conservation, photography and
+                    storytelling.
+                  </p>
+
+                  <div class="pipeline-stage__activities">
+                    <span>Museum Academy</span>
+                    <span>Master Artisan Workshops</span>
+                    <span>Field Schools</span>
+                    <span>Youth Mentorship</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==================================================
+             04 — EXPERIENCE
+             ================================================== -->
+
+              <article class="pipeline-stage" data-stage="04">
+                <div class="pipeline-stage__number">04</div>
+
+                <div class="pipeline-stage__content">
+                  <p class="pipeline-stage__label">Experience</p>
+
+                  <h2 class="pipeline-stage__title">
+                    What does
+                    <span>this feel like?</span>
+                  </h2>
+
+                  <p class="pipeline-stage__lead">
+                    Learning enters the real world.
+                  </p>
+
+                  <p class="pipeline-stage__text">
+                    Learners gain direct exposure to excavations, fossil sites,
+                    museum laboratories, craft studios, communities and
+                    protected environments.
+                  </p>
+
+                  <div class="pipeline-stage__activities">
+                    <span>Excavations</span>
+                    <span>Fossil Sites</span>
+                    <span>Museum Labs</span>
+                    <span>Craft Studios</span>
+                    <span>Communities</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==================================================
+             05 — CREATE
+             ================================================== -->
+
+              <article class="pipeline-stage" data-stage="05">
+                <div class="pipeline-stage__number">05</div>
+
+                <div class="pipeline-stage__content">
+                  <p class="pipeline-stage__label">Create</p>
+
+                  <h2 class="pipeline-stage__title">
+                    What can
+                    <span>I contribute?</span>
+                  </h2>
+
+                  <p class="pipeline-stage__lead">Knowledge becomes output.</p>
+
+                  <p class="pipeline-stage__text">
+                    Participants turn what they have learned into tangible work
+                    — creating products, businesses, documentaries, exhibitions,
+                    archives and research.
+                  </p>
+
+                  <div class="pipeline-stage__activities">
+                    <span>Products</span>
+                    <span>Businesses</span>
+                    <span>Mini Documentaries</span>
+                    <span>Exhibitions</span>
+                    <span>Archives</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==================================================
+             06 — TRANSITION
+             ================================================== -->
+
+              <article class="pipeline-stage" data-stage="06">
+                <div class="pipeline-stage__number">06</div>
+
+                <div class="pipeline-stage__content">
+                  <p class="pipeline-stage__label">Transition</p>
+
+                  <h2 class="pipeline-stage__title">
+                    Where do
+                    <span>I go next?</span>
+                  </h2>
+
+                  <p class="pipeline-stage__lead">
+                    Learning becomes opportunity.
+                  </p>
+
+                  <p class="pipeline-stage__text">
+                    Participants are connected to pathways beyond the programme
+                    — further study, internships, assistantships,
+                    apprenticeships and enterprise.
+                  </p>
+
+                  <div class="pipeline-stage__activities">
+                    <span>University</span>
+                    <span>Internships</span>
+                    <span>Assistantships</span>
+                    <span>Apprenticeships</span>
+                    <span>Entrepreneurship</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==================================================
+             07 — RETURN
+             ================================================== -->
+
+              <article class="pipeline-stage" data-stage="07">
+                <div class="pipeline-stage__number">07</div>
+
+                <div class="pipeline-stage__content">
+                  <p class="pipeline-stage__label">Return</p>
+
+                  <h2 class="pipeline-stage__title">
+                    How do
+                    <span>I give back?</span>
+                  </h2>
+
+                  <p class="pipeline-stage__lead">
+                    The journey becomes self-renewing.
+                  </p>
+
+                  <p class="pipeline-stage__text">
+                    Graduates return to the ecosystem as mentors, guest
+                    speakers, facilitators and contributors — helping create the
+                    next generation of participants.
+                  </p>
+
+                  <div class="pipeline-stage__activities">
+                    <span>Mentor</span>
+                    <span>Guest Speaker</span>
+                    <span>Facilitator</span>
+                    <span>Contributor</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------
+         CYCLE INDICATOR
+         ------------------------------------------------------ -->
+
+          <div class="pipeline-journey__cycle">
+            <span class="pipeline-journey__cycle-label">
+              The cycle continues
+            </span>
+
+            <span class="pipeline-journey__cycle-arrow"> ↻ </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+SCROLL ACCENT — KNOWLEDGE PATH
+======================================================== -->
+<div class="heritage-accent-zone">
+
+  <!-- SCROLL ACCENT -->
+
+  <div
+    class="scroll-accent scroll-accent--knowledge"
+    aria-hidden="true"
+  >
+
+    <svg
+      class="scroll-accent__svg"
+      viewBox="0 0 1200 1800"
+      preserveAspectRatio="none"
+    >
+
+      <path
+        class="scroll-accent__path"
+        d="
+          M 100 0
+          C 520 180, 1050 180, 1080 430
+          C 1110 680, 180 650, 130 900
+          C 80 1150, 1020 1120, 1080 1380
+          C 1110 1510, 900 1660, 760 1800
+        "
+      />
+
+    </svg>
+
+    <span class="scroll-accent__node scroll-accent__node--one"></span>
+    <span class="scroll-accent__node scroll-accent__node--two"></span>
+    <span class="scroll-accent__node scroll-accent__node--three"></span>
+
+  </div>
+
+
+      <!-- ========================================================
+05 — THE LIVING SYSTEM
+======================================================== -->
+
+      <section class="living-system" id="living-system">
+        <div class="living-system__inner">
+          <!-- HEADER -->
+
+          <header class="living-system__header">
+            <div class="living-system__eyebrow">
+              <span class="living-system__number">04</span>
+              <span class="living-system__line"></span>
+              <span>The Living System</span>
+            </div>
+
+            <h2 class="living-system__title">
+              Heritage doesn't end.
+              <span>It circulates.</span>
+            </h2>
+
+            <p class="living-system__intro">
+              Knowledge moves between people, places and practices — becoming
+              part of a living system that can be shared, developed and carried
+              forward.
+            </p>
+          </header>
+
+          <!-- SYSTEM -->
+
+          <div class="living-system__diagram">
+            <div class="living-system__orbit living-system__orbit--outer"></div>
+            <div class="living-system__orbit living-system__orbit--inner"></div>
+
+            <!-- CONNECTIONS -->
+
+            <div class="living-system__connections" aria-hidden="true">
+              <span class="living-system__connection connection--one"></span>
+              <span class="living-system__connection connection--two"></span>
+              <span class="living-system__connection connection--three"></span>
+              <span class="living-system__connection connection--four"></span>
+              <span class="living-system__connection connection--five"></span>
+            </div>
+
+            <!-- CENTRE -->
+
+            <div class="living-system__core">
+              <span class="living-system__core-label"> IMISI </span>
+
+              <strong>
+                Living
+                <span>Heritage</span>
+              </strong>
+
+              <span class="living-system__core-hint">
+                Knowledge in motion
+              </span>
+            </div>
+
+            <!-- NODES -->
+
+            <button
+              class="living-system__node living-system__node--people"
+              data-system="people"
+              type="button"
+            >
+              <span class="living-system__node-number">01</span>
+              <strong>People</strong>
+              <small>Those who carry knowledge</small>
+            </button>
+
+            <button
+              class="living-system__node living-system__node--practice"
+              data-system="practice"
+              type="button"
+            >
+              <span class="living-system__node-number">02</span>
+              <strong>Practice</strong>
+              <small>Knowledge put into action</small>
+            </button>
+
+            <button
+              class="living-system__node living-system__node--place"
+              data-system="place"
+              type="button"
+            >
+              <span class="living-system__node-number">03</span>
+              <strong>Place</strong>
+              <small>Where knowledge lives</small>
+            </button>
+
+            <button
+              class="living-system__node living-system__node--knowledge"
+              data-system="knowledge"
+              type="button"
+            >
+              <span class="living-system__node-number">04</span>
+              <strong>Knowledge</strong>
+              <small>What is learned and shared</small>
+            </button>
+
+            <button
+              class="living-system__node living-system__node--future"
+              data-system="future"
+              type="button"
+            >
+              <span class="living-system__node-number">05</span>
+              <strong>Future</strong>
+              <small>What gets carried forward</small>
+            </button>
+          </div>
+
+          <!-- ACTIVE DESCRIPTION -->
+
+          <div class="living-system__detail">
+            <span class="living-system__detail-index">01 / 05</span>
+
+            <p class="living-system__detail-text">
+              People carry knowledge forward through participation, practice and
+              exchange.
+            </p>
+          </div>
+
+          <!-- CLOSING -->
+
+          <div class="living-system__closing">
+            <span class="living-system__closing-line"></span>
+
+            <p>
+              The system stays alive when knowledge continues moving between
+              generations.
+            </p>
+
+            <span class="living-system__closing-arrow">↓</span>
+          </div>
+        </div>
+      </section>
+
+
+  <!-- ========================================================
+06 — RETURN
+======================================================== -->
+
+      <section class="heritage-return" id="return">
+        <div class="heritage-return__inner">
+          <div class="heritage-return__eyebrow">
+            <span>06</span>
+            <span class="heritage-return__line"></span>
+            <span>Return</span>
+          </div>
+
+          <div class="heritage-return__content">
+            <div class="heritage-return__number">06</div>
+
+            <div class="heritage-return__copy">
+              <p class="heritage-return__label">RETURN</p>
+
+              <h2 class="heritage-return__title">
+                What happens
+                <span>when you come back?</span>
+              </h2>
+
+              <p class="heritage-return__lead">
+                The journey becomes self-renewing.
+              </p>
+
+              <p class="heritage-return__text">
+                Those who move through the pipeline can return to the ecosystem
+                as mentors, facilitators, collaborators and contributors —
+                carrying knowledge into new spaces and opening pathways for
+                others.
+              </p>
+            </div>
+          </div>
+
+          <!-- RETURN PATH -->
+
+          <div class="heritage-return__path">
+            <div class="heritage-return__path-line">
+              <span class="heritage-return__path-progress"></span>
+            </div>
+
+            <div class="heritage-return__path-item">
+              <span>01</span>
+              <strong>Learn</strong>
+            </div>
+
+            <div class="heritage-return__path-item">
+              <span>02</span>
+              <strong>Experience</strong>
+            </div>
+
+            <div class="heritage-return__path-item">
+              <span>03</span>
+              <strong>Return</strong>
+            </div>
+          </div>
+
+          <div class="heritage-return__statement">
+            <span class="heritage-return__statement-line"></span>
+
+            <p>Knowledge becomes more powerful when it is carried forward.</p>
+          </div>
+        </div>
+      </section>
+
+
+</div>
+
+  
+
+      
+      <!-- ========================================================
+07 — CONTINUE
+======================================================== -->
+
+<section class="heritage-continue" id="continue">
+
+  <div class="heritage-continue__inner">
+
+    <!-- EYEBROW -->
+
+    <div class="heritage-continue__eyebrow">
+      <span>07</span>
+      <span class="heritage-continue__line"></span>
+      <span>Continue</span>
+    </div>
+
+
+    <!-- MAIN STATEMENT -->
+
+    <div class="heritage-continue__hero">
+
+      <span class="heritage-continue__number">
+        07
+      </span>
+
+      <div class="heritage-continue__copy">
+
+        <p class="heritage-continue__label">
+          THE JOURNEY CONTINUES
+        </p>
+
+        <h2 class="heritage-continue__title">
+          What will
+          <span>you carry forward?</span>
+        </h2>
+
+        <p class="heritage-continue__intro">
+          Heritage lives through the people who choose to
+          keep learning, making, sharing and creating pathways
+          for what comes next.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONTINUATION PATH -->
+
+    <div class="heritage-continue__path">
+
+      <div class="heritage-continue__path-line">
+        <span></span>
+      </div>
+
+      <div class="heritage-continue__path-point">
+        <span>01</span>
+        <strong>Knowledge</strong>
+      </div>
+
+      <div class="heritage-continue__path-point">
+        <span>02</span>
+        <strong>Practice</strong>
+      </div>
+
+      <div class="heritage-continue__path-point">
+        <span>03</span>
+        <strong>Possibility</strong>
+      </div>
+
+      <div class="heritage-continue__path-point">
+        <span>04</span>
+        <strong>Next Generation</strong>
+      </div>
+
+    </div>
+
+
+    <!-- ACTION -->
+
+    <div class="heritage-continue__action">
+
+      <div class="heritage-continue__action-copy">
+
+        <span>THE NEXT STEP</span>
+
+        <p>
+          Explore the programmes, stories and opportunities
+          that keep the Heritage Pipeline moving.
+        </p>
+
+      </div>
+
+      <a
+        href="./programmes.html"
+        class="heritage-continue__button"
+      >
+        <span>Explore the Programmes</span>
+        <strong>↗</strong>
+      </a>
+
+    </div>
+
+
+    <!-- FINAL LINE -->
+
+    <div class="heritage-continue__closing">
+
+      <span class="heritage-continue__closing-mark">
+        ↻
+      </span>
+
+      <p>
+        Discover · Connect · Learn · Experience · Create ·
+        Transition · Return
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+    <!-- ======= FOOTER =========== -->
+
+    <!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- MAIN CTA -->
+
+        <div class="site-footer__hero">
+          <span class="site-footer__eyebrow"> Ìmísí Foundation </span>
+
+          <h2 class="site-footer__title">
+            Keep knowledge
+            <span>moving.</span>
+          </h2>
+
+          <p class="site-footer__intro">
+            Heritage continues when knowledge is shared, practised and carried
+            forward.
+          </p>
+
+          <div class="site-footer__actions">
+            <a
+              href="#get-involved"
+              class="site-footer__button site-footer__button--lime"
+            >
+              Partner With Us
+
+              <span>↗</span>
+            </a>
+
+            <a
+              href="#support"
+              class="site-footer__button site-footer__button--ghost"
+            >
+              Support the Foundation
+            </a>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <div class="site-footer__logo">ÌMÍSÍ</div>
+
+            <p>A living institution for heritage, knowledge and possibility.</p>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Explore </span>
+
+            <a href="./heritage-pipeline.html"> Heritage Pipeline </a>
+
+            <a href="#why"> Why This Matters </a>
+
+            <a href="#knowledge"> Knowledge </a>
+
+            <a href="#ecosystem"> Ecosystem </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Connect </span>
+
+            <a href="#get-involved"> Partner With Us </a>
+
+            <a href="#support"> Support </a>
+
+            <a href="#contact"> Contact </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Follow </span>
+
+            <a href="#"> Instagram </a>
+
+            <a href="#"> LinkedIn </a>
+
+            <a href="#"> Facebook </a>
+          </div>
+        </div>
+
+        <!-- LEGAL -->
+
+        <div class="site-footer__legal">
+          <span>
+            © <span id="year"></span>
+            Ìmísí Foundation.
+          </span>
+
+          <span> All rights reserved. </span>
+
+          <span class="site-footer__legal-right">
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </span>
+        </div>
+      </div>
+
+      <!-- WORDMARK -->
+
+      <div class="site-footer__wordmark">ÌMÍSÍ</div>
+    </footer>
+
+    <button
+      class="scroll-to-top-btn"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
+
+    <!-- =======================================
+GSAP
+======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="./assets/js/navbar.js"></script>
+
+    <script src="./assets/js/cursor.js"></script>
+    <script src="./assets/js/home-hero.js"></script>
+    <script src="./assets/js/intro.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/heritage-pipeline-line.js"></script>
+    <script src="./assets/js/heritage-pipeline-matter.js"></script>
+    <script src="./assets/js/heritage-pipeline-motion.js"></script>
+    <script src="./assets/js/heritage-living-system.js"></script>
+    <script src="./assets/js/heritage-continue.js"></script>
+    <script src="./assets/js/heritage-return.js"></script>
+     <script src="./assets/js/heritage-scroll-accents.js"></script>
+    <script src="./assets/js/heritage-archive.js"></script>
+    <script src="./assets/js/heritage-possibility.js"></script>
+    <script src="./assets/js/heritage-work.js"></script>
+
+    <!-- THREE.JS IMPORT MAP -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./assets/js/basket.js"></script>
+  </body>
+</html>

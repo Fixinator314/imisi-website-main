@@ -1,0 +1,274 @@
+/* ==========================================================
+   IMISI FOUNDATION — IMPACT INTRO
+   01 / Impact
+   ========================================================== */
+
+.impact-intro {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: clamp(7rem, 11vw, 11rem) 6vw clamp(5rem, 8vw, 8rem);
+
+  background: #f4f1e8;
+  color: #3f3f3f;
+
+  overflow: hidden;
+}
+
+.impact-intro__inner {
+  width: min(1400px, 100%);
+
+  min-height: calc(100vh - 15rem);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.impact-intro__header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: auto;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.impact-intro__eyebrow {
+  color: #0a6970;
+}
+
+.impact-intro__index {
+  opacity: 0.45;
+}
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.impact-intro__main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(280px, 0.65fr);
+
+  gap: clamp(4rem, 9vw, 10rem);
+
+  align-items: end;
+
+  margin: clamp(6rem, 10vw, 10rem) 0;
+}
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.impact-intro__title-wrap {
+  position: relative;
+}
+
+.impact-intro__number {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.15em;
+
+  color: #0c9268;
+}
+
+.impact-intro__title {
+  margin: 0;
+
+  max-width: 950px;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(4.5rem, 9vw, 9rem);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.05em;
+}
+
+.impact-intro__title span {
+  display: block;
+}
+
+.impact-intro__title em {
+  display: block;
+
+  color: #0c9268;
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   COPY
+   ========================================================== */
+
+.impact-intro__copy {
+  max-width: 430px;
+
+  padding-bottom: 0.5rem;
+}
+
+.impact-intro__lead {
+  margin: 0 0 1.5rem;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(1.5rem, 2.3vw, 2.3rem);
+
+  line-height: 1.2;
+}
+
+.impact-intro__copy > p:last-child {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.82rem;
+
+  line-height: 1.8;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   BOTTOM
+   ========================================================== */
+
+.impact-intro__bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+.impact-intro__line {
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(63, 63, 63, 0.2);
+}
+
+.impact-intro__scroll {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: #0a6970;
+}
+
+/* ==========================================================
+   SUBTLE GRAPHIC
+   ========================================================== */
+
+.impact-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: min(50vw, 700px);
+  aspect-ratio: 1;
+
+  right: -25%;
+  bottom: -45%;
+
+  border: 1px solid rgba(10, 105, 112, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .impact-intro__main {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .impact-intro__copy {
+    max-width: 600px;
+  }
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .impact-intro {
+    padding: 6rem 7vw 6rem;
+  }
+
+  .impact-intro__inner {
+    min-height: auto;
+  }
+
+  .impact-intro__index {
+    display: none;
+  }
+
+  .impact-intro__main {
+    margin: 6rem 0 5rem;
+  }
+
+  .impact-intro__title {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+  }
+
+  .impact-intro__copy {
+    max-width: 100%;
+  }
+
+  .impact-intro__bottom {
+    align-items: flex-end;
+  }
+
+  .impact-intro__line {
+    max-width: 100px;
+  }
+}

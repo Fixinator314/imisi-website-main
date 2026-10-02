@@ -1,0 +1,406 @@
+/* ==========================================================
+   IMISI HOUSE — HERITAGE PIPELINE
+   HERO
+   ========================================================== */
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.heritage-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #111;
+  color: var(--nav-bone, #f2eee5);
+}
+
+/* ==========================================================
+   BACKGROUND MEDIA
+   ========================================================== */
+
+.heritage-hero__media {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+.heritage-hero__image {
+  position: absolute;
+  inset: -5%;
+
+  width: 110%;
+  height: 110%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+
+  transform: scale(1.05);
+
+  will-change: transform;
+}
+
+/* ==========================================================
+   IMAGE OVERLAY
+   ========================================================== */
+
+.heritage-hero__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.28) 40%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+
+  z-index: 1;
+}
+
+/* ==========================================================
+   HERO INNER
+   ========================================================== */
+
+.heritage-hero__inner {
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: clamp(7rem, 12vw, 10rem) clamp(1.5rem, 5vw, 6rem)
+    clamp(6rem, 9vw, 8rem);
+
+  z-index: 2;
+}
+
+/* ==========================================================
+   EYEBROW
+   ========================================================== */
+
+.heritage-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--nav-bone, #f2eee5);
+
+  opacity: 0.9;
+}
+
+.heritage-hero__eyebrow-line {
+  display: block;
+
+  width: clamp(2rem, 4vw, 4rem);
+  height: 1px;
+
+  background: currentColor;
+
+  transform-origin: left center;
+}
+
+/* ==========================================================
+   MAIN TITLE
+   ========================================================== */
+
+.heritage-hero__title {
+  max-width: 1050px;
+
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 400;
+
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+
+  color: var(--nav-bone, #f2eee5);
+}
+
+.heritage-hero__title-line {
+  display: block;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   BOTTOM CONTENT
+   ========================================================== */
+
+.heritage-hero__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+
+  width: 100%;
+
+  margin-top: clamp(2rem, 5vw, 4rem);
+}
+
+/* ==========================================================
+   INTRO
+   ========================================================== */
+
+.heritage-hero__intro {
+  max-width: 520px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  color: var(--nav-bone, #f2eee5);
+
+  opacity: 0.88;
+}
+
+/* ==========================================================
+   META
+   ========================================================== */
+
+.heritage-hero__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+
+  flex-shrink: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--nav-bone, #f2eee5);
+
+  opacity: 0.65;
+
+  text-align: right;
+}
+
+/* ==========================================================
+   SCROLL INDICATOR
+   ========================================================== */
+
+.heritage-hero__scroll {
+  position: absolute;
+
+  right: clamp(1.5rem, 4vw, 5rem);
+  bottom: clamp(1.5rem, 3vw, 3rem);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  z-index: 3;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--nav-bone, #f2eee5);
+
+  writing-mode: vertical-rl;
+}
+
+.heritage-hero__scroll-label {
+  opacity: 0.7;
+}
+
+.heritage-hero__scroll-line {
+  position: relative;
+
+  width: 1px;
+  height: 70px;
+
+  background: rgba(255, 255, 255, 0.28);
+
+  overflow: hidden;
+}
+
+.heritage-hero__scroll-dot {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 1px;
+  height: 22px;
+
+  background: currentColor;
+
+  animation: heritageScroll 2.2s ease-in-out infinite;
+}
+
+@keyframes heritageScroll {
+  0% {
+    transform: translateY(-25px);
+  }
+
+  50% {
+    transform: translateY(35px);
+  }
+
+  100% {
+    transform: translateY(70px);
+  }
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+  .heritage-hero {
+    min-height: 100svh;
+  }
+
+  .heritage-hero__inner {
+    min-height: 100svh;
+
+    padding: 8rem 1.25rem 5.5rem;
+  }
+
+  .heritage-hero__image {
+    object-position: center center;
+  }
+
+  .heritage-hero__title {
+    max-width: 100%;
+
+    font-size: clamp(3.5rem, 16vw, 6rem);
+    line-height: 0.9;
+  }
+
+  .heritage-hero__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+  }
+
+  .heritage-hero__intro {
+    max-width: 90%;
+
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .heritage-hero__meta {
+    align-items: flex-start;
+
+    text-align: left;
+  }
+
+  .heritage-hero__scroll {
+    right: 1.25rem;
+    bottom: 1.5rem;
+  }
+}
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+  .heritage-hero__inner {
+    padding: 7rem 1rem 5rem;
+  }
+
+  .heritage-hero__eyebrow {
+    font-size: 0.62rem;
+  }
+
+  .heritage-hero__title {
+    font-size: clamp(3rem, 16vw, 4.5rem);
+  }
+
+  .heritage-hero__intro {
+    max-width: 100%;
+  }
+
+  .heritage-hero__scroll {
+    display: none;
+  }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .heritage-hero__image {
+    transform: none;
+  }
+
+  .heritage-hero__scroll-dot {
+    animation: none;
+  }
+}
+
+/* ==========================================================
+   HERITAGE PIPELINE — LIGHT NAV
+   ========================================================== */
+
+.heritage-pipeline-page .nav__links a,
+.heritage-pipeline-page .nav__support {
+  color: var(--nav-charcoal);
+}
+
+/* Hover */
+.heritage-pipeline-page .nav__links a:hover,
+.heritage-pipeline-page .nav__support:hover {
+  color: #f2eee5;
+}
+
+/* Burger */
+.heritage-pipeline-page .nav__burger svg,
+.heritage-pipeline-page .nav__burger svg path {
+  stroke: #f2eee5;
+}
+
+/* Partner button text stays dark because of the
+   lime/green button background */
+.heritage-pipeline-page .nav__partner {
+  color: #111;
+}

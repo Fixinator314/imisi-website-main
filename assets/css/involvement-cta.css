@@ -1,0 +1,329 @@
+/* ==========================================================
+   IMISI FOUNDATION — INVOLVEMENT CTA
+   04 / Keep It Moving
+   ========================================================== */
+
+.involvement-cta {
+  --teal: #0a6970;
+  --green: #0c9268;
+  --lime: #bed639;
+  --bone: #f4f1e8;
+  --charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 90vh;
+
+  padding: 10vh 6vw 7vh;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--teal);
+  color: var(--bone);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   BACKGROUND CIRCLES
+   ========================================================== */
+
+.involvement-cta::before,
+.involvement-cta::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(244, 241, 232, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.involvement-cta::before {
+  width: min(65vw, 900px);
+  aspect-ratio: 1;
+
+  right: -25%;
+  top: -35%;
+}
+
+.involvement-cta::after {
+  width: min(40vw, 550px);
+  aspect-ratio: 1;
+
+  left: -20%;
+  bottom: -35%;
+
+  border-color: rgba(190, 214, 57, 0.1);
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.involvement-cta__inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(1500px, 100%);
+  margin: auto;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.involvement-cta__header {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.involvement-cta__header span:first-child {
+  color: var(--lime);
+}
+
+.involvement-cta__header span:last-child {
+  color: rgba(244, 241, 232, 0.38);
+}
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.involvement-cta__main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(280px, 0.75fr);
+
+  gap: clamp(60px, 10vw, 160px);
+
+  align-items: end;
+
+  margin-top: clamp(100px, 14vh, 180px);
+}
+
+/* ==========================================================
+   STATEMENT
+   ========================================================== */
+
+.involvement-cta__label {
+  margin: 0 0 25px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: rgba(244, 241, 232, 0.5);
+}
+
+.involvement-cta__statement h2 {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(5rem, 9vw, 10rem);
+  font-weight: 400;
+
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.involvement-cta__statement h2 span {
+  display: block;
+
+  color: var(--lime);
+  font-style: italic;
+}
+
+/* ==========================================================
+   COPY
+   ========================================================== */
+
+.involvement-cta__copy {
+  max-width: 480px;
+
+  padding-bottom: 10px;
+}
+
+.involvement-cta__copy p {
+  margin: 0 0 25px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+
+  color: rgba(244, 241, 232, 0.68);
+}
+
+.involvement-cta__copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   ACTIONS
+   ========================================================== */
+
+.involvement-cta__actions {
+  display: flex;
+  gap: 18px;
+
+  margin-top: 70px;
+}
+
+.involvement-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 22px;
+
+  padding: 17px 23px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.involvement-cta__button span {
+  font-size: 1rem;
+}
+
+.involvement-cta__button:hover {
+  gap: 30px;
+}
+
+.involvement-cta__button--primary {
+  background: var(--lime);
+  color: var(--teal);
+}
+
+.involvement-cta__button--primary:hover {
+  background: var(--bone);
+}
+
+.involvement-cta__button--ghost {
+  border: 1px solid rgba(244, 241, 232, 0.3);
+
+  color: var(--bone);
+}
+
+.involvement-cta__button--ghost:hover {
+  background: rgba(244, 241, 232, 0.08);
+}
+
+/* ==========================================================
+   CYCLE
+   ========================================================== */
+
+.involvement-cta__cycle {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 80px;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(244, 241, 232, 0.12);
+}
+
+.involvement-cta__cycle-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(190, 214, 57, 0.4);
+  border-radius: 50%;
+
+  color: var(--lime);
+
+  font-size: 1.1rem;
+}
+
+.involvement-cta__cycle-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  color: rgba(244, 241, 232, 0.38);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 850px) {
+  .involvement-cta {
+    min-height: auto;
+
+    padding: 80px 5vw 65px;
+  }
+
+  .involvement-cta__header span:last-child {
+    display: none;
+  }
+
+  .involvement-cta__main {
+    grid-template-columns: 1fr;
+
+    margin-top: 90px;
+
+    gap: 45px;
+  }
+
+  .involvement-cta__statement h2 {
+    font-size: clamp(4.5rem, 17vw, 7rem);
+  }
+
+  .involvement-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-top: 55px;
+  }
+
+  .involvement-cta__button {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 500px) {
+  .involvement-cta__cycle {
+    align-items: flex-start;
+  }
+
+  .involvement-cta__cycle-text {
+    line-height: 1.7;
+  }
+}

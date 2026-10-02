@@ -1,0 +1,486 @@
+/* ==========================================================
+   IMISI HOUSE — THE WORK CONTINUES
+   Brand-aligned closing section
+   ========================================================== */
+
+.work-continues {
+  --imisi-teal: #087078;
+  --imisi-lime: #c6df00;
+  --imisi-coral: #e98582;
+  --imisi-bone: #f4f5e9;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 100vh;
+
+  background: var(--imisi-teal);
+  color: var(--imisi-bone);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   MEDIA
+   ========================================================== */
+
+.work-continues__media {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+}
+
+.work-continues__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.08);
+
+  opacity: 0.32;
+
+  filter: saturate(0.7) contrast(0.95);
+}
+
+/* ==========================================================
+   TEAL BRAND OVERLAY
+   ========================================================== */
+
+.work-continues__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(8, 112, 120, 0.98) 0%,
+    rgba(8, 112, 120, 0.94) 38%,
+    rgba(8, 112, 120, 0.78) 68%,
+    rgba(8, 112, 120, 0.88) 100%
+  );
+
+  mix-blend-mode: normal;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.work-continues__inner {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 150px clamp(30px, 7vw, 110px) 60px;
+}
+
+/* ==========================================================
+   EYEBROW
+   ========================================================== */
+
+.work-continues__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 60px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-lime);
+
+  opacity: 0.95;
+}
+
+.work-continues__line {
+  width: 42px;
+  height: 1px;
+
+  background: var(--imisi-lime);
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.work-continues__content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(280px, 0.65fr);
+
+  gap: clamp(50px, 9vw, 150px);
+
+  align-items: end;
+
+  max-width: 1500px;
+}
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.work-continues__title {
+  margin: 0;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(72px, 10vw, 160px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.045em;
+
+  color: var(--imisi-bone);
+}
+
+.work-continues__title span {
+  display: block;
+
+  font-style: italic;
+
+  color: var(--imisi-lime);
+}
+
+/* ==========================================================
+   COPY
+   ========================================================== */
+
+.work-continues__copy {
+  max-width: 420px;
+
+  padding-bottom: 8px;
+}
+
+.work-continues__copy p {
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: var(--imisi-bone);
+
+  opacity: 0.7;
+}
+
+.work-continues__copy .work-continues__lead {
+  margin-bottom: 24px;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+
+  color: var(--imisi-bone);
+
+  opacity: 1;
+}
+
+/* ==========================================================
+   CORAL ACCENT
+   ========================================================== */
+
+.work-continues__copy::before {
+  content: "";
+
+  display: block;
+
+  width: 9px;
+  height: 9px;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-coral);
+}
+
+/* ==========================================================
+   ACTIONS
+   ========================================================== */
+
+.work-continues__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 80px;
+}
+
+/* ----------------------------------------------------------
+   PRIMARY CTA
+   ---------------------------------------------------------- */
+
+.work-continues__button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  min-width: 190px;
+
+  padding: 17px 20px;
+
+  border: 1px solid var(--imisi-lime);
+
+  background: var(--imisi-lime);
+
+  color: var(--imisi-charcoal);
+
+  text-decoration: none;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.work-continues__button:hover {
+  background: var(--imisi-bone);
+
+  border-color: var(--imisi-bone);
+
+  color: var(--imisi-teal);
+
+  transform: translateY(-3px);
+}
+
+.work-continues__arrow {
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+/* ----------------------------------------------------------
+   SECONDARY CTA
+   ---------------------------------------------------------- */
+
+.work-continues__secondary {
+  color: var(--imisi-bone);
+
+  text-decoration: none;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  opacity: 0.7;
+
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease;
+}
+
+.work-continues__secondary:hover {
+  color: var(--imisi-lime);
+
+  opacity: 1;
+}
+
+/* ==========================================================
+   META
+   ========================================================== */
+
+.work-continues__meta {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: auto;
+
+  padding-top: 100px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-bone);
+
+  opacity: 0.5;
+}
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+/*
+   The section is dark teal, therefore the navigation
+   should return to its light/bone text state.
+*/
+
+.work-continues .nav--dark {
+  color: var(--imisi-charcoal);
+}
+
+/*
+   These are useful if your navbar inherits the
+   nav--dark class from the previous light section.
+*/
+
+.nav:not(.nav--dark) .nav__links a,
+.nav:not(.nav--dark) .nav__support {
+  color: var(--imisi-bone);
+}
+
+.nav:not(.nav--dark) .nav__links a:hover,
+.nav:not(.nav--dark) .nav__support:hover {
+  color: var(--imisi-bone);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .work-continues__content {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .work-continues__copy {
+    max-width: 500px;
+  }
+
+  .work-continues__actions {
+    margin-top: 55px;
+  }
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+  .work-continues {
+    min-height: 100svh;
+  }
+
+  .work-continues__inner {
+    min-height: 100svh;
+
+    padding: 130px 24px 35px;
+  }
+
+  .work-continues__eyebrow {
+    margin-bottom: 45px;
+  }
+
+  .work-continues__title {
+    font-size: clamp(58px, 17vw, 100px);
+
+    line-height: 0.9;
+  }
+
+  .work-continues__copy {
+    max-width: 440px;
+  }
+
+  .work-continues__copy .work-continues__lead {
+    font-size: 16px;
+  }
+
+  .work-continues__actions {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    margin-top: 45px;
+  }
+
+  .work-continues__meta {
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding-top: 60px;
+  }
+
+  .work-continues__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 112, 120, 0.82),
+      rgba(8, 112, 120, 0.86) 45%,
+      rgba(8, 112, 120, 0.98)
+    );
+  }
+
+  .work-continues__image {
+    opacity: 0.25;
+  }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .work-continues__button {
+    transition: none;
+  }
+}
+
+.nav.nav--dark .nav__links a,
+.nav.nav--dark .nav__support {
+  color: #111;
+}
+
+.nav.nav--dark .nav__links a:hover,
+.nav.nav--dark .nav__support:hover {
+  color: #111;
+}
+
+.nav.nav--dark .nav__burger svg,
+.nav.nav--dark .nav__burger svg path {
+  stroke: #111;
+}
+
+.nav.nav--dark .nav__partner {
+  color: #111;
+}

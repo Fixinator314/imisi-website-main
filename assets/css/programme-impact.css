@@ -1,0 +1,247 @@
+/* ==========================================================
+   IMISI FOUNDATION — PROGRAMME IMPACT
+   ========================================================== */
+
+.programme-impact {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  background: var(--imisi-bone);
+
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+}
+
+.programme-impact__inner {
+  width: min(1400px, 90%);
+
+  margin: 0 auto;
+
+  padding: clamp(8rem, 14vw, 14rem) 0 clamp(8rem, 14vw, 14rem);
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.programme-impact__header {
+  margin-bottom: clamp(6rem, 12vw, 12rem);
+}
+
+.programme-impact__eyebrow {
+  display: block;
+
+  margin-bottom: 2rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.programme-impact__title {
+  max-width: 1100px;
+
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(4rem, 8.5vw, 9rem);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.05em;
+}
+
+.programme-impact__title span {
+  display: block;
+
+  color: var(--imisi-green);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   STATEMENT
+   ========================================================== */
+
+.programme-impact__statement {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-bottom: clamp(7rem, 14vw, 14rem);
+}
+
+.programme-impact__statement p {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+
+  line-height: 1.65;
+
+  color: rgba(63, 63, 63, 0.75);
+}
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.programme-impact__grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid rgba(10, 105, 112, 0.2);
+
+  border-left: 1px solid rgba(10, 105, 112, 0.2);
+}
+
+.impact-item {
+  min-height: 360px;
+
+  padding: clamp(2rem, 4vw, 4rem);
+
+  display: grid;
+
+  grid-template-columns: 50px 1fr;
+
+  gap: 2rem;
+
+  border-right: 1px solid rgba(10, 105, 112, 0.2);
+
+  border-bottom: 1px solid rgba(10, 105, 112, 0.2);
+
+  transition:
+    background-color 0.45s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.impact-item:hover {
+  background: rgba(190, 214, 57, 0.08);
+
+  transform: translateY(-5px);
+}
+
+.impact-item__number {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.1em;
+
+  color: var(--imisi-teal);
+
+  opacity: 0.6;
+}
+
+.impact-item__body {
+  align-self: end;
+}
+
+.impact-item__body strong {
+  display: block;
+
+  margin-bottom: 1.2rem;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--imisi-teal);
+}
+
+.impact-item__body p {
+  max-width: 360px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.9rem;
+
+  line-height: 1.75;
+
+  color: rgba(63, 63, 63, 0.65);
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.programme-impact__closing {
+  margin-top: clamp(7rem, 12vw, 12rem);
+}
+
+.programme-impact__closing-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin-bottom: 2rem;
+
+  background: rgba(10, 105, 112, 0.2);
+
+  transform-origin: left;
+}
+
+.programme-impact__closing p {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(2rem, 4vw, 4rem);
+
+  line-height: 1.05;
+
+  color: var(--imisi-teal);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .programme-impact__inner {
+    width: 88%;
+  }
+
+  .programme-impact__title {
+    font-size: clamp(3.5rem, 16vw, 5.5rem);
+  }
+
+  .programme-impact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-item {
+    min-height: 320px;
+
+    grid-template-columns: 35px 1fr;
+  }
+}

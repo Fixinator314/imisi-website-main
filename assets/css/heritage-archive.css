@@ -1,0 +1,251 @@
+/* ==========================================================
+   IMISI HOUSE — THE LIVING ARCHIVE
+   ========================================================== */
+
+.living-archive {
+  position: relative;
+
+  background: #076870;
+  color: var(--nav-bone, #f2eee5);
+
+  padding: clamp(9rem, 15vw, 16rem) clamp(1.5rem, 6vw, 7rem);
+}
+
+.living-archive__inner {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.living-archive__header {
+  max-width: 1050px;
+
+  margin-bottom: clamp(7rem, 13vw, 13rem);
+}
+
+.living-archive__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 3rem;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  opacity: 0.6;
+}
+
+.living-archive__line {
+  width: 3rem;
+  height: 1px;
+
+  background: currentColor;
+}
+
+.living-archive__title {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 400;
+
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+}
+
+.living-archive__title span {
+  display: block;
+
+  opacity: 0.4;
+}
+
+.living-archive__intro {
+  max-width: 500px;
+
+  margin: 3rem 0 0 auto;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+
+  line-height: 1.75;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   GALLERY
+   ========================================================== */
+
+.living-archive__gallery {
+  position: relative;
+
+  min-height: 1000px;
+
+  width: 100%;
+}
+
+/* ==========================================================
+   GALLERY ITEM
+   ========================================================== */
+
+.living-archive__item {
+  position: absolute;
+
+  margin: 0;
+
+  width: 34vw;
+  max-width: 500px;
+}
+
+.living-archive__item--one {
+  top: 0;
+  left: 4%;
+}
+
+.living-archive__item--two {
+  top: 28%;
+  right: 5%;
+}
+
+.living-archive__item--three {
+  top: 62%;
+  left: 28%;
+}
+
+/* ==========================================================
+   IMAGES
+   ========================================================== */
+
+.living-archive__image-wrap {
+  position: relative;
+
+  width: 100%;
+  height: 550px;
+
+  overflow: hidden;
+
+  background: #222;
+}
+
+.living-archive__item--two .living-archive__image-wrap {
+  height: 430px;
+}
+
+.living-archive__item--three .living-archive__image-wrap {
+  height: 480px;
+}
+
+.living-archive__image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transform: scale(1.08);
+
+  will-change: transform;
+}
+
+/* ==========================================================
+   CAPTION
+   ========================================================== */
+
+.living-archive__item figcaption {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 0.8rem;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.living-archive__closing {
+  max-width: 700px;
+
+  margin: clamp(8rem, 14vw, 14rem) auto 0;
+
+  text-align: center;
+}
+
+.living-archive__closing p {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+  .living-archive {
+    padding: 6rem 1.25rem 8rem;
+  }
+
+  .living-archive__title {
+    font-size: clamp(3.5rem, 17vw, 6rem);
+  }
+
+  .living-archive__intro {
+    margin: 2rem 0 0;
+
+    max-width: 100%;
+  }
+
+  .living-archive__gallery {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4rem;
+  }
+
+  .living-archive__item {
+    position: relative;
+
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+
+    width: 100%;
+    max-width: none;
+  }
+
+  .living-archive__image-wrap,
+  .living-archive__item--two .living-archive__image-wrap,
+  .living-archive__item--three .living-archive__image-wrap {
+    height: 70vh;
+    min-height: 400px;
+  }
+
+  .living-archive__closing {
+    margin-top: 6rem;
+  }
+}

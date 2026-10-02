@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Impact</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-hero.css" />
+    <link rel="stylesheet" href="./assets/css/impact-intro.css" />
+    <link rel="stylesheet" href="./assets/css/impact-area.css" />
+    <link rel="stylesheet" href="./assets/css/impact-journey.css" />
+    <link rel="stylesheet" href="./assets/css/impact-stories.css" />
+    <link rel="stylesheet" href="./assets/css/impact-continue.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/intro.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="heritage-pipeline-page">
+    <!-- Custom desktop cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Route/section sweep used on nav clicks -->
+    <div class="sweep" id="sweep" aria-hidden="true">
+      <span class="sweep__title"></span>
+    </div>
+    <!-- ==========================================================
+     NAVBAR
+     ========================================================== -->
+
+    <header class="header nav-wrap">
+      <!-- ========================================================
+       DESKTOP NAVIGATION
+       ======================================================== -->
+
+      <nav class="nav" id="nav" data-state="top">
+        <!-- LOGO -->
+        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+        </a>
+
+        <!-- ======================================================
+         DESKTOP NAVIGATION LINKS
+         ====================================================== -->
+
+        <div class="nav__links" id="navLinks">
+          <a href="./heritage-pipeline.html" data-sweep="Heritage Pipeline">
+            Heritage Pipeline
+          </a>
+
+          <a href="./programmes.html" data-sweep="Programmes"> Programmes </a>
+
+          <a href="./stories.html" data-sweep="Stories"> Stories </a>
+
+          <a href="./impact.html" data-sweep="Impact"> Impact </a>
+
+          <a href="./get-involved.html" data-sweep="Get Involved">
+            Get Involved
+          </a>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP CTA
+         ====================================================== -->
+
+        <div class="nav__cta">
+          <a class="nav__support" href="#support"> Support </a>
+
+          <!-- DESKTOP PARTNER DROPDOWN -->
+
+          <div class="nav__dropdown">
+            <button
+              class="btn btn--solid nav__partner nav__dropdown-btn"
+              type="button"
+            >
+              Partner With Us
+
+              <svg
+                class="ico nav__dropdown-arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <ul class="nav__dropdown-menu">
+              <li>
+                <a href="payment.html"> Donate </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Volunteer </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Corporate Partnership </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ====================================================
+           MOBILE BURGER
+           ==================================================== -->
+
+          <button
+            class="nav__burger"
+            id="burger"
+            aria-label="Open menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP HERITAGE PIPELINE MEGA MENU
+         ====================================================== -->
+
+        <div class="mega" id="mega" aria-hidden="true">
+          <div class="mega__list" id="megaList"></div>
+
+          <div class="mega__preview" id="megaPreview"></div>
+        </div>
+      </nav>
+
+      <!-- ========================================================
+       MOBILE FULLSCREEN MENU
+       
+       IMPORTANT:
+       This is OUTSIDE the main .nav.
+       ======================================================== -->
+
+      <div class="mobile" id="mobile" aria-hidden="true">
+        <div class="grain"></div>
+
+        <!-- ======================================================
+         MOBILE TOP BAR
+         ====================================================== -->
+
+        <div class="mobile__top">
+          <a href="./index.html" class="mobile__brand">
+            <img
+              src="./assets/images/imnisi_foundation_logo2.png"
+              alt="Ìmísí Foundation"
+              class="mobile__brand-logo"
+            />
+          </a>
+
+          <!-- CLOSE BUTTON -->
+
+          <button
+            class="mobile__close"
+            id="mobileClose"
+            aria-label="Close menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         MOBILE NAVIGATION
+         ====================================================== -->
+
+        <nav class="mobile__nav" id="mobileNav">
+          <!-- ABOUT -->
+
+          <a href="./heritage-pipeline.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 01 </span>
+
+            Heritage Pipeline
+          </a>
+
+          <!-- HERITAGE PIPELINE -->
+
+          <a href="./programmes.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 02 </span>
+
+            Programmes
+          </a>
+
+          <!-- PROGRAMMES -->
+
+          <a href="./stories.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 03 </span>
+
+            Stories
+          </a>
+
+          <!-- STORIES -->
+
+          <a href="./impact.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 04 </span>
+
+            Impact
+          </a>
+
+          <!-- GET INVOLVED -->
+
+          <a href="./get-involved.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 05 </span>
+
+            Get Involved
+          </a>
+
+          <!-- ====================================================
+           MOBILE ACTIONS
+           ==================================================== -->
+
+          <div class="mobile__actions">
+            <!-- SUPPORT -->
+
+            <a
+              href="./payment.html"
+              class="mobile__action mobile__action--support"
+              data-mobile-link
+            >
+              Support
+            </a>
+
+            <!-- PARTNER WITH US -->
+
+            <button
+              class="mobile__action mobile__action--partner"
+              id="mobilePartnerToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobilePartnerMenu"
+            >
+              Partner With Us
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <!-- MOBILE PARTNER DROPDOWN -->
+
+            <div class="mobile__partner-menu" id="mobilePartnerMenu">
+              <a href="./payment.html" data-mobile-link> Donate </a>
+
+              <a href="./get-involved.html" data-mobile-link> Volunteer </a>
+
+              <a href="./get-involved.html" data-mobile-link>
+                Corporate Partnership
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================================
+     HERITAGE PIPELINE — HERO
+     ========================================================== -->
+
+    <main class="heritage-page">
+      <section class="heritage-hero" id="heritage-hero">
+        <!-- HERO BACKGROUND -->
+        <div class="heritage-hero__media" aria-hidden="true">
+          <img
+            src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+            alt=""
+            class="heritage-hero__image"
+          />
+
+          <div class="heritage-hero__overlay"></div>
+        </div>
+
+        <!-- HERO CONTENT -->
+        <div class="heritage-hero__inner">
+          <!-- EYEBROW -->
+          <div class="heritage-hero__eyebrow">
+            <span class="heritage-hero__eyebrow-line"></span>
+
+            <span> Heritage Pipeline </span>
+          </div>
+
+          <!-- TITLE -->
+          <h1 class="heritage-hero__title">
+            <span class="heritage-hero__title-line"> IMPACT </span>
+
+            <!-- <span class="heritage-hero__title-line">  </span> -->
+
+            <!-- <span class="heritage-hero__title-line"> behind us. </span> -->
+          </h1>
+
+          <!-- INTRO -->
+          <div class="heritage-hero__bottom">
+            <p class="heritage-hero__intro">
+              It is knowledge carried forward — from one generation to the next,
+              through people, practice and possibility.
+            </p>
+
+            <div class="heritage-hero__meta">
+              <span>ÌMÍSÍ HOUSE</span>
+              <span>HERITAGE / KNOWLEDGE / POSSIBILITY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCROLL INDICATOR -->
+        <div class="heritage-hero__scroll">
+          <span class="heritage-hero__scroll-label">
+            Explore the pipeline
+          </span>
+
+          <span class="heritage-hero__scroll-line">
+            <span class="heritage-hero__scroll-dot"></span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+     01 — IMPACT INTRODUCTION
+     ========================================================== -->
+
+      <section class="impact-intro" id="impact-intro">
+        <div class="impact-intro__inner">
+          <header class="impact-intro__header">
+            <span class="impact-intro__eyebrow"> 01 / Impact </span>
+
+            <span class="impact-intro__index">
+              PEOPLE · PRACTICE · PLACE · POSSIBILITY
+            </span>
+          </header>
+
+          <div class="impact-intro__main">
+            <div class="impact-intro__title-wrap">
+              <span class="impact-intro__number"> 01 </span>
+
+              <h2 class="impact-intro__title">
+                What happens
+                <span>when knowledge</span>
+                <em>moves?</em>
+              </h2>
+            </div>
+
+            <div class="impact-intro__copy">
+              <p class="impact-intro__lead">
+                Impact begins when knowledge becomes something people can
+                experience, practise and carry forward.
+              </p>
+
+              <p>
+                The value of heritage is not only in what is preserved. It is
+                also in what becomes possible when people connect with
+                knowledge, place and one another.
+              </p>
+            </div>
+          </div>
+
+          <div class="impact-intro__bottom">
+            <div class="impact-intro__line"></div>
+
+            <div class="impact-intro__scroll">
+              <span>Explore the impact</span>
+              <span>↓</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+     02 — IMPACT AREAS
+     ========================================================== -->
+
+      <section class="impact-areas" id="impact-areas">
+        <div class="impact-areas__sticky">
+          <!-- HEADER -->
+
+          <header class="impact-areas__header">
+            <span class="impact-areas__eyebrow"> 02 / Impact Areas </span>
+
+            <span class="impact-areas__index">
+              PEOPLE · PRACTICE · PLACE · POSSIBILITY
+            </span>
+          </header>
+
+          <!-- MAIN -->
+
+          <div class="impact-areas__main">
+            <div class="impact-areas__intro">
+              <span class="impact-areas__label"> Where impact begins </span>
+
+              <p>
+                Impact takes shape across the relationships between people,
+                practice, place and possibility.
+              </p>
+            </div>
+
+            <!-- AREA STACK -->
+
+            <div class="impact-areas__stack">
+              <!-- PEOPLE -->
+
+              <article
+                class="impact-area impact-area--people is-active"
+                data-area="people"
+              >
+                <span class="impact-area__number"> 01 </span>
+
+                <div class="impact-area__content">
+                  <span class="impact-area__category"> PEOPLE </span>
+
+                  <h2>
+                    People
+                    <em>carry it.</em>
+                  </h2>
+
+                  <p>
+                    Knowledge lives through the people who inherit it, practise
+                    it, share it and pass it forward.
+                  </p>
+                </div>
+
+                <span class="impact-area__mark"> 01 </span>
+              </article>
+
+              <!-- PRACTICE -->
+
+              <article
+                class="impact-area impact-area--practice"
+                data-area="practice"
+              >
+                <span class="impact-area__number"> 02 </span>
+
+                <div class="impact-area__content">
+                  <span class="impact-area__category"> PRACTICE </span>
+
+                  <h2>
+                    Practice
+                    <em>keeps it alive.</em>
+                  </h2>
+
+                  <p>
+                    Heritage becomes living knowledge when it is experienced,
+                    practised and made part of everyday life.
+                  </p>
+                </div>
+
+                <span class="impact-area__mark"> 02 </span>
+              </article>
+
+              <!-- PLACE -->
+
+              <article class="impact-area impact-area--place" data-area="place">
+                <span class="impact-area__number"> 03 </span>
+
+                <div class="impact-area__content">
+                  <span class="impact-area__category"> PLACE </span>
+
+                  <h2>
+                    Place
+                    <em>holds it.</em>
+                  </h2>
+
+                  <p>
+                    Places connect memory, identity and experience — giving
+                    knowledge somewhere to live and return to.
+                  </p>
+                </div>
+
+                <span class="impact-area__mark"> 03 </span>
+              </article>
+
+              <!-- POSSIBILITY -->
+
+              <article
+                class="impact-area impact-area--possibility"
+                data-area="possibility"
+              >
+                <span class="impact-area__number"> 04 </span>
+
+                <div class="impact-area__content">
+                  <span class="impact-area__category"> POSSIBILITY </span>
+
+                  <h2>
+                    Possibility
+                    <em>opens next.</em>
+                  </h2>
+
+                  <p>
+                    What is carried forward creates opportunities for new ideas,
+                    new relationships and new futures.
+                  </p>
+                </div>
+
+                <span class="impact-area__mark"> 04 </span>
+              </article>
+            </div>
+          </div>
+
+          <!-- PROGRESS -->
+
+          <div class="impact-areas__progress">
+            <span class="impact-areas__progress-track">
+              <span class="impact-areas__progress-fill"></span>
+            </span>
+
+            <span class="impact-areas__counter"> 01 / 04 </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================
+     03 — IMPACT JOURNEY
+     ========================================================== -->
+
+    <section class="impact-journey" id="impact-journey">
+      <div class="impact-journey__sticky">
+        <header class="impact-journey__header">
+          <span class="impact-journey__eyebrow"> 03 / Impact Journey </span>
+
+          <span class="impact-journey__index"> 01 — 07 </span>
+        </header>
+
+        <div class="impact-journey__layout">
+          <!-- RAIL -->
+
+          <aside class="impact-journey__rail">
+            <div class="impact-journey__rail-line">
+              <span class="impact-journey__rail-progress"></span>
+            </div>
+
+            <div class="impact-journey__stages">
+              <button class="impact-stage-nav is-active">
+                <span>01</span>
+                <strong>Discover</strong>
+              </button>
+
+              <button class="impact-stage-nav">
+                <span>02</span>
+                <strong>Connect</strong>
+              </button>
+
+              <button class="impact-stage-nav">
+                <span>03</span>
+                <strong>Learn</strong>
+              </button>
+
+              <button class="impact-stage-nav">
+                <span>04</span>
+                <strong>Experience</strong>
+              </button>
+
+              <button class="impact-stage-nav">
+                <span>05</span>
+                <strong>Create</strong>
+              </button>
+
+              <button class="impact-stage-nav">
+                <span>06</span>
+                <strong>Transition</strong>
+              </button>
+
+              <button class="impact-stage-nav">
+                <span>07</span>
+                <strong>Return</strong>
+              </button>
+            </div>
+          </aside>
+
+          <!-- CONTENT -->
+
+          <div class="impact-journey__content">
+            <!-- 01 -->
+
+            <article class="impact-journey__stage is-active">
+              <span class="impact-journey__number">01</span>
+
+              <span class="impact-journey__category"> DISCOVER </span>
+
+              <h2>
+                See what
+                <em>already exists.</em>
+              </h2>
+
+              <p>
+                Impact begins with attention — recognising the knowledge,
+                people, practices and places that are already shaping a
+                community.
+              </p>
+
+              <div class="impact-journey__outcome">
+                <span>IMPACT</span>
+                <strong>Awareness</strong>
+              </div>
+            </article>
+
+            <!-- 02 -->
+
+            <article class="impact-journey__stage">
+              <span class="impact-journey__number">02</span>
+
+              <span class="impact-journey__category"> CONNECT </span>
+
+              <h2>
+                Bring
+                <em>people together.</em>
+              </h2>
+
+              <p>
+                Connections create the conditions for knowledge to move between
+                people, generations and places.
+              </p>
+
+              <div class="impact-journey__outcome">
+                <span>IMPACT</span>
+                <strong>Connection</strong>
+              </div>
+            </article>
+
+            <!-- 03 -->
+
+            <article class="impact-journey__stage">
+              <span class="impact-journey__number">03</span>
+
+              <span class="impact-journey__category"> LEARN </span>
+
+              <h2>
+                Turn
+                <em>curiosity into knowledge.</em>
+              </h2>
+
+              <p>
+                Learning creates a bridge between what is known and what someone
+                is ready to understand or practise.
+              </p>
+
+              <div class="impact-journey__outcome">
+                <span>IMPACT</span>
+                <strong>Capability</strong>
+              </div>
+            </article>
+
+            <!-- 04 -->
+
+            <article class="impact-journey__stage">
+              <span class="impact-journey__number">04</span>
+
+              <span class="impact-journey__category"> EXPERIENCE </span>
+
+              <h2>
+                Make knowledge
+                <em>felt.</em>
+              </h2>
+
+              <p>
+                Experience turns knowledge from something understood into
+                something remembered, embodied and meaningful.
+              </p>
+
+              <div class="impact-journey__outcome">
+                <span>IMPACT</span>
+                <strong>Engagement</strong>
+              </div>
+            </article>
+
+            <!-- 05 -->
+
+            <article class="impact-journey__stage">
+              <span class="impact-journey__number">05</span>
+
+              <span class="impact-journey__category"> CREATE </span>
+
+              <h2>
+                Give knowledge
+                <em>somewhere to go.</em>
+              </h2>
+
+              <p>
+                Creation allows people to interpret what they have encountered
+                and contribute something of their own.
+              </p>
+
+              <div class="impact-journey__outcome">
+                <span>IMPACT</span>
+                <strong>Contribution</strong>
+              </div>
+            </article>
+
+            <!-- 06 -->
+
+            <article class="impact-journey__stage">
+              <span class="impact-journey__number">06</span>
+
+              <span class="impact-journey__category"> TRANSITION </span>
+
+              <h2>
+                Carry it
+                <em>somewhere new.</em>
+              </h2>
+
+              <p>
+                Transition is where learning begins to move beyond the original
+                experience and into another context.
+              </p>
+
+              <div class="impact-journey__outcome">
+                <span>IMPACT</span>
+                <strong>Application</strong>
+              </div>
+            </article>
+
+            <!-- 07 -->
+
+            <article class="impact-journey__stage">
+              <span class="impact-journey__number">07</span>
+
+              <span class="impact-journey__category"> RETURN </span>
+
+              <h2>
+                Give
+                <em>something back.</em>
+              </h2>
+
+              <p>
+                Return completes the movement — creating the possibility for
+                knowledge to continue circulating.
+              </p>
+
+              <div class="impact-journey__outcome">
+                <span>IMPACT</span>
+                <strong>Continuity</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="impact-journey__footer">
+          <span> The journey continues </span>
+
+          <span class="impact-journey__current"> 01 </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     04 / IMPACT STORIES
+     ========================================================== -->
+    <section class="impact-stories" id="impact-stories">
+      <div class="impact-stories__header">
+        <div class="impact-stories__eyebrow">
+          <span>04 / Impact Stories</span>
+        </div>
+
+        <div class="impact-stories__index">PEOPLE · EXPERIENCE · CHANGE</div>
+      </div>
+
+      <div class="impact-stories__intro">
+        <p class="impact-stories__label">From movement to meaning</p>
+
+        <h2>
+          Impact is
+          <span>experienced.</span>
+        </h2>
+
+        <p class="impact-stories__lead">
+          The movement of knowledge becomes visible through the people, places
+          and experiences it touches.
+        </p>
+      </div>
+
+      <div class="impact-stories__feature">
+        <div class="impact-stories__image-wrap">
+          <div class="impact-stories__image">
+            <!-- Replace with an actual impact story image -->
+            <img src="YOUR-IMPACT-STORY-IMAGE.jpg" alt="Impact story" />
+          </div>
+
+          <div class="impact-stories__image-label">
+            <span>01</span>
+            <span>People · Practice · Place</span>
+          </div>
+        </div>
+
+        <div class="impact-stories__story">
+          <div class="impact-stories__story-number">01</div>
+
+          <p class="impact-stories__story-eyebrow">A story of movement</p>
+
+          <h3>When knowledge becomes something you can carry.</h3>
+
+          <p class="impact-stories__story-text">
+            Impact can begin with a moment of connection — a person encountering
+            a practice, a place, a story or an idea that changes what they
+            understand and what they are able to do next.
+          </p>
+
+          <div class="impact-stories__outcome">
+            <span>What moves forward</span>
+
+            <strong> Knowledge · Confidence · Connection </strong>
+          </div>
+
+          <a href="#" class="impact-stories__link">
+            Read the story
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="impact-stories__closing">
+        <p>One experience can become another person's starting point.</p>
+
+        <div class="impact-stories__line"></div>
+
+        <span> IMPACT CONTINUES </span>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     05 / CONTINUE
+     ========================================================== -->
+    <section class="impact-continue" id="impact-continue">
+      <div class="impact-continue__inner">
+        <div class="impact-continue__header">
+          <div class="impact-continue__eyebrow">
+            <span>05 / Continue</span>
+          </div>
+
+          <div class="impact-continue__index">CARRY · CONNECT · CONTINUE</div>
+        </div>
+
+        <div class="impact-continue__main">
+          <p class="impact-continue__label">Impact does not end here.</p>
+
+          <h2>
+            Keep the
+            <span>knowledge</span>
+            moving.
+          </h2>
+
+          <p class="impact-continue__lead">
+            When knowledge is shared, practised and carried forward, one
+            experience can become the beginning of another.
+          </p>
+        </div>
+
+        <div class="impact-continue__path">
+          <div class="impact-continue__path-line"></div>
+
+          <div class="impact-continue__nodes">
+            <div class="impact-continue__node">
+              <span>01</span>
+              <strong>Discover</strong>
+              <small>See what exists.</small>
+            </div>
+
+            <div class="impact-continue__node">
+              <span>02</span>
+              <strong>Learn</strong>
+              <small>Understand what it holds.</small>
+            </div>
+
+            <div class="impact-continue__node">
+              <span>03</span>
+              <strong>Experience</strong>
+              <small>Make it meaningful.</small>
+            </div>
+
+            <div class="impact-continue__node">
+              <span>04</span>
+              <strong>Create</strong>
+              <small>Give it somewhere to go.</small>
+            </div>
+
+            <div class="impact-continue__node">
+              <span>05</span>
+              <strong>Return</strong>
+              <small>Carry it forward.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-continue__actions">
+          <a
+            href="./programmes.html"
+            class="impact-continue__button impact-continue__button--primary"
+          >
+            Explore the Programmes
+            <span>↗</span>
+          </a>
+
+          <a
+            href="./contact.html"
+            class="impact-continue__button impact-continue__button--secondary"
+          >
+            Get Involved
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="impact-continue__cycle">
+          <div class="impact-continue__cycle-mark">↻</div>
+
+          <p>
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FOOTER =========== -->
+
+    <!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- MAIN CTA -->
+
+        <div class="site-footer__hero">
+          <span class="site-footer__eyebrow"> Ìmísí Foundation </span>
+
+          <h2 class="site-footer__title">
+            Keep knowledge
+            <span>moving.</span>
+          </h2>
+
+          <p class="site-footer__intro">
+            Heritage continues when knowledge is shared, practised and carried
+            forward.
+          </p>
+
+          <div class="site-footer__actions">
+            <a
+              href="#get-involved"
+              class="site-footer__button site-footer__button--lime"
+            >
+              Partner With Us
+
+              <span>↗</span>
+            </a>
+
+            <a
+              href="#support"
+              class="site-footer__button site-footer__button--ghost"
+            >
+              Support the Foundation
+            </a>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <div class="site-footer__logo">ÌMÍSÍ</div>
+
+            <p>A living institution for heritage, knowledge and possibility.</p>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Explore </span>
+
+            <a href="#pipeline"> Heritage Pipeline </a>
+
+            <a href="#why"> Why This Matters </a>
+
+            <a href="#knowledge"> Knowledge </a>
+
+            <a href="#ecosystem"> Ecosystem </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Connect </span>
+
+            <a href="#get-involved"> Partner With Us </a>
+
+            <a href="#support"> Support </a>
+
+            <a href="#contact"> Contact </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Follow </span>
+
+            <a href="#"> Instagram </a>
+
+            <a href="#"> LinkedIn </a>
+
+            <a href="#"> Facebook </a>
+          </div>
+        </div>
+
+        <!-- LEGAL -->
+
+        <div class="site-footer__legal">
+          <span>
+            © <span id="year"></span>
+            Ìmísí Foundation.
+          </span>
+
+          <span> All rights reserved. </span>
+
+          <span class="site-footer__legal-right">
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </span>
+        </div>
+      </div>
+
+      <!-- WORDMARK -->
+
+      <div class="site-footer__wordmark">ÌMÍSÍ</div>
+    </footer>
+
+    <button
+      class="scroll-to-top-btn"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
+
+    <!-- =======================================
+GSAP
+======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/cursor.js"></script>
+
+    <script src="./assets/js/home-hero.js"></script>
+    <script src="./assets/js/impact-intro.js"></script>
+    <script src="./assets/js/impact-areas.js"></script>
+    <script src="./assets/js/impact-journey.js"></script>
+    <script src="./assets/js/impact-stories.js"></script>
+    <script src="./assets/js/impact-continue.js"></script>
+
+    <!-- THREE.JS IMPORT MAP -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./assets/js/basket.js"></script>
+  </body>
+</html>

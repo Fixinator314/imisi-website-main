@@ -1,0 +1,1177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Programmes</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-hero.css" />
+    <link rel="stylesheet" href="./assets/css/programmes-intro.css" />
+    <link rel="stylesheet" href="./assets/css/programme-ecosystem.css" />
+    <link rel="stylesheet" href="./assets/css/programme-journey.css" />
+    <link rel="stylesheet" href="./assets/css/programme-impact.css" />
+    <link rel="stylesheet" href="./assets/css/programme-stories.css" />
+    <link rel="stylesheet" href="./assets/css/programme-cta.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/intro.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="heritage-pipeline-page">
+    <!-- Custom desktop cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Route/section sweep used on nav clicks -->
+    <div class="sweep" id="sweep" aria-hidden="true">
+      <span class="sweep__title"></span>
+    </div>
+    <!-- ==========================================================
+     NAVBAR
+     ========================================================== -->
+
+    <header class="header nav-wrap">
+      <!-- ========================================================
+       DESKTOP NAVIGATION
+       ======================================================== -->
+
+      <nav class="nav" id="nav" data-state="top">
+        <!-- LOGO -->
+        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+        </a>
+
+        <!-- ======================================================
+         DESKTOP NAVIGATION LINKS
+         ====================================================== -->
+
+        <div class="nav__links" id="navLinks">
+          <a href="./heritage-pipeline.html" data-sweep="Heritage Pipeline">
+            Heritage Pipeline
+          </a>
+
+          <a href="./programmes.html" data-sweep="Programmes"> Programmes </a>
+
+          <a href="./stories.html" data-sweep="Stories"> Stories </a>
+
+          <a href="./impact.html" data-sweep="Impact"> Impact </a>
+
+          <a href="./get-involved.html" data-sweep="Get Involved">
+            Get Involved
+          </a>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP CTA
+         ====================================================== -->
+
+        <div class="nav__cta">
+          <a class="nav__support" href="#support"> Support </a>
+
+          <!-- DESKTOP PARTNER DROPDOWN -->
+
+          <div class="nav__dropdown">
+            <button
+              class="btn btn--solid nav__partner nav__dropdown-btn"
+              type="button"
+            >
+              Partner With Us
+
+              <svg
+                class="ico nav__dropdown-arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <ul class="nav__dropdown-menu">
+              <li>
+                <a href="payment.html"> Donate </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Volunteer </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Corporate Partnership </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ====================================================
+           MOBILE BURGER
+           ==================================================== -->
+
+          <button
+            class="nav__burger"
+            id="burger"
+            aria-label="Open menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP HERITAGE PIPELINE MEGA MENU
+         ====================================================== -->
+
+        <div class="mega" id="mega" aria-hidden="true">
+          <div class="mega__list" id="megaList"></div>
+
+          <div class="mega__preview" id="megaPreview"></div>
+        </div>
+      </nav>
+
+      <!-- ========================================================
+       MOBILE FULLSCREEN MENU
+       
+       IMPORTANT:
+       This is OUTSIDE the main .nav.
+       ======================================================== -->
+
+      <div class="mobile" id="mobile" aria-hidden="true">
+        <div class="grain"></div>
+
+        <!-- ======================================================
+         MOBILE TOP BAR
+         ====================================================== -->
+
+        <div class="mobile__top">
+          <a href="./index.html" class="mobile__brand">
+            <img
+              src="./assets/images/imnisi_foundation_logo2.png"
+              alt="Ìmísí Foundation"
+              class="mobile__brand-logo"
+            />
+          </a>
+
+          <!-- CLOSE BUTTON -->
+
+          <button
+            class="mobile__close"
+            id="mobileClose"
+            aria-label="Close menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         MOBILE NAVIGATION
+         ====================================================== -->
+
+        <nav class="mobile__nav" id="mobileNav">
+          <!-- ABOUT -->
+
+          <a href="./heritage-pipeline.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 01 </span>
+
+            Heritage Pipeline
+          </a>
+
+          <!-- HERITAGE PIPELINE -->
+
+          <a href="./programmes.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 02 </span>
+
+            Programmes
+          </a>
+
+          <!-- PROGRAMMES -->
+
+          <a href="./stories.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 03 </span>
+
+            Stories
+          </a>
+
+          <!-- STORIES -->
+
+          <a href="./impact.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 04 </span>
+
+            Impact
+          </a>
+
+          <!-- GET INVOLVED -->
+
+          <a href="./get-involved.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 05 </span>
+
+            Get Involved
+          </a>
+
+          <!-- ====================================================
+           MOBILE ACTIONS
+           ==================================================== -->
+
+          <div class="mobile__actions">
+            <!-- SUPPORT -->
+
+            <a
+              href="./payment.html"
+              class="mobile__action mobile__action--support"
+              data-mobile-link
+            >
+              Support
+            </a>
+
+            <!-- PARTNER WITH US -->
+
+            <button
+              class="mobile__action mobile__action--partner"
+              id="mobilePartnerToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobilePartnerMenu"
+            >
+              Partner With Us
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <!-- MOBILE PARTNER DROPDOWN -->
+
+            <div class="mobile__partner-menu" id="mobilePartnerMenu">
+              <a href="./payment.html" data-mobile-link> Donate </a>
+
+              <a href="./get-involved.html" data-mobile-link> Volunteer </a>
+
+              <a href="./get-involved.html" data-mobile-link>
+                Corporate Partnership
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================================
+     HERITAGE PIPELINE — HERO
+     ========================================================== -->
+
+    <main class="heritage-page">
+      <section class="heritage-hero" id="heritage-hero">
+        <!-- HERO BACKGROUND -->
+        <div class="heritage-hero__media" aria-hidden="true">
+          <img
+            src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+            alt=""
+            class="heritage-hero__image"
+          />
+
+          <div class="heritage-hero__overlay"></div>
+        </div>
+
+        <!-- HERO CONTENT -->
+        <div class="heritage-hero__inner">
+          <!-- EYEBROW -->
+          <div class="heritage-hero__eyebrow">
+            <span class="heritage-hero__eyebrow-line"></span>
+
+            <span> Heritage Pipeline </span>
+          </div>
+
+          <!-- TITLE -->
+          <h1 class="heritage-hero__title">
+            <span class="heritage-hero__title-line"> PROGRAMMES </span>
+
+            <!-- <span class="heritage-hero__title-line"> is not </span>
+
+            <span class="heritage-hero__title-line"> behind us. </span> -->
+          </h1>
+
+          <!-- INTRO -->
+          <div class="heritage-hero__bottom">
+            <p class="heritage-hero__intro">
+              It is knowledge carried forward — from one generation to the next,
+              through people, practice and possibility.
+            </p>
+
+            <div class="heritage-hero__meta">
+              <span>ÌMÍSÍ HOUSE</span>
+              <span>HERITAGE / KNOWLEDGE / POSSIBILITY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCROLL INDICATOR -->
+        <div class="heritage-hero__scroll">
+          <span class="heritage-hero__scroll-label">
+            Explore the pipeline
+          </span>
+
+          <span class="heritage-hero__scroll-line">
+            <span class="heritage-hero__scroll-dot"></span>
+          </span>
+        </div>
+      </section>
+
+      <section class="heritage-pipeline" id="pipeline">
+        <!-- We'll build this next -->
+      </section>
+    </main>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — PROGRAMME INTRO
+     ========================================================== -->
+
+    <section class="programmes-intro" id="programmes-intro">
+      <div class="programmes-intro__inner">
+        <div class="programmes-intro__header">
+          <span class="programmes-intro__eyebrow"> 01 / The Programmes </span>
+
+          <div class="programmes-intro__counter">
+            <span>IMISI</span>
+            <span>01—07</span>
+          </div>
+        </div>
+
+        <div class="programmes-intro__main">
+          <div class="programmes-intro__statement">
+            <h2 class="programmes-intro__title">
+              Heritage becomes
+              <span>practice.</span>
+            </h2>
+          </div>
+
+          <div class="programmes-intro__copy">
+            <p class="programmes-intro__lead">
+              Our programmes create spaces where knowledge can be encountered,
+              experienced, practiced and carried forward.
+            </p>
+
+            <p>
+              They connect people with heritage, place and one another —
+              creating opportunities to learn from what already exists while
+              imagining what comes next.
+            </p>
+          </div>
+        </div>
+
+        <div class="programmes-intro__footer">
+          <div class="programmes-intro__line"></div>
+
+          <div class="programmes-intro__hint">
+            <span>Scroll to explore</span>
+            <span class="programmes-intro__arrow">↓</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — PROGRAMME ECOSYSTEM
+     ========================================================== -->
+
+    <section class="programme-ecosystem" id="programme-ecosystem">
+      <div class="programme-ecosystem__inner">
+        <header class="programme-ecosystem__header">
+          <div>
+            <span class="programme-ecosystem__eyebrow">
+              02 / Programme Ecosystem
+            </span>
+
+            <h2 class="programme-ecosystem__title">
+              Where knowledge
+              <span>comes alive.</span>
+            </h2>
+          </div>
+
+          <p class="programme-ecosystem__intro">
+            Each programme creates a different point of entry into the heritage
+            journey — from discovery and learning to practice, creation and
+            return.
+          </p>
+        </header>
+
+        <div class="programme-ecosystem__list">
+          <!-- PROGRAMME 01 -->
+
+          <article
+            class="programme-card programme-card--large"
+            data-programme="01"
+          >
+            <div class="programme-card__number">01</div>
+
+            <div class="programme-card__content">
+              <span class="programme-card__label"> Discover </span>
+
+              <h3>
+                Encountering
+                <em>heritage.</em>
+              </h3>
+
+              <p>
+                Spaces and experiences that open pathways into cultural
+                knowledge, memory, place and identity.
+              </p>
+            </div>
+
+            <div class="programme-card__mark">↗</div>
+          </article>
+
+          <!-- PROGRAMME 02 -->
+
+          <article class="programme-card" data-programme="02">
+            <div class="programme-card__number">02</div>
+
+            <div class="programme-card__content">
+              <span class="programme-card__label"> Connect </span>
+
+              <h3>
+                Building
+                <em>relationships.</em>
+              </h3>
+
+              <p>
+                Connecting people, communities, practitioners and institutions
+                around shared knowledge.
+              </p>
+            </div>
+
+            <div class="programme-card__mark">↗</div>
+          </article>
+
+          <!-- PROGRAMME 03 -->
+
+          <article
+            class="programme-card programme-card--accent"
+            data-programme="03"
+          >
+            <div class="programme-card__number">03</div>
+
+            <div class="programme-card__content">
+              <span class="programme-card__label"> Learn </span>
+
+              <h3>
+                Knowledge
+                <em>in practice.</em>
+              </h3>
+
+              <p>
+                Learning through people, places, practice, research and lived
+                experience.
+              </p>
+            </div>
+
+            <div class="programme-card__mark">↗</div>
+          </article>
+
+          <!-- PROGRAMME 04 -->
+
+          <article class="programme-card" data-programme="04">
+            <div class="programme-card__number">04</div>
+
+            <div class="programme-card__content">
+              <span class="programme-card__label"> Experience </span>
+
+              <h3>
+                Feeling
+                <em>the knowledge.</em>
+              </h3>
+
+              <p>
+                Immersive encounters that make heritage tangible, personal and
+                memorable.
+              </p>
+            </div>
+
+            <div class="programme-card__mark">↗</div>
+          </article>
+
+          <!-- PROGRAMME 05 -->
+
+          <article
+            class="programme-card programme-card--large"
+            data-programme="05"
+          >
+            <div class="programme-card__number">05</div>
+
+            <div class="programme-card__content">
+              <span class="programme-card__label"> Create </span>
+
+              <h3>
+                Making something
+                <em>of your own.</em>
+              </h3>
+
+              <p>
+                Creating new work, ideas and possibilities from knowledge that
+                has been carried forward.
+              </p>
+            </div>
+
+            <div class="programme-card__mark">↗</div>
+          </article>
+
+          <!-- PROGRAMME 06 -->
+
+          <article
+            class="programme-card programme-card--final"
+            data-programme="06"
+          >
+            <div class="programme-card__number">06</div>
+
+            <div class="programme-card__content">
+              <span class="programme-card__label"> Transition </span>
+
+              <h3>
+                Taking it
+                <em>forward.</em>
+              </h3>
+
+              <p>
+                Moving from participation into new opportunities,
+                responsibilities and forms of contribution.
+              </p>
+            </div>
+
+            <div class="programme-card__mark">↗</div>
+          </article>
+        </div>
+
+        <div class="programme-ecosystem__closing">
+          <span> Knowledge does not stay in one place. </span>
+
+          <strong> It moves. </strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — PROGRAMME JOURNEY
+     ========================================================== -->
+
+    <section class="programme-journey" id="programme-journey">
+      <div class="programme-journey__sticky">
+        <div class="programme-journey__header">
+          <span class="programme-journey__eyebrow"> 03 / The Journey </span>
+
+          <span class="programme-journey__counter">
+            <span class="programme-journey__current">01</span>
+            <span>/ 07</span>
+          </span>
+        </div>
+
+        <div class="programme-journey__layout">
+          <!-- LEFT RAIL -->
+
+          <aside class="programme-journey__rail">
+            <div class="programme-journey__rail-line">
+              <span class="programme-journey__rail-progress"></span>
+            </div>
+
+            <nav class="programme-journey__nav">
+              <button class="programme-journey__nav-item is-active">
+                <span>01</span>
+                Discover
+              </button>
+
+              <button class="programme-journey__nav-item">
+                <span>02</span>
+                Connect
+              </button>
+
+              <button class="programme-journey__nav-item">
+                <span>03</span>
+                Learn
+              </button>
+
+              <button class="programme-journey__nav-item">
+                <span>04</span>
+                Experience
+              </button>
+
+              <button class="programme-journey__nav-item">
+                <span>05</span>
+                Create
+              </button>
+
+              <button class="programme-journey__nav-item">
+                <span>06</span>
+                Transition
+              </button>
+
+              <button class="programme-journey__nav-item">
+                <span>07</span>
+                Return
+              </button>
+            </nav>
+          </aside>
+
+          <!-- CONTENT -->
+
+          <div class="programme-journey__content">
+            <!-- 01 -->
+
+            <article class="programme-journey__stage is-active">
+              <span class="programme-journey__stage-number"> 01 </span>
+
+              <span class="programme-journey__stage-label"> Discover </span>
+
+              <h2>
+                What
+                <em>exists?</em>
+              </h2>
+
+              <p>
+                We begin by encountering the knowledge, stories, practices and
+                places that already exist around us.
+              </p>
+            </article>
+
+            <!-- 02 -->
+
+            <article class="programme-journey__stage">
+              <span class="programme-journey__stage-number"> 02 </span>
+
+              <span class="programme-journey__stage-label"> Connect </span>
+
+              <h2>
+                How do these
+                <em>worlds intersect?</em>
+              </h2>
+
+              <p>
+                Connections emerge between people, communities, disciplines,
+                generations and ways of knowing.
+              </p>
+            </article>
+
+            <!-- 03 -->
+
+            <article class="programme-journey__stage">
+              <span class="programme-journey__stage-number"> 03 </span>
+
+              <span class="programme-journey__stage-label"> Learn </span>
+
+              <h2>
+                Can
+                <em>I do this?</em>
+              </h2>
+
+              <p>
+                Knowledge moves from something we encounter into something we
+                can practice.
+              </p>
+            </article>
+
+            <!-- 04 -->
+
+            <article class="programme-journey__stage">
+              <span class="programme-journey__stage-number"> 04 </span>
+
+              <span class="programme-journey__stage-label"> Experience </span>
+
+              <h2>
+                What does
+                <em>this feel like?</em>
+              </h2>
+
+              <p>
+                Learning becomes tangible through participation, immersion and
+                lived experience.
+              </p>
+            </article>
+
+            <!-- 05 -->
+
+            <article class="programme-journey__stage">
+              <span class="programme-journey__stage-number"> 05 </span>
+
+              <span class="programme-journey__stage-label"> Create </span>
+
+              <h2>
+                What can
+                <em>I contribute?</em>
+              </h2>
+
+              <p>
+                Participants begin creating, interpreting and contributing from
+                what they have learned.
+              </p>
+            </article>
+
+            <!-- 06 -->
+
+            <article class="programme-journey__stage">
+              <span class="programme-journey__stage-number"> 06 </span>
+
+              <span class="programme-journey__stage-label"> Transition </span>
+
+              <h2>
+                Where do
+                <em>I go next?</em>
+              </h2>
+
+              <p>
+                The journey opens into new opportunities, responsibilities and
+                possibilities.
+              </p>
+            </article>
+
+            <!-- 07 -->
+
+            <article class="programme-journey__stage">
+              <span class="programme-journey__stage-number"> 07 </span>
+
+              <span class="programme-journey__stage-label"> Return </span>
+
+              <h2>
+                How do I
+                <em>give back?</em>
+              </h2>
+
+              <p>
+                Knowledge returns to the community through mentorship,
+                contribution and continued practice.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="programme-journey__cycle">
+          <span> The journey is not linear. </span>
+
+          <strong>↻</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — PROGRAMME IMPACT
+     ========================================================== -->
+
+    <section class="programme-impact" id="programme-impact">
+      <div class="programme-impact__inner">
+        <header class="programme-impact__header">
+          <span class="programme-impact__eyebrow"> 04 / The Impact </span>
+
+          <h2 class="programme-impact__title">
+            What happens when
+            <span>knowledge moves?</span>
+          </h2>
+        </header>
+
+        <div class="programme-impact__statement">
+          <p>
+            The value of heritage is not only in what we preserve. It is in what
+            people are able to do with it.
+          </p>
+        </div>
+
+        <div class="programme-impact__grid">
+          <!-- IMPACT 01 -->
+
+          <article class="impact-item">
+            <span class="impact-item__number"> 01 </span>
+
+            <div class="impact-item__body">
+              <strong> Discover </strong>
+
+              <p>New perspectives on heritage, culture, identity and place.</p>
+            </div>
+          </article>
+
+          <!-- IMPACT 02 -->
+
+          <article class="impact-item">
+            <span class="impact-item__number"> 02 </span>
+
+            <div class="impact-item__body">
+              <strong> Learn </strong>
+
+              <p>
+                Practical knowledge developed through experience, participation
+                and practice.
+              </p>
+            </div>
+          </article>
+
+          <!-- IMPACT 03 -->
+
+          <article class="impact-item">
+            <span class="impact-item__number"> 03 </span>
+
+            <div class="impact-item__body">
+              <strong> Create </strong>
+
+              <p>
+                New ideas, interpretations and contributions built from existing
+                knowledge.
+              </p>
+            </div>
+          </article>
+
+          <!-- IMPACT 04 -->
+
+          <article class="impact-item">
+            <span class="impact-item__number"> 04 </span>
+
+            <div class="impact-item__body">
+              <strong> Return </strong>
+
+              <p>
+                Knowledge carried back into communities, relationships and
+                future generations.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="programme-impact__closing">
+          <div class="programme-impact__closing-line"></div>
+
+          <p>Preservation becomes powerful when it creates possibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — STORIES / EXPERIENCES
+     ========================================================== -->
+
+    <section class="programme-stories" id="programme-stories">
+      <div class="programme-stories__inner">
+        <header class="programme-stories__header">
+          <span class="programme-stories__eyebrow">
+            05 / Stories & Experiences
+          </span>
+
+          <span class="programme-stories__index">
+            PEOPLE · PLACE · PRACTICE
+          </span>
+        </header>
+
+        <!-- FEATURE STORY -->
+
+        <article class="programme-story programme-story--feature">
+          <div class="programme-story__image-wrap">
+            <img
+              class="programme-story__image"
+              src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1788178524/black1.jpg"
+              alt=""
+            />
+
+            <div class="programme-story__image-overlay"></div>
+          </div>
+
+          <div class="programme-story__content">
+            <span class="programme-story__number"> 01 </span>
+
+            <span class="programme-story__label"> Experience </span>
+
+            <h2>
+              Heritage is
+              <em>experienced.</em>
+            </h2>
+
+            <p>
+              The journey becomes meaningful through the people, places and
+              practices that make knowledge tangible.
+            </p>
+
+            <a href="#" class="programme-story__link">
+              Explore the story
+              <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- SECONDARY STORIES -->
+
+        <div class="programme-stories__secondary">
+          <article class="programme-story programme-story--small">
+            <div class="programme-story__small-image">
+              <img
+                src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="programme-story__small-content">
+              <span>02 / People</span>
+
+              <h3>
+                Knowledge carried
+                <em>through people.</em>
+              </h3>
+
+              <a href="#">
+                Read more
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="programme-story programme-story--small">
+            <div class="programme-story__small-image">
+              <img
+                src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1787639812/queen.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="programme-story__small-content">
+              <span>03 / Place</span>
+
+              <h3>
+                Learning through
+                <em>place.</em>
+              </h3>
+
+              <a href="#">
+                Read more
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="programme-stories__closing">
+          <span> Every journey leaves something behind. </span>
+
+          <strong> And carries something forward. </strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     IMISI FOUNDATION — PROGRAMME CTA
+     ========================================================== -->
+
+    <section class="programme-cta" id="programme-cta">
+      <div class="programme-cta__inner">
+        <div class="programme-cta__top">
+          <span class="programme-cta__eyebrow">
+            06 / Continue the Journey
+          </span>
+
+          <span class="programme-cta__mark"> IMISI </span>
+        </div>
+
+        <div class="programme-cta__main">
+          <h2 class="programme-cta__title">
+            Where will
+            <span>you go next?</span>
+          </h2>
+
+          <p class="programme-cta__intro">
+            There are many ways to enter the journey. Find a programme, connect
+            with the work, or help create the conditions for knowledge to keep
+            moving.
+          </p>
+
+          <div class="programme-cta__actions">
+            <a
+              href="./programmes.html"
+              class="programme-cta__button programme-cta__button--primary"
+            >
+              <span>Explore Programmes</span>
+              <strong>↗</strong>
+            </a>
+
+            <a href="./contact.html" class="programme-cta__button">
+              <span>Get Involved</span>
+              <strong>↗</strong>
+            </a>
+          </div>
+        </div>
+
+        <div class="programme-cta__bottom">
+          <span>
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </span>
+
+          <strong> ↻ </strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FOOTER =========== -->
+
+    <!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- MAIN CTA -->
+
+        <div class="site-footer__hero">
+          <span class="site-footer__eyebrow"> Ìmísí Foundation </span>
+
+          <h2 class="site-footer__title">
+            Keep knowledge
+            <span>moving.</span>
+          </h2>
+
+          <p class="site-footer__intro">
+            Heritage continues when knowledge is shared, practised and carried
+            forward.
+          </p>
+
+          <div class="site-footer__actions">
+            <a
+              href="#get-involved"
+              class="site-footer__button site-footer__button--lime"
+            >
+              Partner With Us
+
+              <span>↗</span>
+            </a>
+
+            <a
+              href="#support"
+              class="site-footer__button site-footer__button--ghost"
+            >
+              Support the Foundation
+            </a>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <div class="site-footer__logo">ÌMÍSÍ</div>
+
+            <p>A living institution for heritage, knowledge and possibility.</p>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Explore </span>
+
+            <a href="#pipeline"> Heritage Pipeline </a>
+
+            <a href="#why"> Why This Matters </a>
+
+            <a href="#knowledge"> Knowledge </a>
+
+            <a href="#ecosystem"> Ecosystem </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Connect </span>
+
+            <a href="#get-involved"> Partner With Us </a>
+
+            <a href="#support"> Support </a>
+
+            <a href="#contact"> Contact </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Follow </span>
+
+            <a href="#"> Instagram </a>
+
+            <a href="#"> LinkedIn </a>
+
+            <a href="#"> Facebook </a>
+          </div>
+        </div>
+
+        <!-- LEGAL -->
+
+        <div class="site-footer__legal">
+          <span>
+            © <span id="year"></span>
+            Ìmísí Foundation.
+          </span>
+
+          <span> All rights reserved. </span>
+
+          <span class="site-footer__legal-right">
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </span>
+        </div>
+      </div>
+
+      <!-- WORDMARK -->
+
+      <div class="site-footer__wordmark">ÌMÍSÍ</div>
+    </footer>
+
+    <button
+      class="scroll-to-top-btn"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
+
+    <!-- =======================================
+GSAP
+======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="./assets/js/navbar.js"></script>
+
+    <script src="./assets/js/cursor.js"></script>
+    <script src="./assets/js/intro.js"></script>
+    <script src="./assets/js/home-hero.js"></script>
+    <script src="./assets/js/programmes-intro.js"></script>
+    <script src="./assets/js/programme-ecosystem.js"></script>
+    <script src="./assets/js/programme-journey.js"></script>
+    <script src="./assets/js/programme-impact.js"></script>
+    <script src="./assets/js/programme-stories.js"></script>
+    <script src="./assets/js/programme-cta.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
+    <!-- THREE.JS IMPORT MAP -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./assets/js/basket.js"></script>
+  </body>
+</html>

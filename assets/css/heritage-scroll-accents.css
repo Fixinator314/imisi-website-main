@@ -1,0 +1,139 @@
+/* ==========================================================
+   IMISI FOUNDATION
+   SCROLL ACCENTS
+   ========================================================== */
+
+.scroll-accent {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   SVG
+   ========================================================== */
+
+.scroll-accent__svg {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-accent__path {
+  fill: none;
+
+  stroke: var(--imisi-teal, #0a6970);
+
+  stroke-width: 1.2;
+
+  stroke-linecap: round;
+
+  opacity: 0.13;
+
+  vector-effect: non-scaling-stroke;
+
+  stroke-dasharray: 10 14;
+}
+
+/* ==========================================================
+   NODES
+   ========================================================== */
+
+.scroll-accent__node {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-lime, #bed639);
+
+  opacity: 0;
+
+  box-shadow: 0 0 0 5px rgba(190, 214, 57, 0.08);
+}
+
+.scroll-accent__node--one {
+  top: 24%;
+  left: 90%;
+}
+
+.scroll-accent__node--two {
+  top: 50%;
+  left: 10%;
+}
+
+.scroll-accent__node--three {
+  top: 76%;
+  left: 90%;
+}
+
+/* ==========================================================
+   LIVING SYSTEM
+   ========================================================== */
+
+.living-system {
+  position: relative;
+}
+
+.living-system > *:not(.scroll-accent) {
+  position: relative;
+
+  z-index: 2;
+}
+
+/* ==========================================================
+   RETURN
+   ========================================================== */
+
+.heritage-return {
+  position: relative;
+}
+
+.heritage-return > *:not(.scroll-accent) {
+  position: relative;
+
+  z-index: 2;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .scroll-accent__path {
+    stroke-width: 1;
+    opacity: 0.09;
+  }
+
+  .scroll-accent__node {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+.heritage-accent-zone {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.heritage-accent-zone > section {
+  position: relative;
+
+  z-index: 1;
+}

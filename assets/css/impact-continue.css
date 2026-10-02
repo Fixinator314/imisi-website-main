@@ -1,0 +1,421 @@
+/* ==========================================================
+   IMISI FOUNDATION — IMPACT CONTINUE
+   05 / Continue
+   ========================================================== */
+
+.impact-continue {
+  --teal: #0a6970;
+  --green: #0c9268;
+  --lime: #bed639;
+  --bone: #f4f1e8;
+  --charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 100vh;
+  padding: 9vh 6vw 7vh;
+
+  background: var(--teal);
+  color: var(--bone);
+
+  overflow: hidden;
+}
+
+.impact-continue::before {
+  content: "";
+
+  position: absolute;
+
+  width: min(70vw, 900px);
+  aspect-ratio: 1;
+
+  right: -25%;
+  bottom: -45%;
+
+  border: 1px solid rgba(244, 241, 232, 0.08);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.impact-continue::after {
+  content: "";
+
+  position: absolute;
+
+  width: min(45vw, 600px);
+  aspect-ratio: 1;
+
+  right: -15%;
+  bottom: -25%;
+
+  border: 1px solid rgba(190, 214, 57, 0.12);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   INNER
+   ---------------------------------------------------------- */
+
+.impact-continue__inner {
+  position: relative;
+  z-index: 2;
+
+  min-height: calc(100vh - 16vh);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------------------------------------------------
+   HEADER
+   ---------------------------------------------------------- */
+
+.impact-continue__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.impact-continue__eyebrow {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--lime);
+}
+
+.impact-continue__index {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  color: rgba(244, 241, 232, 0.45);
+}
+
+/* ----------------------------------------------------------
+   MAIN
+   ---------------------------------------------------------- */
+
+.impact-continue__main {
+  width: min(1000px, 95%);
+
+  margin-top: clamp(70px, 11vh, 150px);
+}
+
+.impact-continue__label {
+  margin: 0 0 24px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: rgba(244, 241, 232, 0.58);
+}
+
+.impact-continue__main h2 {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(4.5rem, 9vw, 10rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+}
+
+.impact-continue__main h2 span {
+  color: var(--lime);
+  font-style: italic;
+}
+
+.impact-continue__lead {
+  width: min(600px, 100%);
+
+  margin: 42px 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  line-height: 1.7;
+
+  color: rgba(244, 241, 232, 0.72);
+}
+
+/* ----------------------------------------------------------
+   PATH
+   ---------------------------------------------------------- */
+
+.impact-continue__path {
+  position: relative;
+
+  margin-top: auto;
+  padding-top: 80px;
+}
+
+.impact-continue__path-line {
+  position: absolute;
+
+  top: 95px;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background: rgba(244, 241, 232, 0.18);
+
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+.impact-continue__nodes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.impact-continue__node {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 40px;
+}
+
+.impact-continue__node::before {
+  content: "";
+
+  position: absolute;
+
+  top: 35px;
+  left: 0;
+
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+
+  background: var(--lime);
+
+  box-shadow: 0 0 0 7px rgba(190, 214, 57, 0.08);
+}
+
+.impact-continue__node span {
+  margin-bottom: 13px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+
+  color: rgba(244, 241, 232, 0.4);
+}
+
+.impact-continue__node strong {
+  font-family: "Marcellus", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.impact-continue__node small {
+  margin-top: 8px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.5;
+
+  color: rgba(244, 241, 232, 0.5);
+}
+
+/* ----------------------------------------------------------
+   ACTIONS
+   ---------------------------------------------------------- */
+
+.impact-continue__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-top: 55px;
+}
+
+.impact-continue__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 16px 22px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.impact-continue__button span {
+  font-size: 1rem;
+}
+
+.impact-continue__button:hover {
+  gap: 28px;
+}
+
+.impact-continue__button--primary {
+  background: var(--lime);
+  color: var(--teal);
+}
+
+.impact-continue__button--primary:hover {
+  background: var(--bone);
+}
+
+.impact-continue__button--secondary {
+  border: 1px solid rgba(244, 241, 232, 0.3);
+  color: var(--bone);
+}
+
+.impact-continue__button--secondary:hover {
+  background: rgba(244, 241, 232, 0.08);
+}
+
+/* ----------------------------------------------------------
+   CYCLE
+   ---------------------------------------------------------- */
+
+.impact-continue__cycle {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 50px;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(244, 241, 232, 0.12);
+}
+
+.impact-continue__cycle-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(190, 214, 57, 0.45);
+  border-radius: 50%;
+
+  font-size: 1.1rem;
+
+  color: var(--lime);
+}
+
+.impact-continue__cycle p {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+
+  color: rgba(244, 241, 232, 0.4);
+}
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  .impact-continue {
+    padding: 70px 5vw 60px;
+  }
+
+  .impact-continue__inner {
+    min-height: auto;
+  }
+
+  .impact-continue__index {
+    display: none;
+  }
+
+  .impact-continue__main {
+    width: 100%;
+    margin-top: 90px;
+  }
+
+  .impact-continue__main h2 {
+    font-size: clamp(4rem, 16vw, 7rem);
+  }
+
+  .impact-continue__lead {
+    margin-top: 32px;
+  }
+
+  .impact-continue__path {
+    margin-top: 90px;
+    padding-top: 0;
+  }
+
+  .impact-continue__path-line {
+    display: none;
+  }
+
+  .impact-continue__nodes {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    padding-left: 28px;
+  }
+
+  .impact-continue__node {
+    padding-top: 0;
+  }
+
+  .impact-continue__node::before {
+    top: 3px;
+    left: -28px;
+  }
+
+  .impact-continue__node span {
+    margin-bottom: 5px;
+  }
+
+  .impact-continue__actions {
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 55px;
+  }
+
+  .impact-continue__cycle {
+    align-items: flex-start;
+  }
+
+  .impact-continue__cycle p {
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-continue__main h2 {
+    font-size: 3.8rem;
+  }
+
+  .impact-continue__button {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

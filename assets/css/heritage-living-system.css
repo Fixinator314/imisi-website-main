@@ -1,0 +1,579 @@
+/* ==========================================================
+   IMISI FOUNDATION
+   THE LIVING SYSTEM
+   ========================================================== */
+
+.living-system {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 100vh;
+
+  background: var(--imisi-bone);
+
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.living-system__inner {
+  width: min(1400px, 90vw);
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: clamp(100px, 10vw, 130px) 0 60px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.living-system__header {
+  max-width: 850px;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.living-system__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 32px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.living-system__number {
+  font-size: 11px;
+}
+
+.living-system__line {
+  width: 46px;
+
+  height: 1px;
+
+  background: var(--imisi-teal);
+
+  opacity: 0.4;
+}
+
+.living-system__title {
+  margin: 0;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(50px, 7vw, 105px);
+
+  line-height: 0.9;
+
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+}
+
+.living-system__title span {
+  display: block;
+
+  color: var(--imisi-teal);
+
+  font-style: italic;
+}
+
+.living-system__intro {
+  max-width: 620px;
+
+  margin: 32px 0 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(14px, 1.2vw, 17px);
+
+  line-height: 1.75;
+
+  color: rgba(63, 63, 63, 0.68);
+}
+
+/* ==========================================================
+   DIAGRAM
+   ========================================================== */
+
+.living-system__diagram {
+  position: relative;
+
+  width: min(820px, 64vw);
+
+  aspect-ratio: 1;
+
+  margin: clamp(20px, 1vw, 40px) 0 0 auto;
+
+  transform: translateX(3%);
+}
+
+/* ==========================================================
+   ORBITS
+   ========================================================== */
+
+.living-system__orbit {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgba(10, 105, 112, 0.15);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.living-system__orbit--outer {
+  width: 72%;
+  height: 72%;
+}
+
+.living-system__orbit--inner {
+  width: 45%;
+  height: 45%;
+
+  border-color: rgba(12, 146, 104, 0.22);
+}
+
+/* ==========================================================
+   CORE
+   ========================================================== */
+
+.living-system__core {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 190px;
+  height: 190px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: var(--imisi-teal);
+
+  color: var(--imisi-bone);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow:
+    0 0 0 12px rgba(10, 105, 112, 0.05),
+    0 0 0 1px rgba(10, 105, 112, 0.2);
+}
+
+.living-system__core-label {
+  margin-bottom: 12px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+}
+
+.living-system__core strong {
+  font-family: Marcellus, serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.living-system__core strong span {
+  display: block;
+
+  color: var(--imisi-lime);
+
+  font-style: italic;
+}
+
+.living-system__core-hint {
+  margin-top: 14px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   CONNECTIONS
+   ========================================================== */
+
+.living-system__connections {
+  position: absolute;
+
+  inset: 0;
+}
+
+.living-system__connection {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 34%;
+
+  height: 1px;
+
+  transform-origin: left center;
+
+  background: linear-gradient(
+    90deg,
+    rgba(10, 105, 112, 0.35),
+    rgba(190, 214, 57, 0.2),
+    transparent
+  );
+}
+
+/* Five radial connections */
+
+.connection--one {
+  transform: rotate(-90deg);
+}
+
+.connection--two {
+  transform: rotate(-18deg);
+}
+
+.connection--three {
+  transform: rotate(54deg);
+}
+
+.connection--four {
+  transform: rotate(126deg);
+}
+
+.connection--five {
+  transform: rotate(198deg);
+}
+
+/* ==========================================================
+   NODES
+   ========================================================== */
+
+.living-system__node {
+  position: absolute;
+
+  width: 150px;
+
+  padding: 18px;
+
+  border: 1px solid rgba(10, 105, 112, 0.2);
+
+  border-radius: 2px;
+
+  background: rgba(244, 241, 232, 0.82);
+
+  color: var(--imisi-charcoal);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.living-system__node:hover,
+.living-system__node.is-active {
+  border-color: var(--imisi-green);
+
+  background: rgba(255, 255, 255, 0.7);
+
+  transform: scale(1.05);
+}
+
+.living-system__node-number {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  color: var(--imisi-teal);
+}
+
+.living-system__node strong {
+  display: block;
+
+  font-family: Marcellus, serif;
+
+  font-size: 21px;
+
+  font-weight: 400;
+}
+
+.living-system__node small {
+  display: block;
+
+  margin-top: 7px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  color: rgba(63, 63, 63, 0.55);
+}
+
+/* ==========================================================
+   NODE POSITIONS
+   ========================================================== */
+
+.living-system__node--people {
+  top: 4%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.living-system__node--practice {
+  top: 29%;
+  right: 3%;
+}
+
+.living-system__node--place {
+  bottom: 8%;
+  right: 12%;
+}
+
+.living-system__node--knowledge {
+  bottom: 8%;
+  left: 12%;
+}
+
+.living-system__node--future {
+  top: 29%;
+  left: 3%;
+}
+
+/* ==========================================================
+   DETAIL
+   ========================================================== */
+
+.living-system__detail {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 24px;
+
+  width: min(620px, 90%);
+
+  margin: 20px 0 0;
+}
+
+.living-system__detail-index {
+  flex-shrink: 0;
+
+  padding-top: 5px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: var(--imisi-teal);
+
+  opacity: 0.75;
+}
+
+.living-system__detail-text {
+  margin: 0;
+
+  max-width: 520px;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(18px, 1.8vw, 24px);
+
+  line-height: 1.35;
+
+  color: var(--imisi-charcoal);
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.living-system__closing {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 35px;
+
+  padding-top: 30px;
+}
+
+.living-system__closing-line {
+  width: 60px;
+
+  height: 1px;
+
+  background: var(--imisi-teal);
+
+  opacity: 0.35;
+}
+
+.living-system__closing p {
+  max-width: 420px;
+
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: rgba(63, 63, 63, 0.55);
+}
+
+.living-system__closing-arrow {
+  margin-left: auto;
+
+  font-size: 22px;
+
+  color: var(--imisi-teal);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .living-system__inner {
+    padding-top: 100px;
+  }
+
+  .living-system__diagram {
+    width: 100%;
+
+    margin: 40px auto 20px;
+
+    transform: none;
+  }
+
+  .living-system__core {
+    width: 145px;
+    height: 145px;
+  }
+
+  .living-system__core strong {
+    font-size: 20px;
+  }
+
+  .living-system__node {
+    width: 115px;
+
+    padding: 12px;
+  }
+
+  .living-system__node strong {
+    font-size: 16px;
+  }
+
+  .living-system__node small {
+    font-size: 8px;
+  }
+
+  .living-system__node--people {
+    top: 0;
+  }
+
+  .living-system__node--practice {
+    right: 0;
+  }
+
+  .living-system__node--place {
+    right: 0;
+    bottom: 0;
+  }
+
+  .living-system__node--knowledge {
+    left: 0;
+    bottom: 0;
+  }
+
+  .living-system__node--future {
+    left: 0;
+  }
+
+  .living-system__detail {
+    margin-top: 10px;
+  }
+
+  .living-system__closing {
+    padding-top: 40px;
+  }
+}

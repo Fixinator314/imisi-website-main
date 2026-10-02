@@ -1,0 +1,412 @@
+/* ==========================================================
+   IMISI FOUNDATION — STORIES CONTINUE
+   06 / Continue the Journey
+   ========================================================== */
+
+.stories-continue {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: clamp(7rem, 11vw, 11rem) 6vw clamp(6rem, 10vw, 10rem);
+
+  background: #f4f1e8;
+  color: #3f3f3f;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.stories-continue__inner {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.stories-continue__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: clamp(6rem, 11vw, 11rem);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.stories-continue__eyebrow {
+  color: #0a6970;
+}
+
+.stories-continue__index {
+  opacity: 0.45;
+}
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.stories-continue__main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(280px, 0.65fr);
+
+  gap: clamp(4rem, 9vw, 10rem);
+
+  align-items: end;
+}
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.stories-continue__title-wrap {
+  position: relative;
+}
+
+.stories-continue__number {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+
+  letter-spacing: 0.15em;
+
+  color: #0c9268;
+}
+
+.stories-continue__title {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(5rem, 10vw, 10rem);
+
+  font-weight: 400;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.05em;
+}
+
+.stories-continue__title em {
+  display: block;
+
+  color: #0a6970;
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   COPY
+   ========================================================== */
+
+.stories-continue__copy {
+  max-width: 420px;
+
+  padding-bottom: 0.5rem;
+}
+
+.stories-continue__lead {
+  margin: 0 0 1.5rem;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(1.5rem, 2.3vw, 2.3rem);
+
+  line-height: 1.2;
+}
+
+.stories-continue__copy > p:last-child {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.82rem;
+
+  line-height: 1.8;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   JOURNEY PATH
+   ========================================================== */
+
+.stories-continue__path {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: clamp(7rem, 12vw, 12rem);
+}
+
+/* ==========================================================
+   NODE
+   ========================================================== */
+
+.continue-node {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.55rem;
+
+  flex: 0 0 auto;
+}
+
+.continue-node span {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.12em;
+
+  color: #0a6970;
+}
+
+.continue-node strong {
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.continue-node.is-active strong {
+  color: #0c9268;
+}
+
+/* ==========================================================
+   CONNECTING LINE
+   ========================================================== */
+
+.continue-line {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 30px;
+
+  height: 1px;
+
+  margin: 1.8rem clamp(0.8rem, 2vw, 2rem) 0;
+
+  background: rgba(63, 63, 63, 0.22);
+}
+
+.continue-line::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: var(--line-progress, 0%);
+  height: 1px;
+
+  background: #bed639;
+}
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.stories-continue__cta {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-top: clamp(7rem, 11vw, 10rem);
+
+  padding-top: 2rem;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.2);
+}
+
+.stories-continue__cta p {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.05em;
+
+  opacity: 0.6;
+}
+
+.stories-continue__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 2.5rem;
+
+  padding: 1.1rem 1.4rem 1.1rem 1.5rem;
+
+  background: #bed639;
+
+  color: #3f3f3f;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.stories-continue__button strong {
+  font-size: 1rem;
+
+  transition: transform 0.35s ease;
+}
+
+.stories-continue__button:hover {
+  background: #0c9268;
+
+  color: #f4f1e8;
+
+  transform: translateY(-3px);
+}
+
+.stories-continue__button:hover strong {
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================================
+   CYCLE
+   ========================================================== */
+
+.stories-continue__cycle {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-top: 5rem;
+
+  opacity: 0.45;
+}
+
+.stories-continue__cycle-mark {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid rgba(63, 63, 63, 0.3);
+
+  border-radius: 50%;
+
+  font-size: 1.1rem;
+}
+
+.stories-continue__cycle p {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .stories-continue {
+    padding: 6rem 7vw 6rem;
+  }
+
+  .stories-continue__index {
+    display: none;
+  }
+
+  .stories-continue__main {
+    display: block;
+  }
+
+  .stories-continue__title {
+    font-size: clamp(4rem, 17vw, 6.5rem);
+  }
+
+  .stories-continue__copy {
+    max-width: 100%;
+
+    margin-top: 3.5rem;
+  }
+
+  .stories-continue__path {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2.5rem 1.5rem;
+
+    margin-top: 6rem;
+  }
+
+  .continue-line {
+    display: none;
+  }
+
+  .continue-node strong {
+    font-size: 1.25rem;
+  }
+
+  .stories-continue__cta {
+    display: block;
+
+    margin-top: 6rem;
+  }
+
+  .stories-continue__button {
+    margin-top: 1.5rem;
+  }
+
+  .stories-continue__cycle {
+    align-items: flex-start;
+  }
+
+  .stories-continue__cycle p {
+    line-height: 1.6;
+  }
+}

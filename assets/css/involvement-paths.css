@@ -1,0 +1,333 @@
+/* ==========================================================
+   IMISI FOUNDATION — INVOLVEMENT PATHS
+   02 / Ways In
+   ========================================================== */
+
+.involvement-paths {
+  --teal: #0a6970;
+  --green: #0c9268;
+  --lime: #bed639;
+  --bone: #f4f1e8;
+  --charcoal: #3f3f3f;
+
+  position: relative;
+
+  padding: 11vh 6vw 12vh;
+
+  background: var(--bone);
+  color: var(--charcoal);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.involvement-paths__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: clamp(70px, 9vh, 120px);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.involvement-paths__eyebrow {
+  color: var(--teal);
+}
+
+.involvement-paths__index {
+  color: rgba(63, 63, 63, 0.4);
+}
+
+/* ==========================================================
+   INTRO
+   ========================================================== */
+
+.involvement-paths__intro {
+  width: min(1000px, 95%);
+
+  margin-bottom: clamp(70px, 9vh, 120px);
+}
+
+.involvement-paths__label {
+  margin: 0 0 22px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: var(--green);
+}
+
+.involvement-paths__intro h2 {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.involvement-paths__intro h2 span {
+  color: var(--green);
+  font-style: italic;
+}
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.involvement-paths__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.16);
+}
+
+/* ==========================================================
+   PATH
+   ========================================================== */
+
+.involvement-path {
+  position: relative;
+
+  min-height: 570px;
+
+  padding: 30px 34px 42px;
+
+  border-right: 1px solid rgba(63, 63, 63, 0.16);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  transition:
+    background 0.45s ease,
+    color 0.45s ease;
+}
+
+.involvement-path:first-child {
+  border-left: 1px solid rgba(63, 63, 63, 0.16);
+}
+
+/* ==========================================================
+   TOP
+   ========================================================== */
+
+.involvement-path__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.involvement-path__number {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+
+  color: rgba(63, 63, 63, 0.4);
+}
+
+.involvement-path__type {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.4);
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.involvement-path__content {
+  margin-top: auto;
+}
+
+.involvement-path__content h3 {
+  margin: 0;
+
+  max-width: 520px;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(2.7rem, 4vw, 4.5rem);
+  font-weight: 400;
+
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.involvement-path__content h3 span {
+  color: var(--green);
+  font-style: italic;
+}
+
+.involvement-path__content p {
+  max-width: 390px;
+
+  margin: 30px 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.75;
+
+  color: rgba(63, 63, 63, 0.67);
+}
+
+/* ==========================================================
+   LINK
+   ========================================================== */
+
+.involvement-path__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  width: fit-content;
+
+  margin-top: 35px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid var(--teal);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--teal);
+  text-decoration: none;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+.involvement-path__link span {
+  font-size: 1rem;
+}
+
+.involvement-path__link:hover {
+  gap: 28px;
+  color: var(--green);
+}
+
+/* ==========================================================
+   HOVER ACCENT
+   ========================================================== */
+
+.involvement-path::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 4px;
+
+  background: var(--lime);
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.5s ease;
+}
+
+.involvement-path:hover::after {
+  transform: scaleX(1);
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.involvement-paths__closing {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  margin-top: 55px;
+}
+
+.involvement-paths__closing-line {
+  width: 80px;
+  height: 1px;
+
+  background: var(--teal);
+}
+
+.involvement-paths__closing p {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: 1.15rem;
+}
+
+.involvement-paths__closing strong {
+  color: var(--teal);
+  font-weight: 400;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 950px) {
+  .involvement-paths__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .involvement-path {
+    min-height: 470px;
+
+    border-right: 0;
+    border-bottom: 1px solid rgba(63, 63, 63, 0.16);
+  }
+
+  .involvement-path:first-child {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .involvement-paths {
+    padding: 75px 5vw 90px;
+  }
+
+  .involvement-paths__index {
+    display: none;
+  }
+
+  .involvement-paths__intro h2 {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+  }
+
+  .involvement-path {
+    min-height: 430px;
+    padding: 28px 20px 38px;
+  }
+
+  .involvement-paths__closing {
+    align-items: flex-start;
+  }
+}

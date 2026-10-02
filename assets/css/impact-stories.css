@@ -1,0 +1,423 @@
+/* ==========================================================
+   IMISI FOUNDATION — IMPACT STORIES
+   04 / Impact Stories
+   ========================================================== */
+
+.impact-stories {
+  --teal: #0a6970;
+  --green: #0c9268;
+  --lime: #bed639;
+  --bone: #f4f1e8;
+  --charcoal: #3f3f3f;
+
+  position: relative;
+  min-height: 100vh;
+  padding: 9vh 6vw 12vh;
+
+  background: var(--bone);
+  color: var(--charcoal);
+
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------
+   HEADER
+   ---------------------------------------------------------- */
+
+.impact-stories__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: clamp(70px, 10vh, 130px);
+}
+
+.impact-stories__eyebrow {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--teal);
+}
+
+.impact-stories__index {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  color: rgba(63, 63, 63, 0.48);
+}
+
+/* ----------------------------------------------------------
+   INTRO
+   ---------------------------------------------------------- */
+
+.impact-stories__intro {
+  width: min(900px, 90%);
+  margin-bottom: clamp(70px, 10vh, 130px);
+}
+
+.impact-stories__label {
+  margin: 0 0 20px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--green);
+}
+
+.impact-stories__intro h2 {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+}
+
+.impact-stories__intro h2 span {
+  color: var(--green);
+  font-style: italic;
+}
+
+.impact-stories__lead {
+  width: min(620px, 100%);
+  margin: 38px 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  line-height: 1.7;
+
+  color: rgba(63, 63, 63, 0.72);
+}
+
+/* ----------------------------------------------------------
+   FEATURE
+   ---------------------------------------------------------- */
+
+.impact-stories__feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: clamp(40px, 7vw, 110px);
+
+  align-items: center;
+
+  width: min(1500px, 100%);
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------
+   IMAGE
+   ---------------------------------------------------------- */
+
+.impact-stories__image-wrap {
+  position: relative;
+}
+
+.impact-stories__image {
+  position: relative;
+
+  width: 100%;
+  height: clamp(420px, 58vw, 720px);
+
+  overflow: hidden;
+
+  background: #d9d5ca;
+}
+
+.impact-stories__image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(10, 105, 112, 0.08),
+    transparent 50%
+  );
+
+  pointer-events: none;
+}
+
+.impact-stories__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.08);
+
+  will-change: transform;
+}
+
+.impact-stories__image-label {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 14px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.48);
+}
+
+/* ----------------------------------------------------------
+   STORY
+   ---------------------------------------------------------- */
+
+.impact-stories__story {
+  max-width: 560px;
+}
+
+.impact-stories__story-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(10, 105, 112, 0.25);
+  border-radius: 50%;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  color: var(--teal);
+}
+
+.impact-stories__story-eyebrow {
+  margin: 0 0 22px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--green);
+}
+
+.impact-stories__story h3 {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(2.8rem, 4.4vw, 5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.impact-stories__story-text {
+  margin: 32px 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+
+  color: rgba(63, 63, 63, 0.7);
+}
+
+/* ----------------------------------------------------------
+   OUTCOME
+   ---------------------------------------------------------- */
+
+.impact-stories__outcome {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-top: 38px;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.16);
+}
+
+.impact-stories__outcome span {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.45);
+}
+
+.impact-stories__outcome strong {
+  font-family: "Marcellus", serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+
+  color: var(--teal);
+}
+
+/* ----------------------------------------------------------
+   LINK
+   ---------------------------------------------------------- */
+
+.impact-stories__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 40px;
+
+  padding-bottom: 9px;
+
+  border-bottom: 1px solid var(--teal);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--teal);
+
+  text-decoration: none;
+
+  transition:
+    gap 0.35s ease,
+    color 0.35s ease;
+}
+
+.impact-stories__link span {
+  font-size: 1rem;
+}
+
+.impact-stories__link:hover {
+  gap: 26px;
+  color: var(--green);
+}
+
+/* ----------------------------------------------------------
+   CLOSING
+   ---------------------------------------------------------- */
+
+.impact-stories__closing {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) 1fr auto;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: clamp(90px, 13vh, 170px);
+}
+
+.impact-stories__closing p {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  line-height: 1.25;
+}
+
+.impact-stories__line {
+  height: 1px;
+  background: rgba(63, 63, 63, 0.18);
+}
+
+.impact-stories__closing span {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  color: var(--green);
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .impact-stories {
+    padding-inline: 5vw;
+  }
+
+  .impact-stories__feature {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stories__story {
+    max-width: 700px;
+  }
+
+  .impact-stories__image {
+    height: min(65vw, 600px);
+  }
+
+  .impact-stories__closing {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .impact-stories__line {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-stories {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+
+  .impact-stories__header {
+    margin-bottom: 70px;
+  }
+
+  .impact-stories__index {
+    display: none;
+  }
+
+  .impact-stories__intro {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .impact-stories__intro h2 {
+    font-size: clamp(3.3rem, 16vw, 5rem);
+  }
+
+  .impact-stories__lead {
+    margin-top: 28px;
+    font-size: 0.95rem;
+  }
+
+  .impact-stories__image {
+    height: 115vw;
+  }
+
+  .impact-stories__story {
+    padding-top: 15px;
+  }
+
+  .impact-stories__story h3 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .impact-stories__story-text {
+    font-size: 0.9rem;
+  }
+
+  .impact-stories__closing {
+    margin-top: 90px;
+  }
+}

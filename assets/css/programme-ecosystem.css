@@ -1,0 +1,382 @@
+/* ==========================================================
+   IMISI FOUNDATION — PROGRAMME ECOSYSTEM
+   ========================================================== */
+
+.programme-ecosystem {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  background: var(--imisi-bone);
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+}
+
+.programme-ecosystem__inner {
+  width: min(1400px, 90%);
+
+  margin: 0 auto;
+
+  padding: clamp(7rem, 12vw, 12rem) 0 clamp(8rem, 14vw, 14rem);
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.programme-ecosystem__header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(280px, 0.7fr);
+
+  gap: clamp(4rem, 10vw, 10rem);
+
+  align-items: end;
+
+  margin-bottom: clamp(6rem, 12vw, 12rem);
+}
+
+.programme-ecosystem__eyebrow {
+  display: block;
+
+  margin-bottom: 2rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.programme-ecosystem__title {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.045em;
+}
+
+.programme-ecosystem__title span {
+  display: block;
+
+  color: var(--imisi-green);
+
+  font-style: italic;
+}
+
+.programme-ecosystem__intro {
+  max-width: 430px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color: rgba(63, 63, 63, 0.7);
+}
+
+/* ==========================================================
+   PROGRAMME LIST
+   ========================================================== */
+
+.programme-ecosystem__list {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1px;
+
+  background: rgba(10, 105, 112, 0.18);
+
+  border-top: 1px solid rgba(10, 105, 112, 0.18);
+  border-left: 1px solid rgba(10, 105, 112, 0.18);
+}
+
+/* ==========================================================
+   CARD
+   ========================================================== */
+
+.programme-card {
+  position: relative;
+
+  min-height: 430px;
+
+  padding: clamp(2rem, 4vw, 4rem);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background: var(--imisi-bone);
+
+  overflow: hidden;
+
+  cursor: default;
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.programme-card--large {
+  min-height: 560px;
+
+  grid-column: span 2;
+}
+
+.programme-card--accent {
+  background: var(--imisi-teal);
+
+  color: var(--imisi-bone);
+}
+
+.programme-card--final {
+  background: var(--imisi-green);
+
+  color: var(--imisi-bone);
+}
+
+/* ==========================================================
+   CARD NUMBER
+   ========================================================== */
+
+.programme-card__number {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.5;
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.programme-card__content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 700px;
+}
+
+.programme-card__label {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.programme-card--accent .programme-card__label,
+.programme-card--final .programme-card__label {
+  color: var(--imisi-lime);
+}
+
+.programme-card h3 {
+  margin: 0 0 1.5rem;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.035em;
+}
+
+.programme-card h3 em {
+  display: block;
+
+  color: var(--imisi-green);
+
+  font-style: italic;
+}
+
+.programme-card--accent h3 em,
+.programme-card--final h3 em {
+  color: var(--imisi-lime);
+}
+
+.programme-card p {
+  max-width: 480px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.9rem;
+
+  line-height: 1.75;
+
+  opacity: 0.7;
+}
+
+/* ==========================================================
+   MARK
+   ========================================================== */
+
+.programme-card__mark {
+  position: absolute;
+
+  right: clamp(2rem, 4vw, 4rem);
+  bottom: clamp(2rem, 4vw, 4rem);
+
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid currentColor;
+
+  border-radius: 50%;
+
+  font-size: 1.2rem;
+
+  opacity: 0.45;
+
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease;
+}
+
+.programme-card:hover .programme-card__mark {
+  transform: rotate(45deg) scale(1.08);
+
+  opacity: 1;
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.programme-ecosystem__closing {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding-top: clamp(5rem, 10vw, 9rem);
+}
+
+.programme-ecosystem__closing span {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.45);
+}
+
+.programme-ecosystem__closing strong {
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  color: var(--imisi-teal);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .programme-ecosystem__header {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .programme-ecosystem__list {
+    grid-template-columns: 1fr;
+  }
+
+  .programme-card,
+  .programme-card--large {
+    grid-column: span 1;
+
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .programme-ecosystem__inner {
+    width: 88%;
+  }
+
+  .programme-ecosystem__title {
+    font-size: clamp(3.5rem, 16vw, 5.5rem);
+  }
+
+  .programme-card,
+  .programme-card--large {
+    min-height: 420px;
+
+    padding: 2rem;
+  }
+
+  .programme-card h3 {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .programme-ecosystem__closing {
+    display: block;
+  }
+
+  .programme-ecosystem__closing strong {
+    display: block;
+
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,1057 @@
+/* ==========================================================
+   IMISI HOUSE — HERITAGE PIPELINE
+   03 — THE SEVEN-STAGE JOURNEY
+   ========================================================== */
+.pipeline-journey {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  /*
+   * THIS IS THE IMPORTANT PART.
+   * The section needs enough scroll distance
+   * for the seven stages to progress.
+   */
+  min-height: 700vh;
+
+  background: var(--imisi-bone);
+  color: var(--imisi-charcoal);
+
+  overflow: visible;
+}
+
+/* ==========================================================
+   STICKY EXPERIENCE
+   ========================================================== */
+
+.pipeline-journey__sticky {
+  position: sticky;
+
+  top: 0;
+
+  height: 100vh;
+
+  min-height: 680px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 125px clamp(24px, 6vw, 90px) 45px;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   TOP BAR
+   ========================================================== */
+
+.pipeline-journey__top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  margin-bottom: 30px;
+}
+
+.pipeline-journey__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.pipeline-journey__eyebrow > span:first-child {
+  color: var(--imisi-lime);
+
+  font-weight: 700;
+}
+
+.pipeline-journey__line {
+  width: 42px;
+  height: 1px;
+
+  background: var(--imisi-lime);
+}
+
+.pipeline-journey__counter {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: rgba(63, 63, 63, 0.45);
+}
+
+.pipeline-journey__current {
+  color: var(--imisi-teal);
+
+  font-size: 14px;
+}
+
+/* ==========================================================
+   MAIN LAYOUT
+   ========================================================== */
+
+.pipeline-journey__layout {
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.3fr)
+    minmax(0, 1fr);
+
+  gap: clamp(50px, 8vw, 130px);
+
+  align-items: center;
+}
+
+/* ==========================================================
+   STAGE RAIL
+   ========================================================== */
+
+.pipeline-journey__rail {
+  position: relative;
+
+  height: min(570px, 72vh);
+
+  display: flex;
+
+  align-items: center;
+}
+
+.pipeline-journey__rail-line {
+  position: absolute;
+
+  left: 13px;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background: rgba(10, 105, 112, 0.18);
+}
+
+.pipeline-journey__rail-progress {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 1px;
+  height: 0;
+
+  background: linear-gradient(
+    180deg,
+    var(--imisi-teal),
+    var(--imisi-green),
+    var(--imisi-lime)
+  );
+}
+
+/* ==========================================================
+   STAGE NAV
+   ========================================================== */
+
+.pipeline-stage-nav {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  height: 100%;
+
+  width: 100%;
+}
+
+.pipeline-stage-nav__item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 28px 1fr;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  background: none;
+
+  color: rgba(63, 63, 63, 0.4);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-family: Manrope, sans-serif;
+
+  transition:
+    color 0.45s ease,
+    transform 0.45s ease;
+}
+
+.pipeline-stage-nav__item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 9px;
+
+  top: 50%;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-bone);
+
+  border: 1px solid rgba(10, 105, 112, 0.35);
+
+  transform: translateY(-50%);
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.pipeline-stage-nav__item span {
+  padding-left: 28px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.pipeline-stage-nav__item strong {
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+}
+
+.pipeline-stage-nav__item.is-active {
+  color: var(--imisi-teal);
+
+  transform: translateX(5px);
+}
+
+.pipeline-stage-nav__item.is-active::before {
+  background: var(--imisi-lime);
+
+  border-color: var(--imisi-lime);
+
+  transform: translateY(-50%) scale(1.5);
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.pipeline-journey__content {
+  position: relative;
+  height: 100%;
+  min-width: 0;
+  padding-bottom: 5rem;
+}
+
+/* ==========================================================
+   STAGE
+   ========================================================== */
+
+.pipeline-stage {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(70px, 0.2fr)
+    minmax(0, 1fr);
+
+  gap: clamp(30px, 5vw, 80px);
+
+  align-content: start;
+
+  align-items: center;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(45px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.7s ease;
+}
+
+.pipeline-stage.is-active {
+  pointer-events: auto;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+/* ==========================================================
+   STAGE NUMBER
+   ========================================================== */
+
+.pipeline-stage__number {
+  align-self: start;
+
+  padding-top: 10px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(70px, 8vw, 130px);
+
+  font-weight: 300;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+
+  color: rgba(10, 105, 112, 0.09);
+}
+
+/* ==========================================================
+   STAGE CONTENT
+   ========================================================== */
+
+.pipeline-stage__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.pipeline-stage__label {
+  margin: 0 0 28px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.pipeline-stage__title {
+  max-width: 950px;
+
+  /* margin: 0; */
+  margin-bottom: 2rem;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(60px, 8vw, 80px);
+
+  font-weight: 400;
+
+  line-height: 0.87;
+
+  letter-spacing: -0.045em;
+
+  color: var(--imisi-charcoal);
+}
+
+.pipeline-stage__title span {
+  display: block;
+
+  color: var(--imisi-teal);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   LEAD
+   ========================================================== */
+
+.pipeline-stage__lead {
+  /* margin: 42px 0 12px; */
+  margin-bottom: 1.25rem;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(18px, 2vw, 27px);
+
+  line-height: 1.3;
+
+  color: var(--imisi-green);
+}
+
+/* ==========================================================
+   TEXT
+   ========================================================== */
+
+.pipeline-stage__text {
+  max-width: 670px;
+
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(14px, 1.1vw, 17px);
+
+  line-height: 1.75;
+
+  color: rgba(63, 63, 63, 0.7);
+}
+
+/* ==========================================================
+   ACTIVITIES
+   ========================================================== */
+
+.pipeline-stage__activities {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  max-width: 780px;
+
+  margin-top: 38px;
+}
+
+.pipeline-stage__activities span {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid rgba(10, 105, 112, 0.2);
+
+  border-radius: 999px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  color: var(--imisi-charcoal);
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================
+   CYCLE
+   ========================================================== */
+
+.pipeline-journey__cycle {
+  position: absolute;
+
+  right: clamp(24px, 6vw, 90px);
+  bottom: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.pipeline-journey__cycle-label {
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.45);
+}
+
+.pipeline-journey__cycle-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-lime);
+
+  color: var(--imisi-charcoal);
+
+  font-size: 18px;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1000px) {
+  .pipeline-journey__sticky {
+    padding: 115px 30px 40px;
+  }
+
+  .pipeline-journey__layout {
+    grid-template-columns:
+      130px
+      minmax(0, 1fr);
+
+    gap: 35px;
+  }
+
+  .pipeline-stage {
+    grid-template-columns: 50px 1fr;
+
+    gap: 25px;
+  }
+
+  .pipeline-stage__title {
+    font-size: clamp(52px, 8vw, 90px);
+  }
+}
+
+@media (max-width: 700px) {
+  .pipeline-journey {
+    min-height: 700vh;
+  }
+
+  .pipeline-journey__sticky {
+    min-height: 100svh;
+
+    padding: 105px 20px 70px;
+  }
+
+  .pipeline-journey__top {
+    margin-bottom: 15px;
+  }
+
+  .pipeline-journey__layout {
+    display: block;
+  }
+
+  /* Horizontal mobile stage indicator */
+
+  .pipeline-journey__rail {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    top: 88px;
+
+    width: auto;
+
+    height: 35px;
+
+    display: block;
+  }
+
+  .pipeline-journey__rail-line {
+    left: 0;
+    right: 0;
+    top: 17px;
+
+    width: auto;
+    height: 1px;
+  }
+
+  .pipeline-journey__rail-progress {
+    width: 0;
+    height: 1px;
+  }
+
+  .pipeline-stage-nav {
+    flex-direction: row;
+
+    height: 35px;
+  }
+
+  .pipeline-stage-nav__item {
+    display: block;
+
+    width: auto;
+
+    flex: 1;
+  }
+
+  .pipeline-stage-nav__item::before {
+    left: 50%;
+    top: 17px;
+
+    width: 7px;
+    height: 7px;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .pipeline-stage-nav__item.is-active {
+    transform: none;
+  }
+
+  .pipeline-stage-nav__item.is-active::before {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  .pipeline-stage-nav__item span {
+    display: none;
+  }
+
+  .pipeline-stage-nav__item strong {
+    display: none;
+  }
+
+  .pipeline-journey__content {
+    height: 100%;
+  }
+
+  .pipeline-stage {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    padding-top: 55px;
+  }
+
+  .pipeline-stage__number {
+    display: none;
+  }
+
+  .pipeline-stage__label {
+    margin-bottom: 22px;
+  }
+
+  .pipeline-stage__title {
+    font-size: clamp(50px, 15vw, 82px);
+  }
+
+  .pipeline-stage__lead {
+    margin-top: 30px;
+
+    font-size: 18px;
+  }
+
+  .pipeline-stage__text {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .pipeline-stage__activities {
+    margin-top: 30px;
+  }
+
+  .pipeline-journey__cycle {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .pipeline-journey__cycle-label {
+    display: none;
+  }
+}
+
+/* ==========================================================
+   03 — LEARN
+   Structured education / entry into practice
+   ========================================================== */
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__number {
+  color: rgba(12, 146, 104, 0.1);
+}
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__label {
+  color: var(--imisi-green);
+}
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__title span {
+  color: var(--imisi-green);
+}
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__lead {
+  color: var(--imisi-teal);
+}
+
+/* ----------------------------------------------------------
+   Learning activity list
+   ---------------------------------------------------------- */
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__activities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 10px 14px;
+  max-width: 720px;
+  margin-top: 32px;
+}
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__activities span {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 44px;
+  padding: 0 16px;
+
+  border: 1px solid rgba(12, 146, 104, 0.18);
+  border-radius: 3px;
+
+  background: rgba(255, 255, 255, 0.22);
+
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  color: var(--imisi-charcoal);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__activities span::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-lime);
+
+  flex-shrink: 0;
+}
+
+/* ----------------------------------------------------------
+   Stage 03 entrance sequence
+   ---------------------------------------------------------- */
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__label,
+.pipeline-stage[data-stage="03"] .pipeline-stage__title,
+.pipeline-stage[data-stage="03"] .pipeline-stage__lead,
+.pipeline-stage[data-stage="03"] .pipeline-stage__text,
+.pipeline-stage[data-stage="03"] .pipeline-stage__activities {
+  opacity: 0;
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pipeline-stage[data-stage="03"].is-active .pipeline-stage__label {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.05s;
+}
+
+.pipeline-stage[data-stage="03"].is-active .pipeline-stage__title {
+  opacity: 1;
+  transform: translateY(0);
+  max-width: 720px;
+  transition-delay: 0.12s;
+}
+
+.pipeline-stage[data-stage="03"].is-active .pipeline-stage__lead {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.22s;
+}
+
+.pipeline-stage[data-stage="03"].is-active .pipeline-stage__text {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.3s;
+}
+
+.pipeline-stage[data-stage="03"].is-active .pipeline-stage__activities {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.38s;
+}
+
+/* ----------------------------------------------------------
+   Individual learning pathways
+   ---------------------------------------------------------- */
+
+.pipeline-stage[data-stage="03"].is-active
+  .pipeline-stage__activities
+  span:nth-child(1) {
+  transition-delay: 0.42s;
+}
+
+.pipeline-stage[data-stage="03"].is-active
+  .pipeline-stage__activities
+  span:nth-child(2) {
+  transition-delay: 0.48s;
+}
+
+.pipeline-stage[data-stage="03"].is-active
+  .pipeline-stage__activities
+  span:nth-child(3) {
+  transition-delay: 0.54s;
+}
+
+.pipeline-stage[data-stage="03"].is-active
+  .pipeline-stage__activities
+  span:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+.pipeline-stage[data-stage="03"] .pipeline-stage__activities span:hover {
+  border-color: rgba(12, 146, 104, 0.45);
+  background: rgba(190, 214, 57, 0.08);
+  transform: translateX(4px);
+}
+
+/* ==========================================================
+   04 — EXPERIENCE
+   Learning enters the real world
+   ========================================================== */
+
+.pipeline-stage[data-stage="04"] {
+  grid-template-columns:
+    minmax(70px, 0.2fr)
+    minmax(0, 1fr);
+}
+
+/* ----------------------------------------------------------
+   Typography
+   ---------------------------------------------------------- */
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__number {
+  color: rgba(10, 105, 112, 0.12);
+}
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__label {
+  color: var(--imisi-teal);
+}
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__title {
+  max-width: 900px;
+}
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__title span {
+  color: var(--imisi-teal);
+}
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__lead {
+  color: var(--imisi-green);
+}
+
+/* ----------------------------------------------------------
+   Experience environments
+   ---------------------------------------------------------- */
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__activities {
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+
+  gap: 8px;
+
+  max-width: 900px;
+
+  margin-top: 34px;
+}
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__activities span {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  min-height: 82px;
+
+  padding: 14px;
+
+  border: 1px solid rgba(10, 105, 112, 0.18);
+
+  border-radius: 2px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.55),
+    rgba(244, 241, 232, 0.2)
+  );
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+/* Small editorial marker */
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__activities span::before {
+  content: "";
+
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-lime);
+}
+
+/* Hover */
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__activities span:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(10, 105, 112, 0.4);
+
+  background: linear-gradient(
+    145deg,
+    rgba(190, 214, 57, 0.12),
+    rgba(255, 255, 255, 0.5)
+  );
+}
+
+/* ----------------------------------------------------------
+   Experience entrance
+   ---------------------------------------------------------- */
+
+.pipeline-stage[data-stage="04"] .pipeline-stage__label,
+.pipeline-stage[data-stage="04"] .pipeline-stage__title,
+.pipeline-stage[data-stage="04"] .pipeline-stage__lead,
+.pipeline-stage[data-stage="04"] .pipeline-stage__text,
+.pipeline-stage[data-stage="04"] .pipeline-stage__activities {
+  opacity: 0;
+
+  transform: translateY(28px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pipeline-stage[data-stage="04"].is-active .pipeline-stage__label {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  transition-delay: 0.05s;
+}
+
+.pipeline-stage[data-stage="04"].is-active .pipeline-stage__title {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  transition-delay: 0.12s;
+}
+
+.pipeline-stage[data-stage="04"].is-active .pipeline-stage__lead {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  transition-delay: 0.22s;
+}
+
+.pipeline-stage[data-stage="04"].is-active .pipeline-stage__text {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  transition-delay: 0.3s;
+}
+
+.pipeline-stage[data-stage="04"].is-active .pipeline-stage__activities {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  transition-delay: 0.38s;
+}

@@ -1,0 +1,462 @@
+/* ==========================================================
+   IMISI FOUNDATION
+   CONTINUE
+   ========================================================== */
+
+.heritage-continue {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 100vh;
+
+  background: var(--imisi-bone);
+
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.heritage-continue__inner {
+  width: min(1400px, 90vw);
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: clamp(110px, 12vw, 160px) 0 70px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* ==========================================================
+   EYEBROW
+   ========================================================== */
+
+.heritage-continue__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.heritage-continue__line {
+  width: 48px;
+
+  height: 1px;
+
+  background: currentColor;
+
+  opacity: 0.4;
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.heritage-continue__hero {
+  display: grid;
+
+  grid-template-columns:
+    minmax(100px, 0.2fr)
+    minmax(0, 1fr);
+
+  gap: clamp(40px, 7vw, 110px);
+
+  margin-top: clamp(80px, 10vw, 130px);
+}
+
+.heritage-continue__number {
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(90px, 12vw, 180px);
+
+  font-weight: 300;
+
+  line-height: 0.75;
+
+  letter-spacing: -0.08em;
+
+  color: rgba(10, 105, 112, 0.08);
+}
+
+.heritage-continue__copy {
+  max-width: 1000px;
+}
+
+.heritage-continue__label {
+  margin: 0 0 28px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.24em;
+
+  color: var(--imisi-green);
+}
+
+.heritage-continue__title {
+  max-width: 950px;
+
+  margin: 0;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(60px, 8vw, 125px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.045em;
+}
+
+.heritage-continue__title span {
+  display: block;
+
+  color: var(--imisi-teal);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   INTRO
+   ========================================================== */
+
+.heritage-continue__intro {
+  max-width: 650px;
+
+  margin: 42px 0 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(15px, 1.2vw, 18px);
+
+  line-height: 1.75;
+
+  color: rgba(63, 63, 63, 0.68);
+}
+
+/* ==========================================================
+   CONTINUATION PATH
+   ========================================================== */
+
+.heritage-continue__path {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+
+  max-width: 1000px;
+
+  margin: clamp(80px, 9vw, 120px) 0 0 auto;
+
+  padding-top: 36px;
+}
+
+.heritage-continue__path-line {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(10, 105, 112, 0.16);
+}
+
+.heritage-continue__path-line span {
+  display: block;
+
+  width: 0%;
+
+  height: 100%;
+
+  background: var(--imisi-lime);
+}
+
+.heritage-continue__path-point {
+  position: relative;
+}
+
+.heritage-continue__path-point::before {
+  content: "";
+
+  position: absolute;
+
+  top: -40px;
+
+  left: 0;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-bone);
+
+  border: 1px solid var(--imisi-teal);
+}
+
+.heritage-continue__path-point:last-child::before {
+  background: var(--imisi-lime);
+
+  border-color: var(--imisi-lime);
+
+  box-shadow: 0 0 0 5px rgba(190, 214, 57, 0.12);
+}
+
+.heritage-continue__path-point span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: rgba(10, 105, 112, 0.5);
+}
+
+.heritage-continue__path-point strong {
+  font-family: Marcellus, serif;
+
+  font-size: 21px;
+
+  font-weight: 400;
+}
+
+/* ==========================================================
+   ACTION
+   ========================================================== */
+
+.heritage-continue__action {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-top: 70px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.12);
+}
+
+.heritage-continue__action-copy {
+  max-width: 500px;
+}
+
+.heritage-continue__action-copy > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: var(--imisi-teal);
+}
+
+.heritage-continue__action-copy p {
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: rgba(63, 63, 63, 0.55);
+}
+
+/* ==========================================================
+   BUTTON
+   ========================================================== */
+
+.heritage-continue__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  min-height: 58px;
+
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  background: var(--imisi-lime);
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease;
+}
+
+.heritage-continue__button strong {
+  font-size: 18px;
+
+  font-weight: 400;
+}
+
+.heritage-continue__button:hover {
+  transform: translateY(-4px);
+
+  background: var(--imisi-green);
+
+  color: var(--imisi-bone);
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.heritage-continue__closing {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: auto;
+
+  padding-top: 45px;
+}
+
+.heritage-continue__closing-mark {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-teal);
+
+  color: var(--imisi-lime);
+
+  font-size: 18px;
+}
+
+.heritage-continue__closing p {
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.45);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .heritage-continue__inner {
+    padding-top: 100px;
+  }
+
+  .heritage-continue__hero {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-top: 70px;
+  }
+
+  .heritage-continue__number {
+    font-size: 80px;
+  }
+
+  .heritage-continue__title {
+    font-size: clamp(48px, 13vw, 80px);
+  }
+
+  .heritage-continue__path {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 55px;
+
+    margin-top: 75px;
+  }
+
+  .heritage-continue__action {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-top: 60px;
+  }
+
+  .heritage-continue__button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+}

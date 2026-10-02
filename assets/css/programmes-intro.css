@@ -1,0 +1,237 @@
+/* ==========================================================
+   IMISI FOUNDATION — PROGRAMMES INTRO
+   Editorial programme introduction
+   ========================================================== */
+
+.programmes-intro {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+  min-height: 100vh;
+
+  background: var(--imisi-bone);
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------
+   INNER
+   ---------------------------------------------------------- */
+
+.programmes-intro__inner {
+  width: min(1400px, 90%);
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: clamp(7rem, 12vh, 10rem) 0 clamp(4rem, 8vh, 7rem);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------------------------------------------------
+   HEADER
+   ---------------------------------------------------------- */
+
+.programmes-intro__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: clamp(5rem, 10vh, 9rem);
+}
+
+.programmes-intro__eyebrow {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+}
+
+.programmes-intro__counter {
+  display: flex;
+  gap: 1.5rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.45);
+}
+
+/* ----------------------------------------------------------
+   MAIN
+   ---------------------------------------------------------- */
+
+.programmes-intro__main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(280px, 0.65fr);
+
+  gap: clamp(4rem, 10vw, 12rem);
+
+  align-items: end;
+
+  flex: 1;
+}
+
+/* ----------------------------------------------------------
+   TITLE
+   ---------------------------------------------------------- */
+
+.programmes-intro__title {
+  margin: 0;
+
+  max-width: 900px;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(4rem, 8vw, 8.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.045em;
+}
+
+.programmes-intro__title span {
+  display: block;
+
+  color: var(--imisi-green);
+
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------
+   COPY
+   ---------------------------------------------------------- */
+
+.programmes-intro__copy {
+  max-width: 460px;
+
+  padding-bottom: 0.5rem;
+}
+
+.programmes-intro__copy p {
+  margin: 0 0 1.5rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+
+  color: rgba(63, 63, 63, 0.72);
+}
+
+.programmes-intro__copy .programmes-intro__lead {
+  margin-bottom: 2rem;
+
+  font-size: 1.1rem;
+
+  line-height: 1.65;
+
+  color: var(--imisi-charcoal);
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+   ---------------------------------------------------------- */
+
+.programmes-intro__footer {
+  margin-top: clamp(5rem, 10vh, 8rem);
+}
+
+.programmes-intro__line {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(10, 105, 112, 0.2);
+
+  transform-origin: left center;
+}
+
+.programmes-intro__hint {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1.2rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: rgba(63, 63, 63, 0.45);
+}
+
+.programmes-intro__arrow {
+  font-size: 1rem;
+
+  color: var(--imisi-teal);
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .programmes-intro__main {
+    grid-template-columns: 1fr;
+
+    gap: 4rem;
+
+    align-items: start;
+  }
+
+  .programmes-intro__title {
+    font-size: clamp(4rem, 13vw, 7rem);
+  }
+
+  .programmes-intro__copy {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .programmes-intro__inner {
+    width: 88%;
+  }
+
+  .programmes-intro__header {
+    margin-bottom: 4rem;
+  }
+
+  .programmes-intro__counter {
+    display: none;
+  }
+
+  .programmes-intro__title {
+    font-size: clamp(3.5rem, 17vw, 5rem);
+  }
+
+  .programmes-intro__copy .programmes-intro__lead {
+    font-size: 1rem;
+  }
+}

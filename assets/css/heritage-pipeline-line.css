@@ -1,0 +1,482 @@
+/* ==========================================================
+   IMISI HOUSE — HERITAGE PIPELINE
+   01 — THE GAP
+   ========================================================== */
+
+.pipeline-line {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 100vh;
+
+  background: var(--imisi-bone);
+  color: var(--imisi-charcoal);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.pipeline-line__inner {
+  position: relative;
+
+  width: min(1400px, 100%);
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: clamp(130px, 14vw, 190px) clamp(24px, 7vw, 110px) 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ==========================================================
+   EYEBROW
+   ========================================================== */
+
+.pipeline-line__eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 50px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-teal);
+
+  opacity: 0.9;
+}
+
+.pipeline-line__eyebrow-number {
+  color: var(--imisi-lime);
+}
+
+.pipeline-line__line {
+  width: 38px;
+  height: 1px;
+
+  background: var(--imisi-lime);
+}
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.pipeline-line__title {
+  max-width: 1050px;
+
+  margin: 0;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(58px, 8.5vw, 135px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+
+  color: var(--imisi-charcoal);
+}
+
+.pipeline-line__title span {
+  display: block;
+}
+
+.pipeline-line__title-accent {
+  color: var(--imisi-teal);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   SYSTEMS
+   ========================================================== */
+
+.pipeline-line__systems {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(220px, 0.55fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: clamp(35px, 5vw, 80px);
+
+  margin-top: 110px;
+}
+
+/* ==========================================================
+   KNOWLEDGE SYSTEM
+   ========================================================== */
+
+.knowledge-system {
+  position: relative;
+
+  min-height: 240px;
+
+  padding: 30px 0;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.25);
+}
+
+.knowledge-system__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.17em;
+
+  text-transform: uppercase;
+}
+
+.knowledge-system__number {
+  color: var(--imisi-lime);
+
+  font-weight: 700;
+}
+
+.knowledge-system__label {
+  color: var(--imisi-teal);
+
+  font-weight: 600;
+}
+
+.knowledge-system__title {
+  margin: 0 0 28px;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(32px, 4vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--imisi-charcoal);
+}
+
+/* ==========================================================
+   ITEMS
+   ========================================================== */
+
+.knowledge-system__items {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.knowledge-system__items span {
+  display: inline-flex;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(10, 105, 112, 0.2);
+
+  border-radius: 999px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+
+  color: var(--imisi-charcoal);
+}
+
+/* ==========================================================
+   LIVING SYSTEM
+   ========================================================== */
+
+.knowledge-system--living {
+  border-top-color: rgba(12, 146, 104, 0.35);
+}
+
+.knowledge-system--living .knowledge-system__label {
+  color: var(--imisi-green);
+}
+
+/* ==========================================================
+   BRIDGE
+   ========================================================== */
+
+.pipeline-line__bridge {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 240px;
+}
+
+.pipeline-line__bridge-label {
+  margin-bottom: 25px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: var(--imisi-teal);
+}
+
+/* ==========================================================
+   BRIDGE LINE
+   ========================================================== */
+
+.pipeline-line__bridge-line {
+  position: relative;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(63, 63, 63, 0.18);
+}
+
+.pipeline-line__progress {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 0;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    var(--imisi-teal),
+    var(--imisi-green),
+    var(--imisi-lime)
+  );
+}
+
+.pipeline-line__node {
+  position: absolute;
+
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-teal);
+
+  transform: translateY(-50%);
+}
+
+.pipeline-line__node:first-child {
+  left: 0;
+}
+
+.pipeline-line__node:last-child {
+  right: 0;
+
+  background: var(--imisi-green);
+}
+
+/* ==========================================================
+   BRIDGE COPY
+   ========================================================== */
+
+.pipeline-line__bridge-copy {
+  max-width: 250px;
+
+  margin: 28px auto 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  text-align: center;
+
+  color: rgba(63, 63, 63, 0.65);
+}
+
+/* ==========================================================
+   CLOSING
+   ========================================================== */
+
+.pipeline-line__closing {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  max-width: 850px;
+
+  margin-top: 100px;
+  margin-left: auto;
+}
+
+.pipeline-line__closing p {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(15px, 1.4vw, 19px);
+
+  line-height: 1.65;
+
+  color: var(--imisi-charcoal);
+}
+
+.pipeline-line__closing-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--imisi-lime);
+
+  color: var(--imisi-charcoal);
+
+  font-size: 20px;
+}
+
+/* ==========================================================
+   ACTIVE STATES
+   ========================================================== */
+
+.pipeline-line.is-active .knowledge-system--formal {
+  border-top-color: var(--imisi-teal);
+}
+
+.pipeline-line.is-active .knowledge-system--living {
+  border-top-color: var(--imisi-green);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .pipeline-line__systems {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    margin-top: 80px;
+  }
+
+  .pipeline-line__bridge {
+    min-height: 120px;
+  }
+
+  .pipeline-line__bridge-line {
+    width: 70%;
+  }
+
+  .knowledge-system {
+    min-height: auto;
+  }
+
+  .pipeline-line__closing {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pipeline-line__inner {
+    min-height: auto;
+
+    padding: 120px 24px 80px;
+  }
+
+  .pipeline-line__eyebrow {
+    margin-bottom: 40px;
+  }
+
+  .pipeline-line__title {
+    font-size: clamp(52px, 15vw, 85px);
+  }
+
+  .pipeline-line__systems {
+    margin-top: 70px;
+
+    gap: 30px;
+  }
+
+  .knowledge-system {
+    padding: 25px 0;
+  }
+
+  .knowledge-system__top {
+    margin-bottom: 40px;
+  }
+
+  .pipeline-line__bridge {
+    order: 2;
+
+    min-height: 160px;
+  }
+
+  .knowledge-system--formal {
+    order: 1;
+  }
+
+  .knowledge-system--living {
+    order: 3;
+  }
+
+  .pipeline-line__bridge-line {
+    width: 100%;
+  }
+
+  .pipeline-line__closing {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-top: 65px;
+  }
+}

@@ -133,109 +133,418 @@ HEADER
      NAVBAR
      ========================================================== -->
 
-    <header class="header nav-wrap">
-      <nav class="nav" id="nav" data-state="top">
-        <!-- LOGO -->
-        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
-          <img
-            src="./assets/images/imnisi_foundation_logo2.png"
-            alt="Ìmísí Foundation"
-            class="nav__logo-image"
-          />
-        </a>
-
-        <!-- DESKTOP NAVIGATION -->
-        <div class="nav__links" id="navLinks">
-          <a href="#about" data-sweep="About"> About </a>
-
-          <!-- data-mega="1" -->
-          <a href="#pipeline"  data-sweep="Heritage Pipeline">
-            Heritage Pipeline
-          </a>
-
-          <a href="#programmes" data-sweep="Programmes"> Programmes </a>
-
-          <a href="#stories" data-sweep="Stories"> Stories </a>
-
-          <a href="#impact" data-sweep="Impact"> Impact </a>
-
-          <a href="#get-involved" data-sweep="Get Involved"> Get Involved </a>
-        </div>
-
-        <!-- CTA -->
-        <div class="nav__cta">
-          <a class="nav__support" href="#support"> Support </a>
-          <li class="nav__dropdown">
-  <button class="btn btn--solid nav__partner nav__dropdown-btn" type="button">
-    Partner With Us
-
-    <svg class="ico nav__dropdown-arrow" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6 9l6 6 6-6" />
-    </svg>
-  </button>
-
-  <ul class="nav__dropdown-menu">
-    <li>
-      <a href="payment.html">Donate</a>
-    </li>
-
-    <li>
-      <a href="#get-involved">Volunteer</a>
-    </li>
-
-    <li>
-      <a href="#get-involved">Corporate Partnership</a>
-    </li>
-  </ul>
-</li>
-
-          <!-- MOBILE BURGER -->
-          <button class="nav__burger" id="burger" aria-label="Open menu">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 7h16M4 12h16M4 17h16" />
-            </svg>
-          </button>
-        </div>
-
-        <!-- ======================================================
-         MEGA MENU
-         ====================================================== -->
-
-        <div class="mega" id="mega" aria-hidden="true">
-          <div class="mega__list" id="megaList"></div>
-
-          <div class="mega__preview" id="megaPreview"></div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- ==========================================================
-     MOBILE FULLSCREEN MENU
+<!-- ==========================================================
+     NAVBAR
      ========================================================== -->
 
-    <div class="mobile" id="mobile" aria-hidden="true">
-      <div class="grain"></div>
+<header class="header nav-wrap">
 
-      <div class="mobile__top">
-        <span class="mobile__brand">
+  <!-- ========================================================
+       DESKTOP NAVIGATION
+       ======================================================== -->
+
+  <nav class="nav" id="nav" data-state="top">
+
+    <!-- LOGO -->
+    <a
+      class="nav__logo"
+      href="./index.html"
+      data-sweep="Ìmísí Foundation"
+    >
+      <img
+        src="./assets/images/imnisi_foundation_logo2.png"
+        alt="Ìmísí Foundation"
+        class="nav__logo-image"
+      />
+    </a>
+
+
+    <!-- ======================================================
+         DESKTOP NAVIGATION LINKS
+         ====================================================== -->
+
+    <div class="nav__links" id="navLinks">
+
+      <a
+        href="./heritage-pipeline.html"
+        data-sweep="Heritage Pipeline"
+      >
+        Heritage Pipeline
+      </a>
+
+      <a
+        href="./programmes.html"
+        data-sweep="Programmes"
+      >
+        Programmes
+      </a>
+
+      <a
+        href="./stories.html"
+        data-sweep="Stories"
+      >
+        Stories
+      </a>
+
+      <a
+        href="./impact.html"
+        data-sweep="Impact"
+      >
+        Impact
+      </a>
+
+      <a
+        href="./get-involved.html"
+        data-sweep="Get Involved"
+      >
+        Get Involved
+      </a>
+
+    </div>
+
+
+    <!-- ======================================================
+         DESKTOP CTA
+         ====================================================== -->
+
+    <div class="nav__cta">
+
+      <a
+        class="nav__support"
+        href="#support"
+      >
+        Support
+      </a>
+
+
+      <!-- DESKTOP PARTNER DROPDOWN -->
+
+      <div class="nav__dropdown">
+
+        <button
+          class="btn btn--solid nav__partner nav__dropdown-btn"
+          type="button"
+        >
+          Partner With Us
+
           <svg
-            class="nav__mark"
-            viewBox="60 160 290 240"
+            class="ico nav__dropdown-arrow"
+            viewBox="0 0 24 24"
             aria-hidden="true"
-          ></svg>
-
-          Ìmísí Foundation
-        </span>
-
-        <button class="mobile__close" id="mobileClose" aria-label="Close menu">
-          <svg viewBox="0 0 24 24">
-            <path d="M6 6l12 12M18 6 6 18" />
+          >
+            <path d="M6 9l6 6 6-6" />
           </svg>
+
         </button>
+
+
+        <ul class="nav__dropdown-menu">
+
+          <li>
+            <a href="payment.html">
+              Donate
+            </a>
+          </li>
+
+          <li>
+            <a href="#get-involved">
+              Volunteer
+            </a>
+          </li>
+
+          <li>
+            <a href="#get-involved">
+              Corporate Partnership
+            </a>
+          </li>
+
+        </ul>
+
       </div>
 
-      <nav class="mobile__nav" id="mobileNav"></nav>
+
+      <!-- ====================================================
+           MOBILE BURGER
+           ==================================================== -->
+
+      <button
+        class="nav__burger"
+        id="burger"
+        aria-label="Open menu"
+        type="button"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+
+      </button>
+
     </div>
+
+
+    <!-- ======================================================
+         DESKTOP HERITAGE PIPELINE MEGA MENU
+         ====================================================== -->
+
+    <div
+      class="mega"
+      id="mega"
+      aria-hidden="true"
+    >
+
+      <div
+        class="mega__list"
+        id="megaList"
+      ></div>
+
+      <div
+        class="mega__preview"
+        id="megaPreview"
+      ></div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ========================================================
+       MOBILE FULLSCREEN MENU
+       
+       IMPORTANT:
+       This is OUTSIDE the main .nav.
+       ======================================================== -->
+
+  <div
+    class="mobile"
+    id="mobile"
+    aria-hidden="true"
+  >
+
+    <div class="grain"></div>
+
+
+    <!-- ======================================================
+         MOBILE TOP BAR
+         ====================================================== -->
+
+    <div class="mobile__top">
+
+      <a
+        href="./index.html"
+        class="mobile__brand"
+      >
+
+        <img
+          src="./assets/images/imnisi_foundation_logo2.png"
+          alt="Ìmísí Foundation"
+          class="mobile__brand-logo"
+        />
+
+      </a>
+
+
+      <!-- CLOSE BUTTON -->
+
+      <button
+        class="mobile__close"
+        id="mobileClose"
+        aria-label="Close menu"
+        type="button"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg>
+
+      </button>
+
+    </div>
+
+
+    <!-- ======================================================
+         MOBILE NAVIGATION
+         ====================================================== -->
+
+    <nav
+      class="mobile__nav"
+      id="mobileNav"
+    >
+
+      <!-- ABOUT -->
+
+      <a
+        href="./heritage-pipeline.html"
+        class="big"
+        data-mobile-link
+      >
+
+        <span class="mobile__number">
+          01
+        </span>
+
+        Heritage Pipeline
+
+      </a>
+
+
+      <!-- HERITAGE PIPELINE -->
+
+      <a
+        href="./programmes.html"
+        class="big"
+        data-mobile-link
+      >
+
+        <span class="mobile__number">
+          02
+        </span>
+
+         Programmes
+
+      </a>
+
+
+      <!-- PROGRAMMES -->
+
+      <a
+        href="./stories.html"
+        class="big"
+        data-mobile-link
+      >
+
+        <span class="mobile__number">
+          03
+        </span>
+
+        Stories
+
+      </a>
+
+
+      <!-- STORIES -->
+
+      <a
+        href="./impact.html"
+        class="big"
+        data-mobile-link
+      >
+
+        <span class="mobile__number">
+          04
+        </span>
+
+         Impact
+
+      </a>
+
+
+      <!-- GET INVOLVED -->
+
+      <a
+        href="./get-involved.html"
+        class="big"
+        data-mobile-link
+      >
+
+        <span class="mobile__number">
+          05
+        </span>
+
+       Get Involved
+
+      </a>
+
+
+
+      <!-- ====================================================
+           MOBILE ACTIONS
+           ==================================================== -->
+
+      <div class="mobile__actions">
+
+
+        <!-- SUPPORT -->
+
+        <a
+          href="./payment.html"
+          class="mobile__action mobile__action--support"
+          data-mobile-link
+        >
+          Support
+        </a>
+
+
+        <!-- PARTNER WITH US -->
+
+        <button
+          class="mobile__action mobile__action--partner"
+          id="mobilePartnerToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobilePartnerMenu"
+        >
+
+          Partner With Us
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+
+        </button>
+
+
+        <!-- MOBILE PARTNER DROPDOWN -->
+
+        <div
+          class="mobile__partner-menu"
+          id="mobilePartnerMenu"
+        >
+
+          <a
+            href="./payment.html"
+            data-mobile-link
+          >
+            Donate
+          </a>
+
+          <a
+            href="./get-involved.html"
+            data-mobile-link
+          >
+            Volunteer
+          </a>
+
+          <a
+            href="./get-involved.html"
+            data-mobile-link
+          >
+            Corporate Partnership
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
+
+    <!-- ======================================================
+ MOBILE FULLSCREEN MENU
+ ====================================================== -->
+
 
     <!-- =======================================
 HERO

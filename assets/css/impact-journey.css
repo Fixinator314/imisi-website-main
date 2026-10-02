@@ -1,0 +1,465 @@
+/* ==========================================================
+   IMISI FOUNDATION — IMPACT JOURNEY
+   03 / Impact Journey
+   ========================================================== */
+
+.impact-journey {
+  --teal: #0a6970;
+  --green: #0c9268;
+  --lime: #bed639;
+  --bone: #f4f1e8;
+  --charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 700vh;
+
+  background: var(--bone);
+  color: var(--charcoal);
+
+  overflow: visible;
+}
+
+/* ==========================================================
+   STICKY FRAME
+   ========================================================== */
+
+.impact-journey__sticky {
+  position: sticky;
+
+  top: 0;
+
+  height: 100vh;
+  min-height: 650px;
+
+  padding: 5vh 6vw;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.impact-journey__header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.impact-journey__eyebrow {
+  color: var(--teal);
+}
+
+.impact-journey__index {
+  opacity: 0.4;
+}
+
+/* ==========================================================
+   LAYOUT
+   ========================================================== */
+
+.impact-journey__layout {
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.35fr)
+    minmax(0, 1.65fr);
+
+  gap: clamp(3rem, 8vw, 9rem);
+
+  align-items: center;
+}
+
+/* ==========================================================
+   RAIL
+   ========================================================== */
+
+.impact-journey__rail {
+  position: relative;
+
+  display: flex;
+
+  gap: 2rem;
+
+  height: 65%;
+}
+
+.impact-journey__rail-line {
+  position: relative;
+
+  width: 1px;
+
+  height: 100%;
+
+  background: rgba(63, 63, 63, 0.2);
+}
+
+.impact-journey__rail-progress {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 1px;
+  height: 0;
+
+  background: var(--green);
+
+  transform-origin: top;
+}
+
+/* ==========================================================
+   NAV
+   ========================================================== */
+
+.impact-journey__stages {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  height: 100%;
+}
+
+.impact-stage-nav {
+  display: grid;
+
+  grid-template-columns: 30px auto;
+
+  gap: 1rem;
+
+  align-items: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--charcoal);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  opacity: 0.35;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.impact-stage-nav span {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.1em;
+
+  color: var(--teal);
+}
+
+.impact-stage-nav strong {
+  font-family: "Marcellus", serif;
+
+  font-size: 1rem;
+
+  font-weight: 400;
+}
+
+.impact-stage-nav:hover {
+  opacity: 0.7;
+}
+
+.impact-stage-nav.is-active {
+  opacity: 1;
+
+  transform: translateX(8px);
+}
+
+.impact-stage-nav.is-active strong {
+  color: var(--teal);
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.impact-journey__content {
+  position: relative;
+
+  height: min(65vh, 620px);
+}
+
+/* ==========================================================
+   STAGE
+   ========================================================== */
+
+.impact-journey__stage {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.55s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.75s;
+}
+
+.impact-journey__stage.is-active {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
+
+  transition:
+    opacity 0.55s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0s;
+}
+
+/* ==========================================================
+   STAGE META
+   ========================================================== */
+
+.impact-journey__number {
+  margin-bottom: 0.8rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.14em;
+
+  color: var(--green);
+}
+
+.impact-journey__category {
+  margin-bottom: 1.5rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--teal);
+}
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.impact-journey__stage h2 {
+  max-width: 900px;
+
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(4rem, 7vw, 7.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.045em;
+}
+
+.impact-journey__stage h2 em {
+  display: block;
+
+  color: var(--green);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.impact-journey__stage > p {
+  max-width: 600px;
+
+  margin: 2rem 0 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.82rem;
+
+  line-height: 1.8;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   OUTCOME
+   ========================================================== */
+
+.impact-journey__outcome {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+  padding-top: 1.25rem;
+
+  border-top: 1px solid rgba(63, 63, 63, 0.18);
+}
+
+.impact-journey__outcome span {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.15em;
+
+  color: var(--teal);
+}
+
+.impact-journey__outcome strong {
+  font-family: "Marcellus", serif;
+
+  font-size: 1.2rem;
+
+  font-weight: 400;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.impact-journey__footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  opacity: 0.5;
+}
+
+.impact-journey__current {
+  color: var(--teal);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .impact-journey {
+    min-height: auto;
+  }
+
+  .impact-journey__sticky {
+    position: relative;
+
+    height: auto;
+    min-height: auto;
+
+    padding: 6rem 7vw 7rem;
+  }
+
+  .impact-journey__index {
+    display: none;
+  }
+
+  .impact-journey__layout {
+    display: block;
+
+    margin-top: 5rem;
+  }
+
+  .impact-journey__rail {
+    display: none;
+  }
+
+  .impact-journey__content {
+    height: auto;
+  }
+
+  .impact-journey__stage {
+    position: relative;
+
+    inset: auto;
+
+    min-height: 75vh;
+
+    padding: 4rem 0;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: none;
+
+    border-top: 1px solid rgba(63, 63, 63, 0.15);
+  }
+
+  .impact-journey__stage:first-child {
+    border-top: 0;
+  }
+
+  .impact-journey__stage h2 {
+    font-size: clamp(3.2rem, 14vw, 5.5rem);
+  }
+
+  .impact-journey__stage > p {
+    max-width: 100%;
+  }
+}

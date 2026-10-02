@@ -1,0 +1,339 @@
+/* ==========================================================
+   IMISI FOUNDATION — PROGRAMME CTA
+   ========================================================== */
+
+.programme-cta {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 90vh;
+
+  display: flex;
+
+  align-items: center;
+
+  background: var(--imisi-teal);
+
+  color: var(--imisi-bone);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   DECORATIVE BACKGROUND
+   ========================================================== */
+
+.programme-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 70vw;
+  height: 70vw;
+
+  max-width: 900px;
+  max-height: 900px;
+
+  border: 1px solid rgba(190, 214, 57, 0.12);
+
+  border-radius: 50%;
+
+  right: -25vw;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.programme-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 45vw;
+  height: 45vw;
+
+  max-width: 600px;
+  max-height: 600px;
+
+  border: 1px solid rgba(244, 241, 232, 0.08);
+
+  border-radius: 50%;
+
+  right: -12vw;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.programme-cta__inner {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1400px, 90%);
+
+  min-height: 90vh;
+
+  margin: 0 auto;
+
+  padding: clamp(3rem, 6vw, 6rem) 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+/* ==========================================================
+   TOP
+   ========================================================== */
+
+.programme-cta__top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.programme-cta__eyebrow {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-lime);
+}
+
+.programme-cta__mark {
+  font-family: "Marcellus", serif;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.1em;
+
+  opacity: 0.45;
+}
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.programme-cta__main {
+  max-width: 1100px;
+}
+
+.programme-cta__title {
+  margin: 0 0 3rem;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(5rem, 11vw, 12rem);
+
+  font-weight: 400;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.055em;
+}
+
+.programme-cta__title span {
+  display: block;
+
+  color: var(--imisi-lime);
+
+  font-style: italic;
+}
+
+.programme-cta__intro {
+  max-width: 540px;
+
+  margin: 0 0 3.5rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color: rgba(244, 241, 232, 0.68);
+}
+
+/* ==========================================================
+   ACTIONS
+   ========================================================== */
+
+.programme-cta__actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.programme-cta__button {
+  min-width: 230px;
+
+  padding: 1rem 1.2rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  border: 1px solid rgba(244, 241, 232, 0.35);
+
+  color: var(--imisi-bone);
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease;
+}
+
+.programme-cta__button strong {
+  display: grid;
+
+  place-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid currentColor;
+
+  border-radius: 50%;
+
+  font-size: 0.9rem;
+
+  font-weight: 400;
+
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.programme-cta__button:hover {
+  background: var(--imisi-bone);
+
+  border-color: var(--imisi-bone);
+
+  color: var(--imisi-teal);
+}
+
+.programme-cta__button:hover strong {
+  transform: rotate(45deg);
+}
+
+.programme-cta__button--primary {
+  background: var(--imisi-lime);
+
+  border-color: var(--imisi-lime);
+
+  color: var(--imisi-charcoal);
+}
+
+.programme-cta__button--primary:hover {
+  background: var(--imisi-bone);
+
+  border-color: var(--imisi-bone);
+
+  color: var(--imisi-teal);
+}
+
+/* ==========================================================
+   BOTTOM
+   ========================================================== */
+
+.programme-cta__bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding-top: 2rem;
+
+  border-top: 1px solid rgba(244, 241, 232, 0.15);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: rgba(244, 241, 232, 0.4);
+}
+
+.programme-cta__bottom strong {
+  font-family: "Marcellus", serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  color: var(--imisi-lime);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+  .programme-cta {
+    min-height: 85vh;
+  }
+
+  .programme-cta__inner {
+    min-height: 85vh;
+
+    width: 88%;
+  }
+
+  .programme-cta__title {
+    font-size: clamp(4rem, 18vw, 7rem);
+  }
+
+  .programme-cta__button {
+    width: 100%;
+  }
+
+  .programme-cta__bottom span {
+    max-width: 260px;
+
+    line-height: 1.7;
+  }
+}

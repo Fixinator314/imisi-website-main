@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Get Involved</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/heritage-pipeline-hero.css" />
+    <link rel="stylesheet" href="./assets/css/get-involved.css" />
+    <link rel="stylesheet" href="./assets/css/involvement-paths.css" />
+    <link rel="stylesheet" href="./assets/css/contact-section.css" />
+    <link rel="stylesheet" href="./assets/css/involvement-cta.css" />
+    <link rel="stylesheet" href="./assets/css/involvement-next.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/intro.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="heritage-pipeline-page">
+    <!-- Custom desktop cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Route/section sweep used on nav clicks -->
+    <div class="sweep" id="sweep" aria-hidden="true">
+      <span class="sweep__title"></span>
+    </div>
+    <!-- ==========================================================
+     NAVBAR
+     ========================================================== -->
+
+    <header class="header nav-wrap">
+      <!-- ========================================================
+       DESKTOP NAVIGATION
+       ======================================================== -->
+
+      <nav class="nav" id="nav" data-state="top">
+        <!-- LOGO -->
+        <a class="nav__logo" href="./index.html" data-sweep="Ìmísí Foundation">
+          <img
+            src="./assets/images/imnisi_foundation_logo2.png"
+            alt="Ìmísí Foundation"
+            class="nav__logo-image"
+          />
+        </a>
+
+        <!-- ======================================================
+         DESKTOP NAVIGATION LINKS
+         ====================================================== -->
+
+        <div class="nav__links" id="navLinks">
+          <a href="./heritage-pipeline.html" data-sweep="Heritage Pipeline">
+            Heritage Pipeline
+          </a>
+
+          <a href="./programmes.html" data-sweep="Programmes"> Programmes </a>
+
+          <a href="./stories.html" data-sweep="Stories"> Stories </a>
+
+          <a href="./impact.html" data-sweep="Impact"> Impact </a>
+
+          <a href="./get-involved.html" data-sweep="Get Involved">
+            Get Involved
+          </a>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP CTA
+         ====================================================== -->
+
+        <div class="nav__cta">
+          <a class="nav__support" href="#support"> Support </a>
+
+          <!-- DESKTOP PARTNER DROPDOWN -->
+
+          <div class="nav__dropdown">
+            <button
+              class="btn btn--solid nav__partner nav__dropdown-btn"
+              type="button"
+            >
+              Partner With Us
+
+              <svg
+                class="ico nav__dropdown-arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <ul class="nav__dropdown-menu">
+              <li>
+                <a href="payment.html"> Donate </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Volunteer </a>
+              </li>
+
+              <li>
+                <a href="#get-involved"> Corporate Partnership </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ====================================================
+           MOBILE BURGER
+           ==================================================== -->
+
+          <button
+            class="nav__burger"
+            id="burger"
+            aria-label="Open menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         DESKTOP HERITAGE PIPELINE MEGA MENU
+         ====================================================== -->
+
+        <div class="mega" id="mega" aria-hidden="true">
+          <div class="mega__list" id="megaList"></div>
+
+          <div class="mega__preview" id="megaPreview"></div>
+        </div>
+      </nav>
+
+      <!-- ========================================================
+       MOBILE FULLSCREEN MENU
+       
+       IMPORTANT:
+       This is OUTSIDE the main .nav.
+       ======================================================== -->
+
+      <div class="mobile" id="mobile" aria-hidden="true">
+        <div class="grain"></div>
+
+        <!-- ======================================================
+         MOBILE TOP BAR
+         ====================================================== -->
+
+        <div class="mobile__top">
+          <a href="./index.html" class="mobile__brand">
+            <img
+              src="./assets/images/imnisi_foundation_logo2.png"
+              alt="Ìmísí Foundation"
+              class="mobile__brand-logo"
+            />
+          </a>
+
+          <!-- CLOSE BUTTON -->
+
+          <button
+            class="mobile__close"
+            id="mobileClose"
+            aria-label="Close menu"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ======================================================
+         MOBILE NAVIGATION
+         ====================================================== -->
+
+        <nav class="mobile__nav" id="mobileNav">
+          <!-- ABOUT -->
+
+          <a href="./heritage-pipeline.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 01 </span>
+
+            Heritage Pipeline
+          </a>
+
+          <!-- HERITAGE PIPELINE -->
+
+          <a href="./programmes.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 02 </span>
+
+            Programmes
+          </a>
+
+          <!-- PROGRAMMES -->
+
+          <a href="./stories.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 03 </span>
+
+            Stories
+          </a>
+
+          <!-- STORIES -->
+
+          <a href="./impact.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 04 </span>
+
+            Impact
+          </a>
+
+          <!-- GET INVOLVED -->
+
+          <a href="./get-involved.html" class="big" data-mobile-link>
+            <span class="mobile__number"> 05 </span>
+
+            Get Involved
+          </a>
+
+          <!-- ====================================================
+           MOBILE ACTIONS
+           ==================================================== -->
+
+          <div class="mobile__actions">
+            <!-- SUPPORT -->
+
+            <a
+              href="./payment.html"
+              class="mobile__action mobile__action--support"
+              data-mobile-link
+            >
+              Support
+            </a>
+
+            <!-- PARTNER WITH US -->
+
+            <button
+              class="mobile__action mobile__action--partner"
+              id="mobilePartnerToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobilePartnerMenu"
+            >
+              Partner With Us
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            <!-- MOBILE PARTNER DROPDOWN -->
+
+            <div class="mobile__partner-menu" id="mobilePartnerMenu">
+              <a href="./payment.html" data-mobile-link> Donate </a>
+
+              <a href="./get-involved.html" data-mobile-link> Volunteer </a>
+
+              <a href="./get-involved.html" data-mobile-link>
+                Corporate Partnership
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================================
+     GET INVOLVED — HERO
+     ========================================================== -->
+    <section class="get-involved-hero" id="get-involved-hero">
+      <!-- BACKGROUND -->
+      <div class="get-involved-hero__media" aria-hidden="true">
+        <img
+          src="https://res.cloudinary.com/jf4bgnfx/image/upload/v1790848753/DSC02967_heritage_hero.jpg"
+          alt=""
+          class="get-involved-hero__image"
+        />
+
+        <div class="get-involved-hero__overlay"></div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="get-involved-hero__inner">
+        <div class="get-involved-hero__eyebrow">
+          <span class="get-involved-hero__eyebrow-line"></span>
+
+          <span>Get Involved</span>
+        </div>
+
+        <h1 class="get-involved-hero__title">
+          <span class="get-involved-hero__title-line"> Be part </span>
+
+          <span class="get-involved-hero__title-line"> of what </span>
+
+          <span class="get-involved-hero__title-line">
+            <em>comes next.</em>
+          </span>
+        </h1>
+
+        <div class="get-involved-hero__bottom">
+          <p class="get-involved-hero__intro">
+            Heritage moves forward when people choose to take part.
+          </p>
+
+          <div class="get-involved-hero__meta">
+            <span>ÌMÍSÍ HOUSE</span>
+
+            <span> PEOPLE / PARTNERSHIPS / POSSIBILITY </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCROLL -->
+      <div class="get-involved-hero__scroll">
+        <span class="get-involved-hero__scroll-label"> Find your way in </span>
+
+        <span class="get-involved-hero__scroll-line">
+          <span class="get-involved-hero__scroll-dot"></span>
+        </span>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     02 / WAYS TO GET INVOLVED
+     ========================================================== -->
+    <section class="involvement-paths" id="ways-in">
+      <div class="involvement-paths__header">
+        <div class="involvement-paths__eyebrow">
+          <span>02 / Ways In</span>
+        </div>
+
+        <div class="involvement-paths__index">
+          PARTNER · SUPPORT · PARTICIPATE
+        </div>
+      </div>
+
+      <div class="involvement-paths__intro">
+        <p class="involvement-paths__label">Choose your way in</p>
+
+        <h2>
+          There is more
+          <span>than one way</span>
+          to contribute.
+        </h2>
+      </div>
+
+      <div class="involvement-paths__grid">
+        <!-- PARTNER -->
+        <article class="involvement-path involvement-path--partner">
+          <div class="involvement-path__top">
+            <span class="involvement-path__number">01</span>
+
+            <span class="involvement-path__type"> Partnership </span>
+          </div>
+
+          <div class="involvement-path__content">
+            <h3>
+              Build something
+              <span>together.</span>
+            </h3>
+
+            <p>
+              Partner with Ìmísí to create opportunities for heritage, knowledge
+              and possibility to move between people, communities and
+              organisations.
+            </p>
+
+            <a href="#contact" class="involvement-path__link">
+              Explore partnership
+              <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- SUPPORT -->
+        <article class="involvement-path involvement-path--support">
+          <div class="involvement-path__top">
+            <span class="involvement-path__number">02</span>
+
+            <span class="involvement-path__type"> Support </span>
+          </div>
+
+          <div class="involvement-path__content">
+            <h3>
+              Help keep
+              <span>knowledge moving.</span>
+            </h3>
+
+            <p>
+              Your support helps create spaces where knowledge can be
+              encountered, experienced, practised and carried forward.
+            </p>
+
+            <a href="./payment.html" class="involvement-path__link">
+              Support the Foundation
+              <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- PARTICIPATE -->
+        <article class="involvement-path involvement-path--participate">
+          <div class="involvement-path__top">
+            <span class="involvement-path__number">03</span>
+
+            <span class="involvement-path__type"> Participation </span>
+          </div>
+
+          <div class="involvement-path__content">
+            <h3>
+              Bring your
+              <span>time and knowledge.</span>
+            </h3>
+
+            <p>
+              Volunteer, collaborate, share your experience or contribute to the
+              work of building a living relationship with heritage.
+            </p>
+
+            <a href="#contact" class="involvement-path__link">
+              Start a conversation
+              <span>↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="involvement-paths__closing">
+        <span class="involvement-paths__closing-line"></span>
+
+        <p>
+          Different paths.
+          <strong>One living system.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     03 / START A CONVERSATION
+     ========================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="contact-section__header">
+        <span>03 / Start a Conversation</span>
+
+        <span>CONNECT · COLLABORATE · BEGIN</span>
+      </div>
+
+      <div class="contact-section__layout">
+        <!-- ======================================================
+         LEFT
+         ====================================================== -->
+
+        <div class="contact-section__intro">
+          <p class="contact-section__label">Let's talk</p>
+
+          <h2>
+            Something
+            <span>starts</span>
+            with a conversation.
+          </h2>
+
+          <p class="contact-section__lead">
+            Whether you want to partner with Ìmísí, support the work, volunteer
+            your time or explore a collaboration, we'd like to hear from you.
+          </p>
+
+          <div class="contact-section__details">
+            <div class="contact-section__detail">
+              <span>Email</span>
+
+              <a href="mailto:YOUR-EMAIL-HERE"> YOUR-EMAIL-HERE </a>
+            </div>
+
+            <div class="contact-section__detail">
+              <span>Location</span>
+
+              <p>South Africa</p>
+            </div>
+
+            <div class="contact-section__detail">
+              <span>Connect</span>
+
+              <div class="contact-section__socials">
+                <a href="#" aria-label="Instagram"> Instagram </a>
+
+                <a href="#" aria-label="LinkedIn"> LinkedIn </a>
+
+                <a href="#" aria-label="Facebook"> Facebook </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================
+         RIGHT — FORM
+         ====================================================== -->
+
+        <div class="contact-section__form-wrap">
+          <div class="contact-section__form-heading">
+            <span>Tell us a little about yourself.</span>
+
+            <span>01 — 04</span>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="#" method="POST">
+            <div class="contact-form__field">
+              <label for="contact-name"> Your name </label>
+
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Full name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="contact-form__field">
+              <label for="contact-email"> Email address </label>
+
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="contact-form__field">
+              <label for="contact-type"> I'm interested in </label>
+
+              <select id="contact-type" name="interest" required>
+                <option value="" disabled selected>Select an option</option>
+
+                <option value="partnership">Partnership</option>
+
+                <option value="support">Supporting the Foundation</option>
+
+                <option value="volunteering">Volunteering</option>
+
+                <option value="collaboration">Collaboration</option>
+
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="contact-message"> Tell us more </label>
+
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Tell us what you'd like to explore..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-form__bottom">
+              <p>Your message is the beginning of the conversation.</p>
+
+              <button type="submit" class="contact-form__submit">
+                Send message
+                <span>↗</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-section__closing">
+        <span class="contact-section__closing-line"></span>
+
+        <p>
+          Knowledge moves
+          <strong>through connection.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     04 / SUPPORT & PARTNERSHIP
+     ========================================================== -->
+    <section class="involvement-cta" id="support">
+      <div class="involvement-cta__inner">
+        <div class="involvement-cta__header">
+          <span>04 / Keep It Moving</span>
+
+          <span> SUPPORT · PARTNER · CONTINUE </span>
+        </div>
+
+        <div class="involvement-cta__main">
+          <div class="involvement-cta__statement">
+            <p class="involvement-cta__label">
+              The journey continues through you.
+            </p>
+
+            <h2>
+              Keep knowledge
+              <span>moving.</span>
+            </h2>
+          </div>
+
+          <div class="involvement-cta__copy">
+            <p>
+              Every contribution creates another opportunity for knowledge to be
+              encountered, shared, practised and carried forward.
+            </p>
+
+            <p>
+              Whether you contribute through partnership, support, participation
+              or collaboration, you become part of the movement.
+            </p>
+          </div>
+        </div>
+
+        <div class="involvement-cta__actions">
+          <a
+            href="./payment.html"
+            class="involvement-cta__button involvement-cta__button--primary"
+          >
+            Support the Foundation
+            <span>↗</span>
+          </a>
+
+          <a
+            href="#contact"
+            class="involvement-cta__button involvement-cta__button--ghost"
+          >
+            Partner With Us
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="involvement-cta__cycle">
+          <div class="involvement-cta__cycle-mark">↻</div>
+
+          <div class="involvement-cta__cycle-text">
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+     05 / THE NEXT STEP
+     ========================================================== -->
+    <section class="involvement-next" id="next-step">
+      <div class="involvement-next__inner">
+        <div class="involvement-next__header">
+          <span>05 / The Next Step</span>
+
+          <span>THE JOURNEY CONTINUES</span>
+        </div>
+
+        <div class="involvement-next__main">
+          <div class="involvement-next__number">05</div>
+
+          <h2>
+            Where will
+            <span>you</span>
+            go next?
+          </h2>
+
+          <p>
+            Every connection can lead somewhere new. Explore the work, discover
+            the programmes and find the place where your journey with Ìmísí
+            begins.
+          </p>
+        </div>
+
+        <div class="involvement-next__links">
+          <a href="./heritage-pipeline.html" class="involvement-next__link">
+            <span>01</span>
+
+            <strong>Heritage Pipeline</strong>
+
+            <em>Explore the journey</em>
+
+            <b>↗</b>
+          </a>
+
+          <a href="./programmes.html" class="involvement-next__link">
+            <span>02</span>
+
+            <strong>Programmes</strong>
+
+            <em>Explore the work</em>
+
+            <b>↗</b>
+          </a>
+
+          <a href="./stories.html" class="involvement-next__link">
+            <span>03</span>
+
+            <strong>Stories</strong>
+
+            <em>Hear the voices</em>
+
+            <b>↗</b>
+          </a>
+
+          <a href="./impact.html" class="involvement-next__link">
+            <span>04</span>
+
+            <strong>Impact</strong>
+
+            <em>See what moves forward</em>
+
+            <b>↗</b>
+          </a>
+        </div>
+
+        <div class="involvement-next__cycle">
+          <span class="involvement-next__cycle-mark"> ↻ </span>
+
+          <span>
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FOOTER =========== -->
+
+    <!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- MAIN CTA -->
+
+        <div class="site-footer__hero">
+          <span class="site-footer__eyebrow"> Ìmísí Foundation </span>
+
+          <h2 class="site-footer__title">
+            Keep knowledge
+            <span>moving.</span>
+          </h2>
+
+          <p class="site-footer__intro">
+            Heritage continues when knowledge is shared, practised and carried
+            forward.
+          </p>
+
+          <div class="site-footer__actions">
+            <a
+              href="#get-involved"
+              class="site-footer__button site-footer__button--lime"
+            >
+              Partner With Us
+
+              <span>↗</span>
+            </a>
+
+            <a
+              href="#support"
+              class="site-footer__button site-footer__button--ghost"
+            >
+              Support the Foundation
+            </a>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <div class="site-footer__logo">ÌMÍSÍ</div>
+
+            <p>A living institution for heritage, knowledge and possibility.</p>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Explore </span>
+
+            <a href="#pipeline"> Heritage Pipeline </a>
+
+            <a href="#why"> Why This Matters </a>
+
+            <a href="#knowledge"> Knowledge </a>
+
+            <a href="#ecosystem"> Ecosystem </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Connect </span>
+
+            <a href="#get-involved"> Partner With Us </a>
+
+            <a href="#support"> Support </a>
+
+            <a href="#contact"> Contact </a>
+          </div>
+
+          <div class="site-footer__column">
+            <span class="site-footer__label"> Follow </span>
+
+            <a href="#"> Instagram </a>
+
+            <a href="#"> LinkedIn </a>
+
+            <a href="#"> Facebook </a>
+          </div>
+        </div>
+
+        <!-- LEGAL -->
+
+        <div class="site-footer__legal">
+          <span>
+            © <span id="year"></span>
+            Ìmísí Foundation.
+          </span>
+
+          <span> All rights reserved. </span>
+
+          <span class="site-footer__legal-right">
+            Discover · Connect · Learn · Experience · Create · Transition ·
+            Return
+          </span>
+        </div>
+      </div>
+
+      <!-- WORDMARK -->
+
+      <div class="site-footer__wordmark">ÌMÍSÍ</div>
+    </footer>
+
+    <button
+      class="scroll-to-top-btn"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
+
+    <!-- =======================================
+GSAP
+======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/cursor.js"></script>
+
+    <script src="./assets/js/home-hero.js"></script>
+    <script src="./assets/js/get-involved-hero.js"></script>
+    <script src="./assets/js/involvement-paths.js"></script>
+    <script src="./assets/js/contact-section.js"></script>
+    <script src="./assets/js/involvement-cta.js"></script>
+    <script src="./assets/js/involvement-next.js"></script>
+
+    <!-- THREE.JS IMPORT MAP -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./assets/js/basket.js"></script>
+  </body>
+</html>

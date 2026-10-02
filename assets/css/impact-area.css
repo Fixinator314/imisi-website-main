@@ -1,0 +1,449 @@
+/* ==========================================================
+   IMISI FOUNDATION — IMPACT AREAS
+   02 / Impact Areas
+   ========================================================== */
+
+.impact-areas {
+  position: relative;
+
+  height: 400vh;
+
+  background: #0a6970;
+  color: #f4f1e8;
+}
+
+/* ==========================================================
+   STICKY FRAME
+   ========================================================== */
+
+.impact-areas__sticky {
+  position: sticky;
+
+  top: 0;
+
+  height: 100vh;
+  min-height: 650px;
+
+  padding: 6vh 6vw;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.impact-areas__header {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.impact-areas__eyebrow {
+  color: #bed639;
+}
+
+.impact-areas__index {
+  opacity: 0.5;
+}
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.impact-areas__main {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 0;
+}
+
+/* ==========================================================
+   INTRO
+   ========================================================== */
+
+.impact-areas__intro {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.impact-areas__label {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: #bed639;
+}
+
+.impact-areas__intro p {
+  width: min(360px, 30vw);
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.78rem;
+
+  line-height: 1.7;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   STACK
+   ========================================================== */
+
+.impact-areas__stack {
+  position: relative;
+
+  width: 100%;
+
+  height: min(58vh, 600px);
+}
+
+/* ==========================================================
+   AREA
+   ========================================================== */
+
+.impact-area {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    clamp(50px, 7vw, 100px)
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: clamp(1.5rem, 4vw, 4rem);
+
+  padding: clamp(2rem, 4vw, 4rem);
+
+  border: 1px solid rgba(244, 241, 232, 0.18);
+
+  background: #0a6970;
+
+  opacity: 0;
+
+  transform: translateY(80px) scale(0.96);
+
+  pointer-events: none;
+
+  will-change: transform, opacity;
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   ACTIVE
+   ========================================================== */
+
+.impact-area.is-active {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
+
+  pointer-events: auto;
+}
+
+/* ==========================================================
+   NUMBER
+   ========================================================== */
+
+.impact-area__number {
+  align-self: start;
+
+  padding-top: 0.4rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.14em;
+
+  color: #bed639;
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.impact-area__content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+}
+
+.impact-area__category {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color: #bed639;
+}
+
+.impact-area h2 {
+  margin: 0;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(4rem, 7vw, 8rem);
+
+  font-weight: 400;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.045em;
+}
+
+.impact-area h2 em {
+  display: block;
+
+  color: #bed639;
+
+  font-style: italic;
+}
+
+.impact-area p {
+  max-width: 520px;
+
+  margin: 2rem 0 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.82rem;
+
+  line-height: 1.8;
+
+  opacity: 0.65;
+}
+
+/* ==========================================================
+   GIANT BACKGROUND NUMBER
+   ========================================================== */
+
+.impact-area__mark {
+  align-self: center;
+
+  font-family: "Marcellus", serif;
+
+  font-size: clamp(12rem, 25vw, 30rem);
+
+  line-height: 0.7;
+
+  color: rgba(190, 214, 57, 0.045);
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+/* ==========================================================
+   PROGRESS
+   ========================================================== */
+
+.impact-areas__progress {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-top: 3vh;
+}
+
+.impact-areas__progress-track {
+  position: relative;
+
+  width: min(300px, 30vw);
+
+  height: 1px;
+
+  background: rgba(244, 241, 232, 0.2);
+}
+
+.impact-areas__progress-fill {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 0;
+  height: 100%;
+
+  background: #bed639;
+
+  transform-origin: left;
+}
+
+.impact-areas__counter {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.5;
+}
+
+/* ==========================================================
+   BACKGROUND ORBIT
+   ========================================================== */
+
+.impact-areas::after {
+  content: "";
+
+  position: absolute;
+
+  width: 65vw;
+  aspect-ratio: 1;
+
+  right: -30%;
+  top: 10%;
+
+  border: 1px solid rgba(190, 214, 57, 0.07);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .impact-areas {
+    height: auto;
+  }
+
+  .impact-areas__sticky {
+    position: relative;
+
+    height: auto;
+    min-height: auto;
+
+    padding: 6rem 7vw 7rem;
+  }
+
+  .impact-areas__index {
+    display: none;
+  }
+
+  .impact-areas__intro {
+    display: block;
+
+    margin: 5rem 0 3rem;
+  }
+
+  .impact-areas__intro p {
+    width: 100%;
+
+    margin-top: 1.5rem;
+  }
+
+  .impact-areas__stack {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .impact-area {
+    position: relative;
+
+    inset: auto;
+
+    min-height: 70vh;
+
+    grid-template-columns: 40px 1fr;
+
+    align-items: start;
+
+    gap: 1rem;
+
+    padding: 2rem 1.5rem;
+
+    opacity: 1;
+
+    transform: none;
+
+    pointer-events: auto;
+  }
+
+  .impact-area__content {
+    padding-top: 2rem;
+  }
+
+  .impact-area h2 {
+    font-size: clamp(3.2rem, 15vw, 5.5rem);
+  }
+
+  .impact-area p {
+    margin-top: 1.5rem;
+  }
+
+  .impact-area__mark {
+    position: absolute;
+
+    right: -10%;
+
+    bottom: -2%;
+
+    font-size: 12rem;
+  }
+
+  .impact-areas__progress {
+    display: none;
+  }
+}

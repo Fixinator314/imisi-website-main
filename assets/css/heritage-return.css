@@ -1,0 +1,356 @@
+/* ==========================================================
+   IMISI FOUNDATION
+   RETURN
+   ========================================================== */
+
+.heritage-return {
+  --imisi-teal: #0a6970;
+  --imisi-green: #0c9268;
+  --imisi-lime: #bed639;
+  --imisi-bone: #f4f1e8;
+  --imisi-charcoal: #3f3f3f;
+
+  position: relative;
+
+  min-height: 100vh;
+
+  background: var(--imisi-teal);
+
+  color: var(--imisi-bone);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   INNER
+   ========================================================== */
+
+.heritage-return__inner {
+  width: min(1400px, 90vw);
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: clamp(110px, 12vw, 170px) 0 80px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* ==========================================================
+   EYEBROW
+   ========================================================== */
+
+.heritage-return__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: var(--imisi-lime);
+}
+
+.heritage-return__line {
+  width: 48px;
+
+  height: 1px;
+
+  background: currentColor;
+
+  opacity: 0.5;
+}
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.heritage-return__content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(100px, 0.2fr)
+    minmax(0, 1fr);
+
+  gap: clamp(40px, 7vw, 110px);
+
+  margin-top: clamp(80px, 10vw, 130px);
+}
+
+.heritage-return__number {
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(90px, 12vw, 180px);
+
+  font-weight: 300;
+
+  line-height: 0.75;
+
+  letter-spacing: -0.08em;
+
+  color: rgba(244, 241, 232, 0.12);
+}
+
+.heritage-return__copy {
+  max-width: 1000px;
+}
+
+.heritage-return__label {
+  margin: 0 0 28px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.24em;
+
+  color: var(--imisi-lime);
+}
+
+.heritage-return__title {
+  max-width: 950px;
+
+  margin: 0;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(58px, 8vw, 125px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.045em;
+}
+
+.heritage-return__title span {
+  display: block;
+
+  color: var(--imisi-lime);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   LEAD
+   ========================================================== */
+
+.heritage-return__lead {
+  margin: 48px 0 12px;
+
+  font-family: Marcellus, serif;
+
+  font-size: clamp(20px, 2.3vw, 30px);
+
+  line-height: 1.3;
+
+  color: var(--imisi-bone);
+}
+
+/* ==========================================================
+   TEXT
+   ========================================================== */
+
+.heritage-return__text {
+  max-width: 670px;
+
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: clamp(14px, 1.1vw, 17px);
+
+  line-height: 1.75;
+
+  color: rgba(244, 241, 232, 0.68);
+}
+
+/* ==========================================================
+   RETURN PATH
+   ========================================================== */
+
+.heritage-return__path {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  max-width: 900px;
+
+  margin: clamp(80px, 9vw, 130px) 0 0 auto;
+
+  padding-top: 35px;
+}
+
+.heritage-return__path-line {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(244, 241, 232, 0.18);
+}
+
+.heritage-return__path-progress {
+  display: block;
+
+  width: 0%;
+
+  height: 100%;
+
+  background: var(--imisi-lime);
+}
+
+.heritage-return__path-item {
+  position: relative;
+}
+
+.heritage-return__path-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: -39px;
+
+  left: 0;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--imisi-bone);
+
+  box-shadow: 0 0 0 5px rgba(244, 241, 232, 0.08);
+}
+
+.heritage-return__path-item:last-child::before {
+  background: var(--imisi-lime);
+}
+
+.heritage-return__path-item span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(244, 241, 232, 0.45);
+}
+
+.heritage-return__path-item strong {
+  font-family: Marcellus, serif;
+
+  font-size: 21px;
+
+  font-weight: 400;
+}
+
+/* ==========================================================
+   STATEMENT
+   ========================================================== */
+
+.heritage-return__statement {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 50px;
+}
+
+.heritage-return__statement-line {
+  width: 55px;
+
+  height: 1px;
+
+  background: var(--imisi-lime);
+
+  opacity: 0.65;
+}
+
+.heritage-return__statement p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-family: Manrope, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: rgba(244, 241, 232, 0.55);
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .heritage-return__inner {
+    padding-top: 100px;
+  }
+
+  .heritage-return__content {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-top: 70px;
+  }
+
+  .heritage-return__number {
+    font-size: 80px;
+  }
+
+  .heritage-return__title {
+    font-size: clamp(48px, 13vw, 80px);
+  }
+
+  .heritage-return__lead {
+    margin-top: 35px;
+  }
+
+  .heritage-return__path {
+    gap: 15px;
+
+    margin-top: 80px;
+  }
+
+  .heritage-return__path-item strong {
+    font-size: 16px;
+  }
+
+  .heritage-return__statement {
+    margin-top: 40px;
+  }
+}
