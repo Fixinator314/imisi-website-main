@@ -1,0 +1,42 @@
+.programme-pilots { background: #f4f1e8; color: #3f3f3f; padding: clamp(80px, 10vw, 140px) 0; }
+.programme-pilots__inner { width: min(1280px, 90%); margin: auto; }
+.programme-pilots__header { max-width: 800px; }
+.programme-pilots__eyebrow, .programme-pilots__status, .pilot-programme small { font: 700 11px/1.6 Manrope, sans-serif; color: #0a6970; letter-spacing: .13em; text-transform: uppercase; }
+.programme-pilots h2 { font-size: clamp(44px, 7vw, 96px); line-height: 1; letter-spacing: -.04em; margin: 28px 0; }
+.programme-pilots em { color: #0a6970; }
+.programme-pilots__header > p:last-of-type, .programme-pilots__note p { font: 400 16px/1.8 Manrope, sans-serif; max-width: 660px; }
+.programme-pilots__status { display: block; margin-top: 24px; }
+.programme-pilots__nav { display: flex; flex-wrap: wrap; gap: 12px 28px; padding: 32px 0; margin-top: 24px; }
+.programme-pilots__nav a { font: 700 12px/1.6 Manrope, sans-serif; border-bottom: 2px solid transparent; padding-bottom: 7px; color: #0a6970; }
+.programme-pilots__nav a.is-current { border-color: #0a6970; }
+.programme-pilots__list { position: relative; --pilot-progress: 1; }
+.programme-pilots__list::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #0a6970; transform: scaleY(var(--pilot-progress)); transform-origin: top; }
+.pilot-programme { border-top: 1px solid #0a697030; padding-left: 30px; scroll-margin-top: 110px; }
+.pilot-programme:last-child { border-bottom: 1px solid #0a697030; }
+.pilot-programme summary { display: grid; grid-template-columns: 60px 1fr 30px; gap: 24px; padding: 30px 0; cursor: pointer; list-style: none; }
+.pilot-programme summary::-webkit-details-marker { display: none; }
+.pilot-programme__number { color: #0a6970; font-size: 30px; }
+.pilot-programme small, .pilot-programme strong, .pilot-programme__summary { display: block; }
+.pilot-programme strong { font-size: clamp(26px, 3.5vw, 44px); line-height: 1.15; font-weight: 400; margin: 8px 0 14px; }
+.pilot-programme__summary { font: 400 15px/1.8 Manrope, sans-serif; max-width: 740px; }
+.pilot-programme__plus { font-size: 32px; color: #0a6970; align-self: center; transition: transform .3s; }
+.pilot-programme[open] .pilot-programme__plus { transform: rotate(45deg); }
+.pilot-programme[open] strong { color: #0a6970; }
+.pilot-programme__body { padding: 0 54px 36px 84px; font: 400 15px/1.8 Manrope, sans-serif; }
+.pilot-programme dl { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 26px; }
+.pilot-programme dt { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: #0a6970; font-weight: 700; margin-bottom: 8px; }
+.programme-pilots__note { background: #0a6970; color: #f4f1e8; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: clamp(28px, 5vw, 60px); margin-top: 64px; }
+.programme-pilots__note h3 { font-size: clamp(30px, 4vw, 50px); line-height: 1.1; }
+.programme-pilots__note em { color: #d6e78a; }
+.programme-pilots__actions { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 32px; }
+.programme-pilots__actions a { font: 700 12px/1.8 Manrope, sans-serif; color: #0a6970; border-bottom: 1px solid; padding-bottom: 8px; }
+.programme-pilots__actions span { margin-left: 16px; }
+.programme-pilots a:focus-visible, .programme-pilots summary:focus-visible { outline: 2px solid #0a6970; outline-offset: 5px; }
+@media (max-width: 650px) {
+ .pilot-programme { padding-left: 18px; }
+ .pilot-programme summary { grid-template-columns: 30px 1fr 22px; gap: 12px; }
+ .pilot-programme__number { font-size: 22px; }
+ .pilot-programme__body { padding: 0 12px 30px 42px; }
+ .pilot-programme dl, .programme-pilots__note { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .programme-pilots * { transition: none !important; } }

@@ -425,6 +425,8 @@
   width: min(620px, 90%);
 
   margin: 20px 0 0;
+
+  bottom: 450px;
 }
 
 .living-system__detail-index {

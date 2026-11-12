@@ -139,20 +139,6 @@ gsap.to(".scroll-down", {
   },
 });
 
-gsap.to(".header", {
-  opacity: 1,
-
-  y: 0,
-
-  scrollTrigger: {
-    trigger: ".hero",
-
-    start: "top 80%",
-
-    toggleActions: "play none none reverse",
-  },
-});
-
 gsap.from(".hero-content", {
   y: 100,
 
@@ -168,36 +154,3 @@ gsap.from(".hero-content", {
     start: "top 70%",
   },
 });
-
-var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-if (scrollToTopBtn) {
-  function toggleScrollToTopBtn() {
-    if (window.scrollY > 500) {
-      scrollToTopBtn.classList.add("show");
-    } else {
-      scrollToTopBtn.classList.remove("show");
-    }
-  }
-
-  window.addEventListener("scroll", toggleScrollToTopBtn, { passive: true });
-
-  scrollToTopBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    var introSection = document.querySelector(".intro");
-    if (introSection) {
-      introSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    } else {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  });
-
-  toggleScrollToTopBtn();
-}

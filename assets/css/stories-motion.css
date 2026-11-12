@@ -411,3 +411,35 @@
     display: none;
   }
 }
+/* The readable vertical layout is the baseline, including when GSAP is unavailable. */
+.stories-motion { height: auto; }
+.stories-motion__sticky { position: relative; height: auto; min-height: 0; overflow: hidden; padding: clamp(70px, 8vw, 110px) 5vw; }
+.stories-motion__intro { gap: 32px; }
+.stories-motion__viewport { display: block; width: 100%; min-width: 0; overflow: hidden; }
+.stories-motion__track { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; min-width: 0; gap: 64px 40px; will-change: auto; }
+.motion-story, .motion-story--large, .stories-motion__statement { width: 100%; min-width: 0; margin: 0; }
+.motion-story__image, .motion-story--large .motion-story__image { height: auto; aspect-ratio: 4 / 3; }
+.motion-story__image img { height: 100%; transform: none; }
+.stories-motion__progress { display: none; }
+@media (max-width: 700px) {
+ .stories-motion__track { grid-template-columns: 1fr; }
+ .stories-motion__lead { width: 100%; }
+}
+/* Enabled by the matching GSAP context, and removed automatically on resize. */
+@media (min-width: 1001px) and (min-height: 850px) and (prefers-reduced-motion: no-preference) {
+ .stories-motion.is-horizontal { height: 320vh; }
+ .is-horizontal .stories-motion__sticky { position: sticky; top: 0; height: 100vh; min-height: 0; padding: 4vh 5vw; }
+ .is-horizontal .stories-motion__intro { margin: 4vh 0 3vh; }
+ .is-horizontal .stories-motion__title { font-size: clamp(56px, 6vw, 96px); }
+ .is-horizontal .stories-motion__viewport { display: flex; flex: 1; min-height: 0; align-items: center; overflow: visible; }
+ .is-horizontal .stories-motion__track { display: flex; align-items: center; width: max-content; gap: 6vw; will-change: transform; }
+ .is-horizontal .motion-story { width: min(36vw, 540px); }
+ .is-horizontal .motion-story--large { width: min(41vw, 620px); }
+ .is-horizontal .motion-story__image, .is-horizontal .motion-story--large .motion-story__image { height: 31vh; aspect-ratio: auto; }
+ .is-horizontal .motion-story--offset { margin-top: 3vh; }
+ .is-horizontal .motion-story h3 { font-size: clamp(28px, 2.8vw, 44px); }
+ .is-horizontal .motion-story__content { padding-top: 16px; }
+ .is-horizontal .motion-story p { margin-top: 14px; }
+ .is-horizontal .stories-motion__statement { width: min(420px, 30vw); margin-left: 3vw; }
+ .is-horizontal .stories-motion__progress { display: flex; flex-shrink: 0; }
+}

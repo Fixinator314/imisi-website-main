@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Set this before the browser restores the previous page position.
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    </script>
 
     <title>Imisi House Foundation</title>
 
@@ -143,7 +147,7 @@ HEADER
        DESKTOP NAVIGATION
        ======================================================== -->
 
-  <nav class="nav" id="nav" data-state="top">
+  <nav class="nav" id="nav" data-state="before-hero">
 
     <!-- LOGO -->
     <a
@@ -1738,6 +1742,7 @@ GSAP
     <script src="./assets/js/foundation.js"></script>
 
     <script src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/home-navigation.js"></script>
 
     <!-- THREE.JS IMPORT MAP -->
     <script type="importmap">

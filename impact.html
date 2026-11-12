@@ -770,75 +770,51 @@
     <!-- ==========================================================
      04 / IMPACT STORIES
      ========================================================== -->
-    <section class="impact-stories" id="impact-stories">
+    <section class="impact-stories" id="impact-stories" aria-labelledby="museum-story-title">
+      <svg class="museum-thread" viewBox="0 0 1200 800" fill="none" aria-hidden="true"><path d="M1000 -80C500 50 1200 220 980 380S500 350 660 600 1120 650 1280 850" /></svg>
       <div class="impact-stories__header">
-        <div class="impact-stories__eyebrow">
-          <span>04 / Impact Stories</span>
-        </div>
-
+        <div class="impact-stories__eyebrow">04 / Impact Stories</div>
         <div class="impact-stories__index">PEOPLE · EXPERIENCE · CHANGE</div>
       </div>
-
       <div class="impact-stories__intro">
-        <p class="impact-stories__label">From movement to meaning</p>
-
-        <h2>
-          Impact is
-          <span>experienced.</span>
-        </h2>
-
-        <p class="impact-stories__lead">
-          The movement of knowledge becomes visible through the people, places
-          and experiences it touches.
-        </p>
+        <p class="impact-stories__label">Heritage within reach</p>
+        <h2 id="museum-story-title">A museum<br /><span>that travels.</span></h2>
+        <p class="impact-stories__lead">Portable collections make space for people to encounter archaeology, ask questions and explore materials together. Earlier travelling museum work under HARP offers a starting point for the next chapter.</p>
       </div>
-
       <div class="impact-stories__feature">
         <div class="impact-stories__image-wrap">
-          <div class="impact-stories__image">
-            <!-- Replace with an actual impact story image -->
-            <img src="YOUR-IMPACT-STORY-IMAGE.jpg" alt="Impact story" />
+          <div class="impact-stories__image"><img id="museum-photo" src="./assets/images/impact/harp-museum-engagement.png" alt="A presenter and learners gathered around the earlier HARP travelling museum displays" loading="lazy" width="800" height="600" /></div>
+          <div class="impact-stories__image-label"><span id="museum-photo-index">01 / 03</span><span>Earlier travelling museum · HARP</span></div>
+          <div class="museum-gallery" role="group" aria-label="Explore photographs of the earlier HARP museum">
+            <button type="button" aria-pressed="true" aria-controls="museum-photo" data-photo="0">01 / Encounter</button>
+            <button type="button" aria-pressed="false" aria-controls="museum-photo" data-photo="1">02 / Explore</button>
+            <button type="button" aria-pressed="false" aria-controls="museum-photo" data-photo="2">03 / Materials</button>
           </div>
-
-          <div class="impact-stories__image-label">
-            <span>01</span>
-            <span>People · Practice · Place</span>
-          </div>
+          <p class="museum-caption" aria-live="polite">A shared encounter with portable museum displays.</p>
         </div>
-
         <div class="impact-stories__story">
           <div class="impact-stories__story-number">01</div>
-
-          <p class="impact-stories__story-eyebrow">A story of movement</p>
-
-          <h3>When knowledge becomes something you can carry.</h3>
-
-          <p class="impact-stories__story-text">
-            Impact can begin with a moment of connection — a person encountering
-            a practice, a place, a story or an idea that changes what they
-            understand and what they are able to do next.
-          </p>
-
-          <div class="impact-stories__outcome">
-            <span>What moves forward</span>
-
-            <strong> Knowledge · Confidence · Connection </strong>
-          </div>
-
-          <a href="#" class="impact-stories__link">
-            Read the story
-            <span>↗</span>
-          </a>
+          <p class="impact-stories__story-eyebrow">Earlier work / HARP</p>
+          <h3>Opening the drawers.<br />Opening a conversation.</h3>
+          <p class="impact-stories__story-text">The earlier museum brought portable displays of stone, ceramics, beads and other materials into public engagement settings. The photographs show participants gathered around collections, with opportunities to look closely and speak with a presenter.</p>
+          <div class="impact-stories__outcome"><span>What this story documents</span><strong>Portable displays · Material exploration · Public engagement</strong></div>
+          <a href="#museum-details" class="impact-stories__link">Explore the story <span aria-hidden="true">↓</span></a>
         </div>
       </div>
-
-      <div class="impact-stories__closing">
-        <p>One experience can become another person's starting point.</p>
-
-        <div class="impact-stories__line"></div>
-
-        <span> IMPACT CONTINUES </span>
+      <div class="museum-details" id="museum-details">
+        <div class="museum-details__intro"><p class="impact-stories__label">Look closer</p><h3>What can a travelling museum make possible?</h3><p>Explore the earlier approach and how it informs the proposed pilot.</p></div>
+        <div class="museum-details__items">
+          <details open><summary><span>01</span> Bring the collection to people <span class="museum-plus" aria-hidden="true">+</span></summary><div class="museum-detail-body"><p>A portable drawer system allows materials to travel beyond a permanent exhibition. Earlier HARP photographs show displays set up for engagement with groups and individual participants.</p></div></details>
+          <details><summary><span>02</span> Give questions something tangible <span class="museum-plus" aria-hidden="true">+</span></summary><div class="museum-detail-body"><p>Stone tools, ceramic fragments, beads and other materials give a presenter a practical starting point. An object can prompt questions about how people lived, what they made and how researchers interpret the past.</p></div></details>
+          <details><summary><span>03</span> Learn from the first format <span class="museum-plus" aria-hidden="true">+</span></summary><div class="museum-detail-body"><p>The trailer proposal reports that earlier participants wanted more text and visual material to accompany the presentation. The proposed design responds with information panels alongside displays and interactive activities.</p></div></details>
+        </div>
       </div>
+      <div class="museum-next">
+        <div><p class="impact-stories__label">The next chapter / In development</p><h3>The proposed Thulamela mobile museum</h3><p>A custom-designed trailer is proposed to bring hands-on displays, visual storytelling and interactive learning to Kruger National Park and surrounding schools and communities.</p><p>Within the proposed Heritage Pipeline pilot, this encounter becomes an invitation to continue: a community learning cohort, deeper experience and individual pathway support.</p></div>
+        <div class="museum-next__action"><span>Discover → Connect → Learn</span><p>What happens after the first encounter?</p><a class="impact-stories__link" href="./heritage-pipeline.html#pipeline-in-practice">Follow the learner journey <span aria-hidden="true">↗</span></a><a class="impact-stories__link" href="./get-involved.html">Help build the pilot <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <p class="museum-source">Earlier work and photographs: supplied HARP travelling museum presentation. Future plans: Thulamela mobile museum proposal and Heritage Pipeline pilot outline. The proposed trailer and learner pathway are in development.</p>
+      <div class="impact-stories__closing"><p>One encounter can become the beginning of a longer journey.</p><div class="impact-stories__line"></div><span>IMPACT CONTINUES</span></div>
     </section>
 
     <!-- ==========================================================
